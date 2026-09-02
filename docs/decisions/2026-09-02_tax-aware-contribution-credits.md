@@ -7,7 +7,7 @@
 
 QOLAB is meant to reward Refaqt contributions when there is revenue, cap those rewards, pay more than hours × rate when Refaqt does well, and avoid VAT and income tax at grant while credits have no cash value.
 
-The first mechanics sketch used C-tokens, a power-law bonding curve, R-tokens, and U-tokens at 1 U = 1 euro, with a 10% revenue pool and peer transfers. Under Belgian VAT (arts. 22, 22bis, 26 WBTW) and income-tax practice (tax at vesting/disposal, not at euro conversion), that sketch creates an ascertainable value at grant. Peer transfer and a euro peg also pull in e-money / FSMA / MiCA analysis.
+The first mechanics sketch used C-tokens, a power-law bonding curve, R-tokens, and U-tokens at 1 U = 1 euro, with a 10% revenue pool and peer transfers. Under Belgian VAT (arts. 22, 22bis, 26 WBTW) and income-tax practice (tax at vesting/disposal, not at euro conversion), that sketch creates an ascertainable value at grant. Peer transfer and a euro peg also pull in e-money / FSMA / MiCA analysis. The “1 U = 1 euro” label also contradicts the pro-rata pool formula, which does not pay par.
 
 Full analysis: [docs/token-system.md](../token-system.md).
 

@@ -215,13 +215,29 @@ Foreign contributors: map place of supply, VIES, reverse charge, and (for US per
 | Design choice | Why it hurts |
 | --- | --- |
 | Bonding curve used as a **euro price** to mint U | Gives R a market value on day one |
-| **1 U = 1 euro** | Face-value claim; e-money shaped; easy valuation |
+| **1 U = 1 euro** | Looks like a par claim / e-money, while the pool formula does not actually pay €1 per U |
 | **Peer transfer** of R and U | Disposal + price discovery |
 | Immediate C→R conversion described as “reward” | Sounds like payment at grant |
 | 10% of **revenue** to anyone holding tokens | Profit-participation / investment narrative, and can exceed profit |
 | Unused U “converted back at the old price” | Confirms that a price existed |
 
 The bonding curve as a **mint function for weights** (later contributors get fewer weights per hour) is fine. Using the same curve as an **FX rate into euro** is not.
+
+### Internal contradiction: “1 U = 1 euro” vs the pool formula
+
+The sketch says both:
+
+- 1 U-token is 1 euro, and
+- euros received = `pool × U_offered / total_U_offered`.
+
+Those cannot both be true. The second formula always empties the pool onto **offered** U:
+
+- If little U is offered, each U receives **more than** €1.
+- If much U is offered, each U receives **less than** €1.
+
+U is then a **pro-rata chip**, not a par claim. Calling it “1 euro” is the worst of both worlds: it looks like e-money or a face-value debt to a regulator, while economically it is just a share of whatever is in the pot. If everyone in a given round converts R→U at the **same** curve price, that price also **cancels** in the pro-rata (`payout_i ∝ R_i`). The U layer then adds legal risk without changing who gets what.
+
+Drop U. Split the pool on weights directly.
 
 ---
 
