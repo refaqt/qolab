@@ -1,0 +1,8 @@
+---
+description: Where narrative documentation lives and when to update it
+alwaysApply: true
+---
+
+# Living documentation
+
+Follow [`.agents/rules/living-docs.md`](../../.agents/rules/living-docs.md).

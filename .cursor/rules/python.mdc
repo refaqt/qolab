@@ -1,0 +1,9 @@
+---
+description: Python layout and test habits for this repository
+globs: "**/*.py, tests/**"
+alwaysApply: false
+---
+
+# Python
+
+Follow [`.agents/rules/python.md`](../../.agents/rules/python.md).
