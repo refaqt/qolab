@@ -4,7 +4,7 @@ QOLAB is a contribution-credit system for work on Refaqt projects. The live desi
 
 - Working overview: [token-system-design/architecture.md](../token-system-design/architecture.md)
 - Tax and company-law analysis: [token-system-design/token-system.md](../token-system-design/token-system.md)
-- Vintage pools (no unit `v`): [token-system-design/vintage-pools.md](../token-system-design/vintage-pools.md)
+- Vintage pools (no unit `v`) and the time-opened fee cap: [token-system-design/vintage-pools.md](../token-system-design/vintage-pools.md)
 - Spreadsheet for the 2026-09-03 bonding-curve iteration: [token-system-design/2026-09-03_token-system-calculation.ods](../token-system-design/2026-09-03_token-system-calculation.ods)
 
 Stack is not chosen yet. Default is an off-chain ledger.

@@ -4,7 +4,7 @@ Working analysis of the 2026-09-03 bonding-curve design (`2026-09-03_token-syste
 
 Previous sketch (C / R / U tokens, contractor invoice at cash-out): [docs/log/2026-09-02_belgian-token-system-analysis.md](../docs/log/2026-09-02_belgian-token-system-analysis.md) and proposed [ADR 2026-09-02](../docs/decisions/2026-09-02_tax-aware-contribution-credits.md). This note supersedes that mechanics description; the legal hooks (WBTW arts. 22, 22bis, 26; substance over form) still apply.
 
-**Prevention rules applied:** [docs/mistakes/2026-09-03_unit-price-on-growing-pool.md](../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md) — do not put a euro spot price on certificates, including payout-time `v = pool / N`. Token-engineering rule that also applies: labels (“profit certificate”, “voluntary contribution”, “cooperative spirit”) do not take compensation outside VAT or income tax. Facts beat labels.
+**Prevention rules applied:** [do not put a euro spot price on certificates, including payout-time `v = pool / N`](../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md). Token-engineering rule that also applies: labels (“profit certificate”, “voluntary contribution”, “cooperative spirit”) do not take compensation outside VAT or income tax. Facts beat labels. `r` and `k` are a fee cap, not a yield.
 
 Payout-time `v = pool / outstanding` (recommended in an earlier draft of this note) is **withdrawn**. It causes wait-and-run, idle capital, and stacked VenB. Replacement: [vintage-pools.md](vintage-pools.md).
 
@@ -67,7 +67,7 @@ At each distribution date, **do not invent a unit `v`**, even from actual money.
 
 `v = pool / outstanding` looks like a payout-time conversion (no mint-time quote). Economically it is still a spot price on a **growing stock**. If leftover stays in the pot and certificates burn on withdraw, holders wait until `v` is a “decent ROI”, then they all withdraw. The earmarked pool cannot be invested meanwhile. If that delay leaves the money as retained earnings, Refaqt VenB and the contributors’ BV VenB stack — the opposite of a same-year deductible fee. Capping the denominator (`v = pool / N_cap`) only lets the GA set that price, arbitrarily or to hit an ROI on points.
 
-**Replacement:** [vintage-pools.md](vintage-pools.md). Each year the GA/board sets a budget `P_t`. Split it across eligible weights with **default-in**. Do not burn weights for taking the vintage. Leftover (opt-out, no invoice, over ceiling) goes to **operating reserves**, not back into the certificate pool. Vacuuming is prevented because the denominator is everyone, not because a euro rate `w` caps extraction.
+**Replacement:** [vintage-pools.md](vintage-pools.md). Each year the GA/board sets a budget `P_t`. Split it across eligible weights with **default-in**. Do not burn weights for taking the vintage. Leftover (opt-out, no invoice, over the **opened cap**) goes to **operating reserves**, not back into the certificate pool. Vacuuming is prevented because the denominator is everyone, not because a euro rate `w` caps extraction. The fee cap is **time-opened per lot** (1× at first eligibility; extra multiple only while unpaid) so a fat forecast is not a sure bet on `k×`.
 
 The “wait and `w` rises” feature is a second early-bird stacked on the mint. `v = pool / N` recreates it. Drop both; early-bird in `Δp` is enough.
 
@@ -209,10 +209,10 @@ Compare **€10,000 of CV earnings before the reward and before VenB**, paid to 
 1. **Pick the tax box first, then fit the curve.** Option 1 = statutes + share class + GA dividend + allocation that looks like capital, not points. Option 2 = services contract + contingent invoice + points as **weights**. Mixing them is how you get both 30% *and* VAT.
 2. **Keep members for governance** (small cash share, one member one vote or as statutes say). Do not pretend the share is the reward.
 3. **Mint with `p = c0 · c^k`.** Do not quote `dc/dp` in euros.
-4. **No unit `v`.** Do not burn using `pool / outstanding` or `pool / N_cap`. Use **vintages**: default-in split of this year’s `P_t`; leftover to reserves; no burn for taking the vintage ([vintage-pools.md](vintage-pools.md), [ADR 2026-09-03](../docs/decisions/2026-09-03_vintage-pools-no-unit-price.md)).
+4. **No unit `v`.** Do not burn using `pool / outstanding` or `pool / N_cap`. Use **vintages**: default-in split of this year’s `P_t`; leftover to reserves; no burn for taking the vintage ([vintage-pools.md](vintage-pools.md), [ADR 2026-09-03](../docs/decisions/2026-09-03_vintage-pools-no-unit-price.md)). Bound each lot with a **time-opened fee cap**, not a static `k×` from day one ([ADR 2026-09-03 time-opened fee cap](../docs/decisions/2026-09-03_time-opened-fee-cap.md)).
 5. **Pool = GA policy** with solvency: `min(p% of profit or EBITDA, optional q% of revenue, cash after reserves)`. Not an automatic 10% of turnover. Unallocated profit is Refaqt’s to invest; `P_t` is paid in year t.
 6. **Non-transferable**, off-chain, no peer market (already in this iteration — keep it).
 7. **Employees stay on euro payroll.** QOLAB is not wages in kind.
-8. **DVB + counsel** before anyone is promised a certificate. Ask explicitly: (a) no taxable event at mint; (b) characterisation of cash-out as fee vs dividend; (c) VAT time of supply; (d) RSZ / arbeidsrelatie; (e) same-year deduction of a default-in vintage; (f) forfeiture of opt-out / uninvoiced slices; (g) ceiling vs sunset as the bound.
+8. **DVB + counsel** before anyone is promised a certificate. Ask explicitly: (a) no taxable event at mint; (b) characterisation of cash-out as fee vs dividend; (c) VAT time of supply; (d) RSZ / arbeidsrelatie; (e) same-year deduction of a default-in vintage; (f) forfeiture of opt-out / uninvoiced slices; (g) opened cap vs sunset as the bound; (h) time-opened fee cap vs interest / receivable.
 
 Until those sign-offs exist, treat this document as a **pre-legal spec**, not a launched scheme.

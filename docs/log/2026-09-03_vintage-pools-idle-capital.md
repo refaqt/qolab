@@ -12,11 +12,11 @@ Proposed (not accepted): no unit `v`; each year a vintage budget `P_t`; default-
 
 ## Open Questions
 
-- Ceiling (`k × effort`) vs sunset (`T` vintages) if a reference rate feels like pricing points.
+- Ceiling (`k × effort`) vs sunset (`T` vintages) if a reference rate feels like pricing points — refined in [ADR 2026-09-03 time-opened fee cap](../decisions/2026-09-03_time-opened-fee-cap.md).
 - Accountant: can a default-in vintage be provisioned so VenB matches the fee year.
-- DVB items (e)–(g) in the vintage-pools note.
+- DVB items (e)–(h) in the vintage-pools note.
 
 ## Next Steps
 
-- Counsel + accountant on vintages, forfeiture, and option 2 matching.
-- Then draft the QOLAB regulation around vintages, not around a withdrawal rate.
+- Counsel + accountant on vintages, forfeiture, opened cap vs interest, and option 2 matching.
+- Then draft the QOLAB regulation around vintages and the time-opened cap, not around a withdrawal rate.
