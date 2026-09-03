@@ -18,7 +18,7 @@ Until counsel and an accountant (and preferably a DVB ruling) say otherwise, des
 1. **One instrument:** non-transferable **contribution weights** (not C / R / U, not a euro peg).
 2. **Mint function** may be a power-law or vintage multiplier so early work gets more weight. It must **not** be quoted as a euro price.
 3. **No secondary market.** Transfers only to treasury, on death, or to a successor vehicle of the same beneficial owner.
-4. **Cash only in distribution rounds** funded from a solvency-checked pool (`min` of a profit metric, an optional revenue cap, and available cash) — not an automatic 10% of turnover.
+4. **Cash only in distribution rounds** funded from a solvency-checked pool (`min` of a profit metric, an optional revenue cap, and available cash) — not an automatic 10% of turnover. Payout mechanics: **vintages** (default-in, no unit `v`, leftover to reserves), not `v = pool / N` — [ADR 2026-09-03](2026-09-03_vintage-pools-no-unit-price.md).
 5. **Personal cap** at payout: `k × Σ(hours × reference rate)`, so returns can exceed the hourly notional but not without bound.
 6. **Invoice at payout** is the consideration. Pool amounts are **VAT-exclusive**. Credits are contractually a contingent success fee, not shares and not a dividend.
 7. **Membership is optional and separate.** Statutes must say credits are not parts/shares and cash-out is not a distribution on capital (especially if the CV is or becomes a social enterprise).
