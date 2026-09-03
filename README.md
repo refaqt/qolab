@@ -19,3 +19,4 @@ Humans on Windows may double-click `setup-tooling.bat` instead.
 - [AGENTS.md](AGENTS.md) — entry point for Cursor, Claude Code, and other agents
 - [docs/onboarding.md](docs/onboarding.md) — how to set up and navigate this repository
 - [docs/architecture.md](docs/architecture.md) — purpose and layout
+- [docs/token-system.md](docs/token-system.md) — Belgian tax/legal analysis of the contribution-credit system
