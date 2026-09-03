@@ -4,17 +4,17 @@ System overview and component map for this repository. Update when layout, entry
 
 ## Purpose
 
-QOLAB is a **contribution-credit system** for work on Refaqt projects. The 2026-09-03 iteration rewards documented contribution with non-transferable **profit certificates** minted on a bonding curve, cashed from a GA-set pool, and burned on withdrawal.
+QOLAB is a **contribution-credit system** for work on Refaqt projects. The working iteration rewards documented contribution with non-transferable **weights** minted on a bonding curve, and pays them from **annual vintage budgets** — not from a unit price `v = pool / certificates`.
 
-Belgian tax and corporate analysis of that iteration: [token-system.md](token-system.md). Earlier contractor-credit proposal: [docs/decisions/2026-09-02_tax-aware-contribution-credits.md](../docs/decisions/2026-09-02_tax-aware-contribution-credits.md). **No option is accepted yet** — design is still iterating.
+Belgian tax and corporate analysis: [token-system.md](token-system.md). Idle-pool / wait-and-run problem and vintage replacement: [vintage-pools.md](vintage-pools.md). Earlier contractor-credit proposal: [docs/decisions/2026-09-02_tax-aware-contribution-credits.md](../docs/decisions/2026-09-02_tax-aware-contribution-credits.md). Proposed vintage ADR: [docs/decisions/2026-09-03_vintage-pools-no-unit-price.md](../docs/decisions/2026-09-03_vintage-pools-no-unit-price.md). **No option is accepted yet** — design is still iterating.
 
 ## Intended flow (working, not decided)
 
 1. Contributor is admitted as a **member** of the CV (governance). Labour is **not** assumed to be volunteer work for tax purposes.
-2. Ledger records **contribution points**, then mints certificates with `p = c0 · c^k` (early work mints more).
-3. Certificates are **non-transferable**. No peer market.
-4. The GA sets a **profit (or revenue) pool**. Withdrawal uses a payout-time conversion, not a published euro rate at mint — see the analysis.
-5. Cash-out is either a **dividend** (option 1) or an **invoiced fee/royalty** (option 2). Those two boxes should not be mixed on the same instrument.
+2. Ledger records **contribution points**, then mints weights with `p = c0 · c^k` (early work mints more). No euro quote of `dc/dp`.
+3. Weights are **non-transferable**. No peer market.
+4. Each year the GA/board sets a **vintage budget** `P_t` (waterfall + solvency). Default-in split across weights; leftover to reserves; weights are not burned for taking the vintage. No `v = pool / N`.
+5. Cash-out is either a **dividend** (option 1) or an **invoiced fee/royalty** (option 2). Those two boxes should not be mixed on the same instrument. Same-year invoices are what avoid stacked VenB under option 2.
 
 Stack is not chosen yet. Default is an off-chain ledger, not a chain.
 

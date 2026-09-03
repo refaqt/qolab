@@ -18,5 +18,5 @@ None accepted. Working recommendation: keep the mint curve and non-transferabili
 
 ## Next Steps
 
-- Iterate the design (no PR yet).
+- Iterate the design (no PR yet). **Done for the `v = pool / N` trap:** [2026-09-03_vintage-pools-idle-capital.md](2026-09-03_vintage-pools-idle-capital.md).
 - Counsel + accountant; then statutes vs dienstenovereenkomst.
