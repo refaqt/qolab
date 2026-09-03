@@ -4,7 +4,7 @@
 
 ## What happened
 
-Analysed the C / bonding-curve / R / U (1 U = 1 euro) sketch against Belgian VAT, income tax, cooperative law, and EU token regulation. Wrote [docs/token-system.md](../token-system.md) and proposed [ADR 2026-09-02](../decisions/2026-09-02_tax-aware-contribution-credits.md). Noted that the U par claim contradicts the pro-rata pool formula.
+Analysed the C / bonding-curve / R / U (1 U = 1 euro) sketch against Belgian VAT, income tax, cooperative law, and EU token regulation. Wrote the first analysis (later moved to [token-system-design/token-system.md](../../token-system-design/token-system.md)) and proposed [ADR 2026-09-02](../decisions/2026-09-02_tax-aware-contribution-credits.md). Noted that the U par claim contradicts the pro-rata pool formula.
 
 ## Decisions
 
