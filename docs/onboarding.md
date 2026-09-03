@@ -18,8 +18,8 @@ How to set up, run, and navigate this repository.
 
 | Doc | Use |
 | --- | --- |
-| `docs/architecture.md` | Module map and data flow |
-| `docs/token-system.md` | Belgian tax/legal analysis and proposed credit design |
+| `docs/architecture.md` | Pointer to the working design |
+| `token-system-design/` | Bonding-curve draft, spreadsheet, Belgian tax/legal analysis |
 | `.agents-local/skills/patterns/SKILL.md` | Project-specific reusable patterns |
 | `docs/decisions/` | Past technical decisions (ADRs) |
 | `docs/mistakes/` | What went wrong and how to avoid it |
