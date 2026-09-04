@@ -1,7 +1,7 @@
 # ADR — Time-opened fee cap (no default k× on a short payback)
 
 - **Date:** 2026-09-03
-- **Status:** Proposed
+- **Status:** Proposed. **Parked** (complexity) by [2026-09-04 cheap-share dead-end](2026-09-04_cheap-share-route-dead-end.md) together with the vintage packaging.
 - **Amends:** fee-cap mechanics in [2026-09-03 vintage pools](2026-09-03_vintage-pools-no-unit-price.md) (point 4) and the personal-cap line in [2026-09-02](2026-09-02_tax-aware-contribution-credits.md) (point 5). Both still proposed. Does not accept option 1 vs 2.
 
 ## Context

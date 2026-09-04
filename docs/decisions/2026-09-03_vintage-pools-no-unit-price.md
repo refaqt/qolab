@@ -1,7 +1,7 @@
 # ADR — Vintage pools instead of a unit certificate price
 
 - **Date:** 2026-09-03
-- **Status:** Proposed. **Amended by** [2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md) (how the fee ceiling opens).
+- **Status:** Proposed. **Amended by** [2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md) (how the fee ceiling opens). **Parked** (complexity) by [2026-09-04 cheap-share dead-end](2026-09-04_cheap-share-route-dead-end.md) — not rejected on the idle-pool / no-unit-`v` analysis.
 - **Amends:** payout mechanics in [2026-09-02](2026-09-02_tax-aware-contribution-credits.md) (still proposed). Does not accept option 1 vs 2; it says how cash leaves **if** the instrument is a contingent fee.
 
 ## Context

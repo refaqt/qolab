@@ -20,4 +20,5 @@ Humans on Windows may double-click `setup-tooling.bat` instead.
 - [docs/onboarding.md](docs/onboarding.md) — how to set up and navigate this repository
 - [docs/architecture.md](docs/architecture.md) — purpose and layout
 - [token-system-design/token-system.md](token-system-design/token-system.md) — Belgian tax/legal analysis of the contribution-credit system
-- [token-system-design/vintage-pools.md](token-system-design/vintage-pools.md) — why not `v = pool / N`, vintage budgets, and the time-opened fee cap
+- [token-system-design/vintage-pools.md](token-system-design/vintage-pools.md) — why not `v = pool / N` (parked: complexity)
+- [token-system-design/cheap-share-route.md](token-system-design/cheap-share-route.md) — cheap €1 shares as a dividend wrapper (**dead-end**)

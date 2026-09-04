@@ -1,5 +1,7 @@
 # Vintage pools instead of a unit certificate price
 
+**Status: parked (complexity).** The idle-pool / no-unit-`v` analysis still stands. The lot / record-date / time-opened-cap packaging is too heavy to explain, so this is not the live spec. Do not replace it with cheap €1 shares — that route is a **dead-end** ([cheap-share-route.md](cheap-share-route.md), [ADR 2026-09-04](../docs/decisions/2026-09-04_cheap-share-route-dead-end.md)). Next pass is option 2 with less machinery.
+
 Working design note on the idle-pool / wait-and-run problem that follows from `v = pool / certificates`, and on the gold rush that follows from a static `k×` ceiling. Companion to [token-system.md](token-system.md). This is **design input for counsel and an accountant**, not a ruling.
 
 **Prevention rules applied:** [do not put a euro spot price on a growing pool](../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md). Token-engineering: do not publish ROI or a euro price on contribution credits; `r` and the lifetime multiple are a **fee cap**, not a yield; do not recreate a statutory surplus right via a token; labels do not take compensation outside VAT or income tax.
