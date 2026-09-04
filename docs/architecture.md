@@ -5,6 +5,7 @@ QOLAB is a contribution-credit system for work on Refaqt projects. The live desi
 - Working overview: [token-system-design/architecture.md](../token-system-design/architecture.md)
 - Tax and company-law analysis: [token-system-design/token-system.md](../token-system-design/token-system.md)
 - Vintage pools (parked): [token-system-design/vintage-pools.md](../token-system-design/vintage-pools.md)
+- Why an effort fee cap is not a unit price of `p`: [docs/decisions/2026-09-04_fee-cap-not-unit-price.md](decisions/2026-09-04_fee-cap-not-unit-price.md)
 - Cheap-share route (**dead-end**): [token-system-design/cheap-share-route.md](../token-system-design/cheap-share-route.md)
 - Spreadsheet for the 2026-09-03 bonding-curve iteration: [token-system-design/2026-09-03_token-system-calculation.ods](../token-system-design/2026-09-03_token-system-calculation.ods)
 
