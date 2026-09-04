@@ -80,7 +80,7 @@ Three different “prices” get mixed. This route uses the first two at once.
 
 Belgian VAT and income tax look at ascertainable value, not at the word “cap.” At mint a holder can say: “I received 51,000 `p`, each of which can become €1 of dividend if the GA distributes.” That is a mark-to-market of the *ceiling*. The bonding curve then prices **work in euros**, not only in weight: Alex’s 50,000 points mint a €51,000 cap; Bill’s 40,000 points mint a €39,000 cap.
 
-A fee cap tied to **documented effort** is a different object: it bounds an invoice so the fee stays near the work (art. 49 WIB 92 / arm’s length). It is not a quote of `p`. Here `p` *is* the euro cap, so minting `p` *is* stating the euro value of that contribution’s remaining claim.
+A fee cap tied to **documented effort** is a different object: it bounds an invoice so the fee stays near the work (art. 49 WIB 92 / arm’s length). It is not a quote of `p`. Dividing that cap by `Δp` (`(k × E) / Δp`) does **not** turn it into a unit FX — same work, different mint dates, same cap, different implied €/`p`. Full argument: [vintage-pools.md](vintage-pools.md) (“Does `(k × hours × rate) / Δp` price `p`?”). Here `p` *is* the euro cap, so minting `p` *is* stating the euro value of that contribution’s remaining claim.
 
 Burn-on-payout also reopens stock-model incentives even without an earmarked pot: taking this year’s dividend **shrinks next year’s share count**. If a fat year is visible, holders want the GA to **retain** earnings so they keep shares for the jackpot, then hit the full `p` cap in one go.
 

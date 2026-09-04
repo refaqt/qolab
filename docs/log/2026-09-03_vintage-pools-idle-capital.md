@@ -12,7 +12,7 @@ Proposed (not accepted): no unit `v`; each year a vintage budget `P_t`; default-
 
 ## Open Questions
 
-- Ceiling (`k × effort`) vs sunset (`T` vintages) if a reference rate feels like pricing points — refined in [ADR 2026-09-03 time-opened fee cap](../decisions/2026-09-03_time-opened-fee-cap.md).
+- Ceiling (`k × effort`) vs sunset (`T` vintages) if a reference rate feels like pricing points — refined in [ADR 2026-09-03 time-opened fee cap](../decisions/2026-09-03_time-opened-fee-cap.md); `(k × E) / Δp` is not a unit price of `p` ([ADR 2026-09-04](../decisions/2026-09-04_fee-cap-not-unit-price.md)).
 - Accountant: can a default-in vintage be provisioned so VenB matches the fee year.
 - DVB items (e)–(h) in the vintage-pools note.
 

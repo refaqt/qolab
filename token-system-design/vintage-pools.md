@@ -17,6 +17,7 @@ Working design note on the idle-pool / wait-and-run problem that follows from `v
 | Does `v = pool / (capped number of certificates)` fix it? | **No.** It moves the price into the cap. The GA then either picks `C` arbitrarily, or picks `C` so that `v` hits a target ROI on contribution points — which **is** a euro price on the points, the grant-time tax problem. |
 | How do we get money out every year without pricing points or setting an ROI? | Stop defining a unit price on a **stock**. Each year the GA/board sets a **budget** `P_t` (this vintage only). Split `P_t` across eligible weights with **default-in**. Do not burn weights for taking the vintage. Leftover (opt-out, no invoice, over cap) goes to **operating reserves**, not back into a certificate pool. Weights keep participating until a **time-opened fee cap** is exhausted, a **sunset** hits, or the person exits. The implied €/certificate is a residue of a budget split, not a target, and is not published at mint. |
 | Does a default lifetime multiple `k × effort` invite a gold rush when a fat year is forecasted? | **Yes**, if that `k×` is open from the first vintage. A short payback then still pays the long-risk multiple. **Open the extra multiple only while a contribution lot stays unpaid.** First eligible vintage: cap = 1× documented effort. Later vintages raise the cap only if principal is still unpaid, up to `k×`, then freeze once 1× is paid. Lots minted in year `Y` first sit in vintage `Y+1` (record date). |
+| Does the fee cap put a euro **price on `p`**, so VAT/tax is due at grant? (`(k × hours × rate) / Δp`) | **No as a unit price.** The cap is on the **invoice versus documented effort `E_L`**, not on minted `p`. Same work, different mint dates, same cap, different `Δp` — so that quotient is not a property of `p`. A maximum is not consideration “to be received” (WBTW art. 26): if `P_t` is zero, nothing is owed. What *does* trigger the grant-time fact pattern is a published €/unit (`w`, `v = P/N`, or remaining `p` = remaining euros). Do not publish the quotient or book the cap as a receivable. Still a DVB hypothesis. |
 
 ---
 
@@ -136,6 +137,44 @@ Two different GA jobs get confused:
 Ex-post return still **scales with how well Refaqt is doing** (goal 4): good years have larger `P_t`, so opened caps fill faster. They do **not** jump to `k×` on the first fat invoice. That is not the GA targeting `v* = ROI × points / certificates`. If Refaqt does poorly, vintages are small or skipped and the opened cap is never reached. The extra multiple is compensation for **unpaid waiting**, not a default windfall.
 
 Do not publish `P_t / Σ W` as a certificate price. The contributor sees an **invoice amount**. If someone divides it by their weight, that is hindsight on a budget split, not a running FX rate at mint.
+
+### Does `(k × hours × rate) / Δp` price `p`?
+
+That arithmetic is the natural next objection: if you cannot invoice more than `k × E_L`, then one `p` looks “worth” `cap / Δp` euros, and VAT/PIT should attach at grant.
+
+It answers the wrong question. Three objects get mixed (the cheap-share dead-end used the first two at once; [cheap-share-route.md](cheap-share-route.md)):
+
+| Object | What it is | In this vintage model |
+| --- | --- | --- |
+| **Unit FX** | euros = `p` × a rate, the same rate for everyone at a date | **Not used.** No `w`, no `v = P/N`, no 1 `p` = €1 |
+| **Effort ceiling** | `pay ≤` opened cap on documented effort `E_L` (hours × frozen contractor band, or a task estimate) | **Used.** Arm’s-length brake (art. 49 WIB 92). Independent of how many `p` that lot minted |
+| **Ex-post return** | cash actually received / `E_L`, after the fact | Always exists once money has moved. Not a mint-time quote |
+
+The reconstruction of the flow is otherwise right: each year a budget `P_t` is split by share of eligible weights; a person cannot take more than the opened cap on that lot’s effort. Corrections that matter for tax:
+
+- `P_t` is a **solvency-checked budget**, not an automatic slice of revenue.
+- The cap is on **cumulative invoices for that lot**, not a per-year price of `p`.
+- The parked design does **not** open `k×` on day one. First eligible vintage: `1×`. Extra multiple only while principal is unpaid.
+
+Why `cap / Δp` is not a unit price of `p`:
+
+1. **It is not unique to `p`.** Two lots with the same `E_L` have the same euro cap and different `Δp` (early bird mints more weight). Alice (early, 2,000 `p`, `E = €5,000`, static `k = 3`) would “price” `p` at €7.50; Dana (late, 800 `p`, same work) at €18.75. A real unit price of `p` is the same for all outstanding certificates at a date (`v`, `w`, or 1 `p` = €1). This quotient just restates that early-bird lives in **weight**, not in a euro quote.
+2. **The payout formula never uses it.** `gross_i = P_t × W_i / Σ W`; `pay_i = min(gross_i, remaining cap)`. The cap **clips** a budget split. It does not convert certificates into euros. The rejected `N_cap` design *did* use a cap to *set* `v` so holders hit a target on points — that *is* pricing.
+3. **A ceiling is not a value.** WBTW art. 26 (and VAT Directive art. 73): the taxable amount is everything received or **to be received**. The cap is what you **cannot exceed**. If `P_t` is zero, or the GA skips the vintage, or the lot sunsets unpaid, the holder receives nothing. Taxing `k × E_L` at grant would tax money that may never be invoiced. Uncertainty of the *pool* is what [token-system.md](token-system.md) said helps; a running €/certificate rate is what hurts, because it answers “what is one certificate worth” even when the pool is €0. The effort cap does not answer that.
+4. **Time-opened: at grant you do not even know `k×`.** First vintage the ceiling is `1×`. It freezes there if 1× is paid. It opens toward `k×` only while unpaid. The formula `(k × E) / Δp` assumes the long-risk multiple is known and will be paid. That assumption is the [gold-rush](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md) the opening rule was written to kill.
+
+What *would* make this the grant-time fact pattern — and is why those routes were rejected:
+
+| Construction | Why it prices the mint |
+| --- | --- |
+| Publish or book `(k × E_L) / Δp` as €/`p` at contribution | A mark-to-market FPS can copy |
+| Choose `N_cap` so `v` hits `k × points` | The GA is targeting a euro value of points |
+| Remaining `p` *is* remaining euros (cheap-share burn/par) | Minting `p` *is* stating the euro claim |
+| Static `k×` open on day one plus a forecasted fat `P_t` | The cap starts to look like ascertainable consideration of ~`k×E`, not a hope |
+
+A contractor success-fee clause is the same object: “you share this year’s bonus pool; you cannot invoice more than 3× your quoted fee.” VAT attaches to the **invoice**, not to 3× at signing. Nobody treats `3× fee / hours` as the grant of a priced token.
+
+`p` is not worthless. The cap **bounds** lifetime euros from that lot. Belgian tax does not tax every bounded hope at grant; it taxes **ascertainable consideration**. The design claim is the narrower one: no published €/unit, no receivable, cap on the **work** not on `p`. That is still a **DVB hypothesis**, not a ruling. Do not describe `k` or `r` as a target return. DVB item **(i):** effort cap vs implied `€/p` at grant.
 
 ### Vacuuming without a euro rate `w`
 
@@ -294,6 +333,6 @@ Early-bird stays in **Δp**. A second early-bird in a rising `v` is the investme
 5. **Time-opened fee cap** per lot (1× at first eligibility; opens with `(1+r)` only while principal is unpaid, up to `k×`, then freeze). **Record date:** lots minted in year `Y` first sit in vintage `Y+1`. Sunset `T` may sit on top; it does not replace the opened cap.
 6. Leftover and unallocated profit are **Refaqt’s to invest**. Earmarked `P_t` is paid in year t.
 7. Option 2 wrapper: dienstenovereenkomst + QOLAB annex; invoice is the consideration. Do not mix a dividend story on the same instrument.
-8. Still a **pre-legal spec**. DVB questions to add: (e) same-year deduction of a default-in vintage; (f) forfeiture of opt-out / uninvoiced slices; (g) opened cap vs sunset as the bound; (h) time-opened fee cap vs interest / receivable.
+8. Still a **pre-legal spec**. DVB questions to add: (e) same-year deduction of a default-in vintage; (f) forfeiture of opt-out / uninvoiced slices; (g) opened cap vs sunset as the bound; (h) time-opened fee cap vs interest / receivable; (i) effort fee cap vs implied `€/p` at grant (`(k × E) / Δp`).
 
 Until those sign-offs exist, do not promise holders a unit price, a target ROI, a pot that “will be worth more if you wait”, or a default `k×` on a short payback.

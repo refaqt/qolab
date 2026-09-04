@@ -10,9 +10,10 @@ A unit price on a **stock** that grows, with burn-on-withdraw and no lapse, is a
 
 ## Prevention rule
 
-Do not give contribution certificates a euro spot price, including payout-time `v = pool / N`. Split **this year’s** budget across weights (default-in). Do not burn for taking a vintage. Do not recycle leftover into the certificate pot. Do not choose a denominator or a rate to hit a target ROI on points.
+Do not give contribution certificates a euro spot price, including payout-time `v = pool / N`. Split **this year’s** budget across weights (default-in). Do not burn for taking a vintage. Do not recycle leftover into the certificate pot. Do not choose a denominator or a rate to hit a target ROI on points. A fee cap on **documented effort** is not a unit price of `p`: do not treat `(k × E) / Δp` as a grant-time FX, and do not publish it.
 
 ## Related
 
 - [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md)
 - [docs/decisions/2026-09-03_vintage-pools-no-unit-price.md](../decisions/2026-09-03_vintage-pools-no-unit-price.md)
+- [docs/decisions/2026-09-04_fee-cap-not-unit-price.md](../decisions/2026-09-04_fee-cap-not-unit-price.md)

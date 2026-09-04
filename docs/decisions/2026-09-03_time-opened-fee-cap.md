@@ -31,5 +31,5 @@ Until counsel and an accountant say otherwise:
 - Long unpaid wait can still reach toward `k×`. That is the risk premium.
 - A forecasted boom is a sure bet on getting paid for work, not on `k×`.
 - Same-year invoiced vintages and the no-unit-`v` rules are unchanged.
-- Do not describe `r` as interest. DVB item **(h):** time-opened fee cap vs interest / receivable.
-- Next step: human review of (e)–(h), then regulation text.
+- Do not describe `r` as interest. DVB item **(h):** time-opened fee cap vs interest / receivable. DVB item **(i):** effort cap vs implied `€/p` at grant — [ADR 2026-09-04](2026-09-04_fee-cap-not-unit-price.md).
+- Next step: human review of (e)–(i). Packaging is parked; the cap-is-not-a-price analysis still binds a simpler option-2 fee cap.

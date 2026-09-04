@@ -1,7 +1,7 @@
 # ADR — Vintage pools instead of a unit certificate price
 
 - **Date:** 2026-09-03
-- **Status:** Proposed. **Amended by** [2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md) (how the fee ceiling opens). **Parked** (complexity) by [2026-09-04 cheap-share dead-end](2026-09-04_cheap-share-route-dead-end.md) — not rejected on the idle-pool / no-unit-`v` analysis.
+- **Status:** Proposed. **Amended by** [2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md) (how the fee ceiling opens) and [2026-09-04 effort cap is not a unit price of `p`](2026-09-04_fee-cap-not-unit-price.md). **Parked** (complexity) by [2026-09-04 cheap-share dead-end](2026-09-04_cheap-share-route-dead-end.md) — not rejected on the idle-pool / no-unit-`v` analysis.
 - **Amends:** payout mechanics in [2026-09-02](2026-09-02_tax-aware-contribution-credits.md) (still proposed). Does not accept option 1 vs 2; it says how cash leaves **if** the instrument is a contingent fee.
 
 ## Context
@@ -29,6 +29,7 @@ Until counsel and an accountant say otherwise:
 - Idle earmarked pots and coordinated runs go away if default-in and forfeiture are real.
 - Refaqt invests retained profit that was never in `P_t`; contributors receive cash as vintages run.
 - Ex-post returns still rise when Refaqt does well (`P_t` larger, opened caps fill faster) without a GA-set ROI price. A fat year does not jump a new lot to `k×`.
+- `(k × E) / Δp` is **not** a unit price of `p`. The effort cap clips invoices; it does not convert certificates. Clarified in [2026-09-04](2026-09-04_fee-cap-not-unit-price.md). DVB item **(i)**.
 - Round administration is heavier (default-in, deadlines, forfeiture).
 - Option 1 (dividend on a share class) remains a separate characterisation fight; vintages do not win it.
-- Next step: human review of same-year deduction, forfeiture, opened cap vs sunset, and DVB (h); then regulation text.
+- Next step: human review of same-year deduction, forfeiture, opened cap vs sunset, and DVB (h)–(i). Packaging is parked; the no-unit-`v` analysis still stands.

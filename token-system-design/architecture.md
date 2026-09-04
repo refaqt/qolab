@@ -8,7 +8,7 @@ QOLAB is a **contribution-credit system** for work on Refaqt projects. Design is
 
 Constraints that still bind: non-transferable weights minted with `p = c0 · c^k`; **no** euro quote of `dc/dp` and **no** unit `v = pool / N`; governance membership is separate from the reward; do not mix a dividend story and a fee on the same instrument.
 
-**Parked (complexity):** annual vintage budgets and the time-opened fee cap per lot — [vintage-pools.md](vintage-pools.md). The idle-pool analysis still stands; the packaging is too heavy for now.
+**Parked (complexity):** annual vintage budgets and the time-opened fee cap per lot — [vintage-pools.md](vintage-pools.md). The idle-pool analysis still stands; the packaging is too heavy for now. An effort-tied fee cap is **not** a unit price of `p` — [ADR 2026-09-04](../docs/decisions/2026-09-04_fee-cap-not-unit-price.md).
 
 **Dead-end:** cheap €1 shares whose number tracks `p`, with `p` as a euro dividend cap and burn-on-payout — [cheap-share-route.md](cheap-share-route.md). Rejected: [ADR 2026-09-04](../docs/decisions/2026-09-04_cheap-share-route-dead-end.md).
 
