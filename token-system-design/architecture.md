@@ -12,7 +12,7 @@ Constraints that still bind: non-transferable weights minted with `p = c0 · c^k
 
 **Dead-end:** cheap €1 shares whose number tracks `p`, with `p` as a euro dividend cap and burn-on-payout — [cheap-share-route.md](cheap-share-route.md). Rejected: [ADR 2026-09-04](../docs/decisions/2026-09-04_cheap-share-route-dead-end.md).
 
-**Next pass:** option 2 (contingent invoiced fee, points as weights) with **reduced complexity**. Belgian tax and corporate analysis: [token-system.md](token-system.md). Earlier contractor-credit proposal: [docs/decisions/2026-09-02_tax-aware-contribution-credits.md](../docs/decisions/2026-09-02_tax-aware-contribution-credits.md).
+**Next pass:** option 2 (contingent invoiced fee, points as weights) with **reduced complexity**. Working cap sketch: [docs/log/2026-09-04_option-2-effort-cap.md](../docs/log/2026-09-04_option-2-effort-cap.md) (points mint `p`; `f_ij` clips invoices; `P_t` is still the GA pool). Belgian tax and corporate analysis: [token-system.md](token-system.md). Earlier contractor-credit proposal: [docs/decisions/2026-09-02_tax-aware-contribution-credits.md](../docs/decisions/2026-09-02_tax-aware-contribution-credits.md).
 
 ## Intended flow (working constraints, payout not decided)
 
