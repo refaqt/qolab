@@ -1,6 +1,6 @@
 # Architecture
 
-QOLAB is a contribution-credit system for work on Refaqt projects. The live design draft lives in [`token-system-design/`](../token-system-design/) while the mechanics are still iterating. **No option is accepted yet.** Vintages are parked (complexity). The cheap-share / option-1 sketch is a **dead-end**. Next pass is option 2 with less machinery.
+QOLAB is a contribution-credit system for work on Refaqt projects. The live design draft lives in [`token-system-design/`](../token-system-design/) while the mechanics are still iterating. **No option is accepted yet.** Vintages are parked (complexity). Cheap-share and bonding-curve shares (cheap grant value + revenue mint) are **dead-ends**. Next pass is option 2 with less machinery.
 
 - Working overview: [token-system-design/architecture.md](../token-system-design/architecture.md)
 - Tax and company-law analysis: [token-system-design/token-system.md](../token-system-design/token-system.md)
@@ -9,7 +9,9 @@ QOLAB is a contribution-credit system for work on Refaqt projects. The live desi
 - Option-2 personal effort cap (working sketch): [docs/log/2026-09-04_option-2-effort-cap.md](log/2026-09-04_option-2-effort-cap.md)
 - Option-2 sketch that burns `S` against euros (**not** the next pass): [docs/log/2026-09-07_s-burn-euro-par.md](log/2026-09-07_s-burn-euro-par.md)
 - Cheap-share route (**dead-end**): [token-system-design/cheap-share-route.md](../token-system-design/cheap-share-route.md)
+- Bonding-curve shares with cheap grant value (**dead-end**): [docs/log/2026-09-07_bonding-curve-shares-dead-end.md](log/2026-09-07_bonding-curve-shares-dead-end.md)
 - Spreadsheet for the 2026-09-03 bonding-curve iteration: [token-system-design/2026-09-03_token-system-calculation.ods](../token-system-design/2026-09-03_token-system-calculation.ods)
+- Spreadsheet for the 2026-09-07 bonding-curve shares dead-end: [token-system-design/2026-09-07_token-system-calculation.ods](../token-system-design/2026-09-07_token-system-calculation.ods)
 
 Stack is not chosen yet. Default is an off-chain ledger.
 
