@@ -78,7 +78,7 @@ Three different “prices” get mixed. This route uses the first two at once.
 
 | Kind | This route | Vintage (parked, not this dead-end) |
 | --- | --- | --- |
-| **Unit FX** (conversion rate: euros per token) | 5,000 `p` burned per €5,000 → **1 `p` = €1** | No conversion rate. Budget `P_t` split across weights. No burn for taking the vintage. |
+| **Unit FX** (conversion rate: euros per token) | 5,000 `p` burned per €5,000 → **1 `p` = €1** | No conversion rate. Budget `P_t` split across weights. Amortize `p` by `alloc / rem` of remaining opened cap — not euros per token ([p-burn-remaining-cap.md](p-burn-remaining-cap.md)). |
 | **Ceiling** | Remaining `p` *is* remaining euros. Open in full on day one. | Ceiling is documented effort `E_L`, not minted `p`. Opens at 1×. |
 | **Ex-post return** | Always exists after the fact. | Same. |
 

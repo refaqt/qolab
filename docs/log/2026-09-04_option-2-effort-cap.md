@@ -15,7 +15,16 @@ remaining_i = min(Σ_j f_ij · (1 + r · max(0, t − t_j)),  k · Σ_j f_ij) �
 pay_i       = min(P_t · p_i / Σ p,  max(0, remaining_i))
 ```
 
-`P_t` stays a solvency-checked GA/board budget. The cap only **clips** invoices. Leftover of `P_t` goes to operating reserves. No burn of `p`.
+`P_t` stays a solvency-checked GA/board budget. The cap only **clips** invoices. Leftover of `P_t` goes to operating reserves. **Amended:** `p` is amortized against remaining opened cap — [ADR 2026-09-08](../decisions/2026-09-08_p-burn-remaining-cap.md). After `pay_i` / `alloc_i`:
+
+```
+if remaining_i <= 0:
+    p_i ← 0
+else:
+    p_i ← p_i · (remaining_i − alloc_i) / remaining_i
+```
+
+`alloc_i = min(P_t · p_i / Σ p, max(0, remaining_i))` (haircut even if the slice is forfeited). This log’s original “No burn of `p`” is withdrawn for that fraction; euro-par burns stay rejected.
 
 Two ledgers (aligned with [uniform points per hour](2026-09-04_points-per-hour-weight.md)):
 
@@ -36,7 +45,7 @@ Logging `f_ij` does **not** automatically trigger VAT/tax at that instant if `f`
 
 ## Decisions
 
-Proposed (not accepted): simpler option-2 cap on per-person `f_ij`; points ≠ `f`; `P_t` is not the cap; call `r` a parameter; do not describe or book the cap as a claim. Still bound by [ADR 2026-09-04 fee cap is not a unit price of `p`](../decisions/2026-09-04_fee-cap-not-unit-price.md) and [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md).
+Proposed (not accepted): simpler option-2 cap on per-person `f_ij`; points ≠ `f`; `P_t` is not the cap; call `r` a parameter; do not describe or book the cap as a claim. **Accepted later:** proportional `p` burn against remaining opened cap ([ADR 2026-09-08](../decisions/2026-09-08_p-burn-remaining-cap.md)). Still bound by [ADR 2026-09-04 fee cap is not a unit price of `p`](../decisions/2026-09-04_fee-cap-not-unit-price.md) and [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md).
 
 ## Open Questions
 

@@ -10,10 +10,12 @@ A unit price on a **stock** that grows, with burn-on-withdraw and no lapse, is a
 
 ## Prevention rule
 
-Do not give contribution certificates a euro spot price, including payout-time `v = pool / N`. Split **this year’s** budget across weights (default-in). Do not burn for taking a vintage. Do not recycle leftover into the certificate pot. Do not choose a denominator or a rate to hit a target ROI on points. A fee cap on **documented effort** is not a unit price of `p`: do not treat `(k × E) / Δp` as a grant-time conversion rate (unit FX: euros per token at mint), and do not publish it.
+Do not give contribution certificates a euro spot price, including payout-time `v = pool / N`. Split **this year’s** budget across weights (default-in). Do not burn at a **unit FX** (euros per token, the same for everyone) for taking a vintage. Do amortize `p` by the fraction of remaining opened cap just allocated ([ADR 2026-09-08](../decisions/2026-09-08_p-burn-remaining-cap.md)). Do not recycle leftover into the certificate pot. Do not choose a denominator or a rate to hit a target ROI on points. A fee cap on **documented effort** is not a unit price of `p`: do not treat `(k × E) / Δp` as a grant-time conversion rate (unit FX: euros per token at mint), and do not publish it. Do not leave paid-off `p` outstanding ([unburned `p` after the cap](2026-09-08_unburned-p-after-cap.md)).
 
 ## Related
 
 - [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md)
 - [docs/decisions/2026-09-03_vintage-pools-no-unit-price.md](../decisions/2026-09-03_vintage-pools-no-unit-price.md)
 - [docs/decisions/2026-09-04_fee-cap-not-unit-price.md](../decisions/2026-09-04_fee-cap-not-unit-price.md)
+- [docs/decisions/2026-09-08_p-burn-remaining-cap.md](../decisions/2026-09-08_p-burn-remaining-cap.md)
+- [docs/mistakes/2026-09-08_unburned-p-after-cap.md](2026-09-08_unburned-p-after-cap.md)

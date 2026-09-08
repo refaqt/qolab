@@ -18,7 +18,7 @@ Full note: [token-system-design/cheap-share-route.md](../../token-system-design/
 
 1. **Reject** the cheap-share route. Do not implement it. Do not use labour-quota €1 shares to dress a contribution reward as a dividend.
 2. **Reject** burning `p` at a euro par (5,000 `p` per €5,000 received, or 1 `p` = €1 as a remaining-dividend cap). That is a unit price on the mint.
-3. **Park** vintages and the time-opened fee cap. The no-unit-`v` / leftover-to-reserves / no-burn-for-taking-the-flow analysis still stands; the *packaging* is too heavy for now.
+3. **Park** vintages and the time-opened fee cap. The no-unit-`v` / leftover-to-reserves analysis still stands; the *packaging* is too heavy for now. “No burn for taking the flow” meant **no euro-par redemption**. Weight **is** amortized against remaining opened cap — [ADR 2026-09-08](2026-09-08_p-burn-remaining-cap.md).
 4. **Next pass:** option 2 (contingent invoiced fee, points as weights) with **reduced complexity**. Constraints that still bind: no euro par on `p`; no `v = pool / N`; an effort-tied fee cap is **not** a unit price of `p` ([ADR 2026-09-04](2026-09-04_fee-cap-not-unit-price.md)); do not mix dividend and fee on one instrument; governance share ≠ reward.
 
 ## Consequences

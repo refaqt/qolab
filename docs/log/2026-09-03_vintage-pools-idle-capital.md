@@ -8,7 +8,7 @@ The `v = pool / certificates issued` fallback (and `v = pool / capped N`) was ch
 
 ## Decisions
 
-Proposed (not accepted): no unit `v`; each year a vintage budget `P_t`; default-in; leftover to reserves; no burn for taking a vintage; ceiling and/or sunset; keep the mint curve as weights only. Double VenB is avoided only if the vintage is a same-year deductible fee (option 2).
+Proposed (not accepted): no unit `v`; each year a vintage budget `P_t`; default-in; leftover to reserves; ceiling and/or sunset; keep the mint curve as weights only. **Amended:** amortize `p` against remaining opened cap, not a euro par ([ADR 2026-09-08](../decisions/2026-09-08_p-burn-remaining-cap.md)). Double VenB is avoided only if the vintage is a same-year deductible fee (option 2).
 
 ## Open Questions
 
