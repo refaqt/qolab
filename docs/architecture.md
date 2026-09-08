@@ -1,12 +1,13 @@
 # Architecture
 
-QOLAB is a contribution-credit system for work on Refaqt projects. The live design draft lives in [`token-system-design/`](../token-system-design/) while the mechanics are still iterating. **No option is accepted yet.** Vintages are parked (complexity). Cheap-share and bonding-curve shares (cheap grant value + revenue mint) are **dead-ends**. Next pass is option 2 with less machinery.
+QOLAB is a contribution-credit system for work on Refaqt projects. The live design draft lives in [`token-system-design/`](../token-system-design/) while the mechanics are still iterating. **No option is accepted yet.** Vintages are parked (complexity). Cheap-share and bonding-curve shares (cheap grant value + revenue mint) are **dead-ends**. Next pass is option 2 with less machinery. **Accepted:** amortize `p` against remaining opened cap ([p-burn-remaining-cap.md](../token-system-design/p-burn-remaining-cap.md)).
 
 - Working overview: [token-system-design/architecture.md](../token-system-design/architecture.md)
 - Tax and company-law analysis: [token-system-design/token-system.md](../token-system-design/token-system.md)
 - Vintage pools (parked): [token-system-design/vintage-pools.md](../token-system-design/vintage-pools.md)
 - Why an effort fee cap is not a unit price of `p`: [docs/decisions/2026-09-04_fee-cap-not-unit-price.md](decisions/2026-09-04_fee-cap-not-unit-price.md)
 - Option-2 personal effort cap (working sketch): [docs/log/2026-09-04_option-2-effort-cap.md](log/2026-09-04_option-2-effort-cap.md)
+- Proportional burn of `p` against remaining opened cap (**accepted**): [token-system-design/p-burn-remaining-cap.md](../token-system-design/p-burn-remaining-cap.md), [ADR 2026-09-08](decisions/2026-09-08_p-burn-remaining-cap.md)
 - Option-2 sketch that burns `S` against euros (**not** the next pass): [docs/log/2026-09-07_s-burn-euro-par.md](log/2026-09-07_s-burn-euro-par.md)
 - Cheap-share route (**dead-end**): [token-system-design/cheap-share-route.md](../token-system-design/cheap-share-route.md). A 2026-09-08 variant (€0.10 vs €10, quota = `f(p)`, no burn) is the same rejection: [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md)
 - Bonding-curve shares with cheap grant value (**dead-end**): [docs/log/2026-09-07_bonding-curve-shares-dead-end.md](log/2026-09-07_bonding-curve-shares-dead-end.md)

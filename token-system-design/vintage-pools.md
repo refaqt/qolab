@@ -1,6 +1,6 @@
 # Vintage pools instead of a unit certificate price
 
-**Status: parked (complexity).** The idle-pool / no-unit-`v` analysis still stands. The lot / record-date / time-opened-cap packaging is too heavy to explain, so this is not the live spec. Do not replace it with cheap €1 shares — that route is a **dead-end** ([cheap-share-route.md](cheap-share-route.md), [ADR 2026-09-04](../docs/decisions/2026-09-04_cheap-share-route-dead-end.md)). Next pass is option 2 with less machinery.
+**Status: parked (complexity).** The idle-pool / no-unit-`v` analysis still stands. The lot / record-date / time-opened-cap packaging is too heavy to explain, so this is not the live spec. **Accepted on top:** amortize `p` against remaining opened cap ([p-burn-remaining-cap.md](p-burn-remaining-cap.md)). Do not replace this note with cheap €1 shares — that route is a **dead-end** ([cheap-share-route.md](cheap-share-route.md), [ADR 2026-09-04](../docs/decisions/2026-09-04_cheap-share-route-dead-end.md)). Next pass is option 2 with less machinery.
 
 Working design note on the idle-pool / wait-and-run problem that follows from `v = pool / certificates`, and on the gold rush that follows from a static `k×` ceiling. Companion to [token-system.md](token-system.md). This is **design input for counsel and an accountant**, not a ruling.
 
@@ -15,7 +15,7 @@ Working design note on the idle-pool / wait-and-run problem that follows from `v
 | Does `v = pool / (# certificates issued)` cause everyone to wait, then withdraw at once? | **Yes**, if redeeming burns certificates and leftover pool stays in the pot. Waiting is then a free option on pool growth. When `v` finally looks like a “decent ROI”, exercise is simultaneous. |
 | Does that trap a large unused pool and tax profit twice? | **Yes, if the money sits as retained earnings.** Refaqt pays VenB (20/25%) on profit that was never deducted. Later the contributor’s BV pays VenB again on what it receives. Immediate (same-year) distribution as a **deductible success fee** taxes the amount once, at the BV. That only happens if the money actually leaves (or is a certain payable) in the year the profit is earned. A low `v` that nobody will take prevents that. |
 | Does `v = pool / (capped number of certificates)` fix it? | **No.** It moves the price into the cap. The GA then either picks `C` arbitrarily, or picks `C` so that `v` hits a target ROI on contribution points — which **is** a euro price on the points, the grant-time tax problem. |
-| How do we get money out every year without pricing points or setting an ROI? | Stop defining a unit price on a **stock**. Each year the GA/board sets a **budget** `P_t` (this vintage only). Split `P_t` across eligible weights with **default-in**. Do not burn weights for taking the vintage. Leftover (opt-out, no invoice, over cap) goes to **operating reserves**, not back into a certificate pool. Weights keep participating until a **time-opened fee cap** is exhausted, a **sunset** hits, or the person exits. The implied €/certificate is a residue of a budget split, not a target, and is not published at mint. |
+| How do we get money out every year without pricing points or setting an ROI? | Stop defining a unit price on a **stock**. Each year the GA/board sets a **budget** `P_t` (this vintage only). Split `P_t` across eligible weights with **default-in**. Leftover (opt-out, no invoice, over cap) goes to **operating reserves**, not back into a certificate pool. Amortize `p` against remaining opened cap (`burned = p · alloc / rem`; `rem = 0` ⇒ `p = 0`) — [p-burn-remaining-cap.md](p-burn-remaining-cap.md). That is not a unit FX. Do not keep paid-off weight as a claim on later vintages. The implied €/certificate is a residue of a budget split, not a target, and is not published at mint. |
 | Does a default lifetime multiple `k × effort` invite a gold rush when a fat year is forecasted? | **Yes**, if that `k×` is open from the first vintage. A short payback then still pays the long-risk multiple. **Open the extra multiple only while a contribution lot stays unpaid.** First eligible vintage: cap = 1× documented effort. Later vintages raise the cap only if principal is still unpaid, up to `k×`, then freeze once 1× is paid. Lots minted in year `Y` first sit in vintage `Y+1` (record date). |
 | Does the fee cap put a euro **price on `p`**, so VAT/tax is due at grant? (`(k × hours × rate) / Δp`) | **No as a unit price.** The cap is on the **invoice versus documented effort `E_L`**, not on minted `p`. Same work, different mint dates, same cap, different `Δp` — so that quotient is not a property of `p`. A maximum is not consideration “to be received” (WBTW art. 26): if `P_t` is zero, nothing is owed. What *does* trigger the grant-time fact pattern is a published €/unit (`w`, `v = P/N`, or remaining `p` = remaining euros). Do not publish the quotient or book the cap as a receivable. Still a DVB hypothesis. |
 
@@ -104,7 +104,10 @@ each fiscal year t, after solvency:
      invoice in year t (VAT-exclusive) → pay
      leftover (opt-out, no invoice, over opened cap) → operating reserves
         NOT added to a future certificate pool
-     W_i is NOT burned for taking the vintage
+     amortize W: if rem <= 0 then W ← 0
+        else W ← W · (rem − alloc) / rem
+        (alloc haircuts even if the slice is forfeited)
+        same fraction per lot if lots exist — [p-burn-remaining-cap.md](p-burn-remaining-cap.md)
      retire a lot when its cap is exhausted, sunset hits, or the person exits
 ```
 
@@ -118,12 +121,12 @@ No `v` in the rules. No “how many certificates per euro”. The invoice is a s
 
 | Old stock model | Vintage model |
 | --- | --- |
-| Burn now vs burn later at a higher `v` | Taking this vintage does **not** spend the right to the next one |
+| Burn now vs burn later at a higher `v` | Taking this vintage does **not** sell certificates at a spot price. Weight **does** fall by `alloc / rem` of remaining opened cap ([p-burn-remaining-cap.md](p-burn-remaining-cap.md)) |
 | Leftover raises tomorrow’s `v` | Leftover goes to **reserves** (Refaqt can invest). Waiting does not fatten your pot |
-| Opt-in: you can sit out until `v` is fat | **Default-in:** sitting out is an opt-out, and that slice is **forfeited** |
+| Opt-in: you can sit out until `v` is fat | **Default-in:** sitting out is an opt-out; that slice is **forfeited** and still haircuts `p` |
 | Pool is a growing stock | `P_t` is a **flow**. Miss year t, that flow is gone |
 
-Time value of money then says: take each vintage up to the **opened** cap. That is the opposite of a run. Waiting does not fatten tomorrow’s pot; it only opens more cap if this lot is still unpaid.
+Time value of money then says: take each vintage up to the **opened** cap. Waiting does not fatten tomorrow’s pot; it only opens more cap if this lot is still unpaid. Skipping a thin year to keep `p` is closed by the haircut on `alloc`.
 
 ### Why this does not price contribution points
 
@@ -159,7 +162,7 @@ The reconstruction of the flow is otherwise right: each year a budget `P_t` is s
 Why `cap / Δp` is not a unit price of `p`:
 
 1. **It is not unique to `p`.** Two lots with the same `E_L` have the same euro cap and different `Δp` (early bird mints more weight). Alice (early, 2,000 `p`, `E = €5,000`, static `k = 3`) would “price” `p` at €7.50; Dana (late, 800 `p`, same work) at €18.75. A real unit price of `p` is the same for all outstanding certificates at a date (`v`, `w`, or 1 `p` = €1). This quotient just restates that early-bird lives in **weight**, not in a euro quote.
-2. **The payout formula never uses it.** `gross_i = P_t × W_i / Σ W`; `pay_i = min(gross_i, remaining cap)`. The cap **clips** a budget split. It does not convert certificates into euros. The rejected `N_cap` design *did* use a cap to *set* `v` so holders hit a target on points — that *is* pricing.
+2. **The payout formula never uses a unit €/`p`.** `gross_i = P_t × W_i / Σ W`; `pay_i = min(gross_i, remaining cap)`. The cap **clips** a budget split. The accepted burn then retires the **fraction** `alloc / rem` of that person’s (or lot’s) weight ([p-burn-remaining-cap.md](p-burn-remaining-cap.md)). That is not converting certificates at a rate that is the same for everyone. The rejected `N_cap` design *did* use a cap to *set* `v` so holders hit a target on points — that *is* pricing.
 3. **A ceiling is not a value.** WBTW art. 26 (and VAT Directive art. 73): the taxable amount is everything received or **to be received**. The cap is what you **cannot exceed**. If `P_t` is zero, or the GA skips the vintage, or the lot sunsets unpaid, the holder receives nothing. Taxing `k × E_L` at grant would tax money that may never be invoiced. Uncertainty of the *pool* is what [token-system.md](token-system.md) said helps; a running €/certificate rate is what hurts, because it answers “what is one certificate worth” even when the pool is €0. The effort cap does not answer that.
 4. **Time-opened: at grant you do not even know `k×`.** First vintage the ceiling is `1×`. It freezes there if 1× is paid. It opens toward `k×` only while unpaid. The formula `(k × E) / Δp` assumes the long-risk multiple is known and will be paid. That assumption is the [gold-rush](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md) the opening rule was written to kill.
 
@@ -202,7 +205,7 @@ That is still not setting `v` so that people *realise* a target ROI:
 
 Sunset `T` can stay as a **second** bound: lots lapse after `T` vintages. It does not replace the opened cap; a fat year inside `T` would still fill a static `k×`.
 
-Unlimited lifetime share of every future `P_t` (no opened cap, no sunset, no burn) is an equity-like stream. Do not leave that open.
+Unlimited lifetime share of every future `P_t` (no opened cap, no sunset, no burn) is an equity-like stream. Do not leave that open. Paid-off `p` must not remain as seniority on later work ([unburned `p` after the cap](../docs/mistakes/2026-09-08_unburned-p-after-cap.md)).
 
 **Rejected as the default** (they do not tie the multiple to payback, or they reprice points):
 
@@ -231,7 +234,9 @@ Ten people, equal weights (1,000 each, 10,000 outstanding). Policy: half of prof
 
 Until year 3 the €135,000 is earmarked and idle. If it sat as retained earnings, Refaqt already paid VenB on the underlying profit. The BVs are taxed when they finally invoice. That is the double layer.
 
-### Vintage split, default-in, no burn, leftover to reserves
+### Vintage split, default-in, leftover to reserves
+
+(Cash path unchanged if nobody hits a cap. Weight then falls by `alloc / rem`; see [p-burn-remaining-cap.md](p-burn-remaining-cap.md).)
 
 | Year | `P_t` | Each invoice | Refaqt reinvests (the other half) | Trapped certificate pool |
 | --- | --- | --- | --- | --- |
@@ -318,6 +323,7 @@ VAT: invoice in year t; pool specified **VAT-exclusive** (already in the 2026-09
 | Members for **governance** (small cash share) | Leftover recycling into the certificate pot |
 | Employees on euro payroll | Opt-in + burn-on-withdraw as the default cash-out |
 | Time-opened cap on unpaid lots | Waiting-is-rewarded as a second early-bird |
+| Amortize `p` by `alloc / rem` of remaining opened cap | Paid-off `p` kept as seniority on later vintages |
 | | Static `k × effort` open from the first vintage |
 
 Early-bird stays in **Δp**. A second early-bird in a rising `v` is the investment story.
@@ -329,10 +335,10 @@ Early-bird stays in **Δp**. A second early-bird in a rising `v` is the investme
 1. One instrument: non-transferable **weights** (call them certificates internally if you want; they must not have a euro par or a public `v`).
 2. **Vintage budget** `P_t`, not a stock pot. Policy `%` and reserves are GA/board; not an automatic 10% of turnover.
 3. **Default-in**, short opt-out. No invoice by the stated date → that allocation **forfeits to reserves**.
-4. **No burn** for taking a vintage. Retire a lot when its opened cap is exhausted, sunset hits, or the person exits.
+4. **Amortize `p`** against remaining opened cap (`burned = p · alloc / rem`; `rem = 0` ⇒ `p = 0`). Haircut on allocated amount, including forfeit. Do **not** burn at a euro par. Sunset or exit also retire. [p-burn-remaining-cap.md](p-burn-remaining-cap.md).
 5. **Time-opened fee cap** per lot (1× at first eligibility; opens with `(1+r)` only while principal is unpaid, up to `k×`, then freeze). **Record date:** lots minted in year `Y` first sit in vintage `Y+1`. Sunset `T` may sit on top; it does not replace the opened cap.
 6. Leftover and unallocated profit are **Refaqt’s to invest**. Earmarked `P_t` is paid in year t.
 7. Option 2 wrapper: dienstenovereenkomst + QOLAB annex; invoice is the consideration. Do not mix a dividend story on the same instrument.
-8. Still a **pre-legal spec**. DVB questions to add: (e) same-year deduction of a default-in vintage; (f) forfeiture of opt-out / uninvoiced slices; (g) opened cap vs sunset as the bound; (h) time-opened fee cap vs interest / receivable; (i) effort fee cap vs implied `€/p` at grant (`(k × E) / Δp`).
+8. Still a **pre-legal spec**. DVB questions to add: (e) same-year deduction of a default-in vintage; (f) forfeiture of opt-out / uninvoiced slices; (g) opened cap vs sunset as the bound; (h) time-opened fee cap vs interest / receivable; (i) effort fee cap vs implied `€/p` at grant (`(k × E) / Δp`); (j) proportional `p` burn against remaining opened cap vs remaining consideration.
 
 Until those sign-offs exist, do not promise holders a unit price, a target ROI, a pot that “will be worth more if you wait”, or a default `k×` on a short payback.

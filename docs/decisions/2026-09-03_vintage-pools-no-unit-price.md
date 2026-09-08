@@ -1,7 +1,7 @@
 # ADR — Vintage pools instead of a unit certificate price
 
 - **Date:** 2026-09-03
-- **Status:** Proposed. **Amended by** [2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md) (how the fee ceiling opens) and [2026-09-04 effort cap is not a unit price of `p`](2026-09-04_fee-cap-not-unit-price.md). **Parked** (complexity) by [2026-09-04 cheap-share dead-end](2026-09-04_cheap-share-route-dead-end.md) — not rejected on the idle-pool / no-unit-`v` analysis.
+- **Status:** Proposed. **Amended by** [2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md) (how the fee ceiling opens), [2026-09-04 effort cap is not a unit price of `p`](2026-09-04_fee-cap-not-unit-price.md), and [2026-09-08 proportional `p` burn](2026-09-08_p-burn-remaining-cap.md) (amortize weight against remaining opened cap; not a euro par). **Parked** (complexity) by [2026-09-04 cheap-share dead-end](2026-09-04_cheap-share-route-dead-end.md) — not rejected on the idle-pool / no-unit-`v` analysis.
 - **Amends:** payout mechanics in [2026-09-02](2026-09-02_tax-aware-contribution-credits.md) (still proposed). Does not accept option 1 vs 2; it says how cash leaves **if** the instrument is a contingent fee.
 
 ## Context
@@ -19,7 +19,7 @@ Until counsel and an accountant say otherwise:
 1. **Do not** use `v = pool / N_issued` or `v = pool / N_cap`, and **do not** choose `N_cap` or `v` to target an ROI on contribution points.
 2. The GA/board sets each year’s **budget** `P_t` (waterfall + solvency + reserves), not a certificate price. Unallocated profit is Refaqt’s to invest.
 3. Distribution is a **vintage**: default-in; invoice in the same fiscal year; leftover (opt-out, no invoice, over the opened cap) goes to **operating reserves**, not back into a certificate pool.
-4. Weights are **not burned** for taking a vintage. Retire only on a **time-opened fee cap** and/or **sunset**, or on exit. The cap itself is defined in [2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md) — not a static `k × effort` from the first vintage.
+4. Weights are **not burned at a euro par** for taking a vintage (`w`, `v = P/N`, 1 `p` = €1). **Do** amortize `p` against remaining opened cap: `burned = p · (alloc / rem)`; `rem = 0` ⇒ `p = 0` — [ADR 2026-09-08](2026-09-08_p-burn-remaining-cap.md). Retire also on sunset or exit. The cap itself is defined in [2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md) — not a static `k × effort` from the first vintage.
 5. Keep the mint `p = c0 · c^k` as a weight function. Do not quote €/certificate at mint or as a running withdrawal rate.
 6. Same-year invoiced vintages are what make option 2 avoid double VenB. Vintages do not by themselves make a points-minted right into a dividend.
 

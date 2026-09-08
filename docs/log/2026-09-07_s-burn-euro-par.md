@@ -22,7 +22,7 @@ Pro-rata of an unknown pool (`R_i = P_t · S_i / Σ S`) is only this vintage’s
 
 `dS = a · dC` then makes `a` a €/point mint. If year-1 `a = 1`, grant is “1 point → €1 of remaining claim.” If `P_t > Σ S`, `S_i − R_i` goes negative unless clipped; clipping makes the par louder (euro cap, open on day one → gold rush at about `a ×` points-as-euros).
 
-What would **not** price `S`: keep it as a dimensionless weight; split `P_t` by share of `S`; do **not** burn `S` for taking the vintage. Retire via a documented-effort ceiling, sunset, or exit. An effort cap on the **invoice** is not a unit FX of `S` (it does not convert tokens into euros).
+What would **not** price `S`: keep it as a dimensionless weight; split `P_t` by share of `S`; amortize that weight by the fraction of remaining opened cap just allocated (`p · alloc / rem`), not by subtracting euros ([p-burn-remaining-cap.md](../../token-system-design/p-burn-remaining-cap.md)). An effort cap on the **invoice** is not a unit FX of `S` (it does not convert tokens into euros).
 
 ### Can `S` be transferable?
 

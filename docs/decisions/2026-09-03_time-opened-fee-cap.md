@@ -6,7 +6,7 @@
 
 ## Context
 
-Vintages stop wait-and-run: each year a budget `P_t`, default-in, no burn, leftover to reserves. They still handed every contributor a lifetime ceiling `k × documented effort` from the first vintage. A sudden fat `P_t` fills that multiple in one invoice. When a boom is forecasted, contributing is a sure bet on a high multiple — even if the payback period is a few months.
+Vintages stop wait-and-run: each year a budget `P_t`, default-in, leftover to reserves (no unit `v`). Weight is amortized against remaining opened cap ([ADR 2026-09-08](2026-09-08_p-burn-remaining-cap.md)), which is not a euro par. They still handed every contributor a lifetime ceiling `k × documented effort` from the first vintage. A sudden fat `P_t` fills that multiple in one invoice. When a boom is forecasted, contributing is a sure bet on a high multiple — even if the payback period is a few months.
 
 The mint curve `p = c0 · c^k` only changes weight. A late lot still mints `Δp` and races to the same `k×`. A blended per-person ceiling lets last week’s work inherit years of “waited” cap.
 
