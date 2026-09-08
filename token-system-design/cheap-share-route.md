@@ -18,10 +18,14 @@ This is **design input for counsel and an accountant**, not a ruling. Companion 
 | --- | --- |
 | Can a CV issue €1 shares, let contribution points set how many you may buy, pay dividends, and force a sell-down as cash is received? | **On paper, probably yes** (statutes, share class, GA distribution, cooperative withdrawal / own-share rules). Counsel still has to check WVV issuance, equality of members, and whether the real contribution is **inbreng in nijverheid** (art. 1:8 WVV) that must be valued. |
 | Can we rely on “no tax at grant, 30% dividend only, no VAT, no RSZ”? | **No.** Share *count* tracks labour. Cash inbreng is €1; economic cap is €5,000 per share. That is the option-1 characterisation the tax note already rejected: allocation that looks like capital, not points. Routing points through cheap shares makes the labour-for-equity facts **louder**, not quieter. |
-| Does burning `p` for dividend received put a price on contributions? | **Yes.** 5,000 `p` per €5,000 received is **1 `p` = €1**. Defining `p` as a euro dividend cap already prices the mint; the burn only operates the FX. Same family as the rejected U = €1 peg and `w = dc/dp`. |
+| Does burning `p` for dividend received put a price on contributions? | **Yes.** 5,000 `p` per €5,000 received is **1 `p` = €1**. Defining `p` as a euro dividend cap already prices the mint; the burn only operates that conversion (the **unit FX**: a published euros-per-token rate, like a foreign-exchange rate). Same family as the rejected U = €1 peg and `w = dc/dp`. |
 | Does this avoid vintage complexity? | The *story* is simpler. The *legal form* is more entangled (shares + `p` + forced buyback + dividends + bonding curve). It also reopens a day-one lifetime euro ceiling and “wait for the fat year” if the GA can retain earnings. |
 
 **Can you implement it like this?** The ledger and statutory sell-down can be written. The legal wrapper “cheap cooperative share, voluntary work, tax only 30% at cash-out” is the part that likely does **not** survive. Treat this document as a **rejected spec**.
+
+### 2026-09-08 variant (€0.10 vs €10, no cap)
+
+Still this dead-end. Sketch: class A at €0.10, members buy up to a quota set by `p`; class B at €10 for investors; dividend by number of shares; private-person shareholders; no euro cap or burn of `p`. A 0.1 vs 1,000 split was dropped as too extreme; 0.1 vs 10 is the same labour-quota mapping with a 100:1 issue-price gap (one `p` plus ten cents gets the same dividend as €10 of B capital). Company law can write two classes. Option 1 still fails because share *count* tracks work. Session: [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md).
 
 ---
 
@@ -74,13 +78,13 @@ Three different “prices” get mixed. This route uses the first two at once.
 
 | Kind | This route | Vintage (parked, not this dead-end) |
 | --- | --- | --- |
-| **Unit FX** (euros per token) | 5,000 `p` burned per €5,000 → **1 `p` = €1** | No FX. Budget `P_t` split across weights. No burn for taking the vintage. |
+| **Unit FX** (conversion rate: euros per token) | 5,000 `p` burned per €5,000 → **1 `p` = €1** | No conversion rate. Budget `P_t` split across weights. No burn for taking the vintage. |
 | **Ceiling** | Remaining `p` *is* remaining euros. Open in full on day one. | Ceiling is documented effort `E_L`, not minted `p`. Opens at 1×. |
 | **Ex-post return** | Always exists after the fact. | Same. |
 
 Belgian VAT and income tax look at ascertainable value, not at the word “cap.” At mint a holder can say: “I received 51,000 `p`, each of which can become €1 of dividend if the GA distributes.” That is a mark-to-market of the *ceiling*. The bonding curve then prices **work in euros**, not only in weight: Alex’s 50,000 points mint a €51,000 cap; Bill’s 40,000 points mint a €39,000 cap.
 
-A fee cap tied to **documented effort** is a different object: it bounds an invoice so the fee stays near the work (art. 49 WIB 92 / arm’s length). It is not a quote of `p`. Dividing that cap by `Δp` (`(k × E) / Δp`) does **not** turn it into a unit FX — same work, different mint dates, same cap, different implied €/`p`. Full argument: [vintage-pools.md](vintage-pools.md) (“Does `(k × hours × rate) / Δp` price `p`?”). Here `p` *is* the euro cap, so minting `p` *is* stating the euro value of that contribution’s remaining claim.
+A fee cap tied to **documented effort** is a different object: it bounds an invoice so the fee stays near the work (art. 49 WIB 92 / arm’s length). It is not a quote of `p`. Dividing that cap by `Δp` (`(k × E) / Δp`) does **not** turn it into a unit FX (euros per token) — same work, different mint dates, same cap, different implied €/`p`. Full argument: [vintage-pools.md](vintage-pools.md) (“Does `(k × hours × rate) / Δp` price `p`?”). Here `p` *is* the euro cap, so minting `p` *is* stating the euro value of that contribution’s remaining claim.
 
 Burn-on-payout also reopens stock-model incentives even without an earmarked pot: taking this year’s dividend **shrinks next year’s share count**. If a fat year is visible, holders want the GA to **retain** earnings so they keep shares for the jackpot, then hit the full `p` cap in one go.
 
@@ -118,6 +122,7 @@ It tried to make option 1 *look* true by inserting a €1 share between the poin
 
 - Cheap extra shares as the reward vehicle.
 - Any 1 `p` = €1 (or 5,000 `p` per €5,000) burn, cap, or par.
+- Two-class €0.10 / €10 shares with a `p` quota and dividend per share ([2026-09-08](../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
 - Inbreng in nijverheid as a tax shelter (it is a valuation event).
 - VVPRbis on €1 labour-quota shares.
 

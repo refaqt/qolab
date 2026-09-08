@@ -8,7 +8,7 @@ QOLAB is a contribution-credit system for work on Refaqt projects. The live desi
 - Why an effort fee cap is not a unit price of `p`: [docs/decisions/2026-09-04_fee-cap-not-unit-price.md](decisions/2026-09-04_fee-cap-not-unit-price.md)
 - Option-2 personal effort cap (working sketch): [docs/log/2026-09-04_option-2-effort-cap.md](log/2026-09-04_option-2-effort-cap.md)
 - Option-2 sketch that burns `S` against euros (**not** the next pass): [docs/log/2026-09-07_s-burn-euro-par.md](log/2026-09-07_s-burn-euro-par.md)
-- Cheap-share route (**dead-end**): [token-system-design/cheap-share-route.md](../token-system-design/cheap-share-route.md)
+- Cheap-share route (**dead-end**): [token-system-design/cheap-share-route.md](../token-system-design/cheap-share-route.md). A 2026-09-08 variant (€0.10 vs €10, quota = `f(p)`, no burn) is the same rejection: [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md)
 - Bonding-curve shares with cheap grant value (**dead-end**): [docs/log/2026-09-07_bonding-curve-shares-dead-end.md](log/2026-09-07_bonding-curve-shares-dead-end.md)
 - Spreadsheet for the 2026-09-03 bonding-curve iteration: [token-system-design/2026-09-03_token-system-calculation.ods](../token-system-design/2026-09-03_token-system-calculation.ods)
 - Spreadsheet for the 2026-09-07 bonding-curve shares dead-end: [token-system-design/2026-09-07_token-system-calculation.ods](../token-system-design/2026-09-07_token-system-calculation.ods)

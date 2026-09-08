@@ -24,6 +24,6 @@ Full note: [token-system-design/cheap-share-route.md](../../token-system-design/
 ## Consequences
 
 - A simpler story that fails characterisation is not an improvement on a correct-but-heavy option-2 vintage.
-- Option 1 remains available only if allocation looks like **capital / membership**, not contribution points. Cheap extra shares whose number tracks points do not get there.
+- Option 1 remains available only if allocation looks like **capital / membership**, not contribution points. Cheap extra shares whose number tracks points do not get there. A 2026-09-08 variant (€0.10 contributor shares vs €10 investor shares, quota = `f(p)`, dividend per share, no burn) is the same rejection — [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](../log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md).
 - Inbreng in nijverheid, done honestly, is a share-valuation event — often worse than a contingent fee — not a shelter.
 - Next write-up should strip vintage machinery, not reintroduce a par or a share-quota.

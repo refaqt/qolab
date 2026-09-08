@@ -8,7 +8,7 @@ Parked vintages: the time-opened fee cap per lot is too complicated to explain. 
 
 ## Decisions
 
-Rejected (dead-end): cheap extra shares as the reward; 1 `p` = €1 as cap or burn FX; labour-quota shares as a path to 30% dividend treatment. Parked (complexity, not merits): vintage `P_t` + time-opened lots. Next pass is option 2 with less machinery. Constraints that still bind: no euro par on `p`; no unit `v`; do not mix dividend and fee on one instrument; governance share ≠ reward.
+Rejected (dead-end): cheap extra shares as the reward; 1 `p` = €1 as cap or burn conversion rate (unit FX: euros per token retired); labour-quota shares as a path to 30% dividend treatment. Parked (complexity, not merits): vintage `P_t` + time-opened lots. Next pass is option 2 with less machinery. Constraints that still bind: no euro par on `p`; no unit `v`; do not mix dividend and fee on one instrument; governance share ≠ reward.
 
 ## Open Questions
 
