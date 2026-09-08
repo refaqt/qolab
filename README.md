@@ -22,5 +22,6 @@ Humans on Windows may double-click `setup-tooling.bat` instead.
 - [token-system-design/token-system.md](token-system-design/token-system.md) — Belgian tax/legal analysis of the contribution-credit system
 - [token-system-design/vintage-pools.md](token-system-design/vintage-pools.md) — why not `v = pool / N` (parked: complexity)
 - [token-system-design/p-burn-remaining-cap.md](token-system-design/p-burn-remaining-cap.md) — amortize `p` against remaining opened cap (**accepted**)
+- [token-system-design/nested-mint-budgets.md](token-system-design/nested-mint-budgets.md) — nested mint budgets for sub-projects (**accepted**)
 - [token-system-design/cheap-share-route.md](token-system-design/cheap-share-route.md) — cheap €1 shares as a dividend wrapper (**dead-end**)
 - [docs/log/2026-09-07_bonding-curve-shares-dead-end.md](docs/log/2026-09-07_bonding-curve-shares-dead-end.md) — steep bonding-curve shares with cheap grant value (**dead-end**)

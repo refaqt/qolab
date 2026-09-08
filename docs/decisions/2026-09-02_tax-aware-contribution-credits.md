@@ -1,7 +1,7 @@
 # ADR — Tax-aware contribution credits (Belgium)
 
 - **Date:** 2026-09-02
-- **Status:** Proposed. Payout packaging: vintages [parked](2026-09-04_cheap-share-route-dead-end.md) (complexity); cheap-share option-1 wrapper [rejected](2026-09-04_cheap-share-route-dead-end.md). Next pass is simpler option 2.
+- **Status:** Proposed. Payout packaging: vintages [parked](2026-09-04_cheap-share-route-dead-end.md) (complexity); cheap-share option-1 wrapper [rejected](2026-09-04_cheap-share-route-dead-end.md). Next pass is simpler option 2. Sub-project mint: nested mint budgets [accepted](2026-09-08_nested-mint-budgets.md).
 
 ## Context
 

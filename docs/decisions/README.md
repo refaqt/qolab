@@ -11,3 +11,4 @@ Architecture Decision Records. One file per decision: `YYYY-MM-DD_topic.md`.
 | 2026-09-04 | [Effort fee cap is not a unit price of `p`](2026-09-04_fee-cap-not-unit-price.md) |
 | 2026-09-07 | [Bonding-curve shares with cheap grant value is a dead-end](2026-09-07_bonding-curve-shares-dead-end.md) |
 | 2026-09-08 | [Proportional burn of `p` against remaining opened cap](2026-09-08_p-burn-remaining-cap.md) |
+| 2026-09-08 | [Nested mint budgets for sub-projects](2026-09-08_nested-mint-budgets.md) |
