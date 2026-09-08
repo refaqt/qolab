@@ -23,4 +23,5 @@ Accepted (design) for sub-projects: nested mint budgets as above. Does not accep
 ## Next Steps
 
 - Keep this mint route in the option-2 spec (two levels, linear `p_j` first).
+- Open fork on how local weight sunsets / whether the sub-project takes euros: [nested `p` sunset two directions](2026-09-08_nested-p-sunset-two-directions.md) (next analysis: project-as-contractor).
 - Counsel + accountant on (a)–(d), (i), (j), and (k)–(n).

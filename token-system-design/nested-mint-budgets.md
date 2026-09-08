@@ -122,6 +122,7 @@ Two levels are enough to start. Deeper nesting is the same protocol (a project i
 - Unused budget expires vs rolls (default: expire).
 - Depth of nesting beyond two levels.
 - Whether a local bonding curve is ever worth it inside a small team.
+- **Open fork (not this ADR):** how local weight sunsets, and whether the sub-project takes parent `p` or euros — [docs/log/2026-09-08_nested-p-sunset-two-directions.md](../docs/log/2026-09-08_nested-p-sunset-two-directions.md). Next analysis is project-as-contractor. Does not un-accept this mint gate.
 
 ---
 
