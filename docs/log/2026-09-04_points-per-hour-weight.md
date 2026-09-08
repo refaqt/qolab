@@ -10,7 +10,7 @@ Asked whether minting contribution points from time spent risks a euro reclassif
 
 Proposed (not accepted): **100 points per hour for every contributor is fine as a weight scale.** It only renames hours. It does not by itself give points or `p` a euro value.
 
-What still prices the points (and then infects `p`) is coupling that scale to a market wage — e.g. choosing 100 points/hour *because* the job is €100/hour, or writing industry €/hour into the points rule. Keep industry rates **off** the points rule. Hours × a contractor band stay an **invoice ceiling** at cash-out, not a grant-time FX. Related: [ADR 2026-09-04 fee cap is not a unit price of `p`](../decisions/2026-09-04_fee-cap-not-unit-price.md).
+What still prices the points (and then infects `p`) is coupling that scale to a market wage — e.g. choosing 100 points/hour *because* the job is €100/hour, or writing industry €/hour into the points rule. Keep industry rates **off** the points rule. Hours × a contractor band stay an **invoice ceiling** at cash-out, not a grant-time conversion rate (euros per token at mint). Related: [ADR 2026-09-04 fee cap is not a unit price of `p`](../decisions/2026-09-04_fee-cap-not-unit-price.md).
 
 Time-based points are still **labour**, not a volunteer or dividend story. Option 1 stays the weak box. Next pass remains option 2.
 

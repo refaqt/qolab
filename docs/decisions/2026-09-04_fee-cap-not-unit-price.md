@@ -19,7 +19,7 @@ Full argument: [token-system-design/vintage-pools.md](../../token-system-design/
 
 Until counsel and an accountant (and preferably a DVB ruling) say otherwise:
 
-1. A fee cap on **documented effort** `E_L` (hours × frozen contractor band, or a task estimate) is an **invoice ceiling**, not a unit FX of `p`. The next option-2 spec may keep such a cap.
+1. A fee cap on **documented effort** `E_L` (hours × frozen contractor band, or a task estimate) is an **invoice ceiling**, not a unit FX of `p` (not a conversion rate of euros per token). The next option-2 spec may keep such a cap.
 2. **Do not** treat `(k × E_L) / Δp` as the price of `p`. Do not publish it at mint. Do not book the cap as a receivable.
 3. What *does* price the mint, and stays rejected: a published €/unit (`w`, `v = P/N`), remaining `p` as remaining euros, or choosing a denominator so holders hit a target on points.
 4. Ask DVB item **(i)** explicitly: effort-tied fee cap versus implied `€/p` at grant.

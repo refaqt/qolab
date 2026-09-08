@@ -18,11 +18,11 @@ Three questions.
 
 **Yes. It puts a par of 1 `S` = €1.** Uncertainty of this year’s `P_t` does not undo that.
 
-Pro-rata of an unknown pool (`R_i = P_t · S_i / Σ S`) is only this vintage’s budget split. That residue, by itself, is what vintages already accepted. Subtracting **euros** from `S` is a **unit FX**: each euro invoiced retires one `S`. Remaining `S` is remaining euros if later pools cover the stock. Same class of fact as burning 5,000 `p` per €5,000 ([cheap-share euro par](../mistakes/2026-09-04_cheap-share-euro-par.md)) and as remaining `p` = remaining euros ([ADR 2026-09-04](../decisions/2026-09-04_fee-cap-not-unit-price.md)).
+Pro-rata of an unknown pool (`R_i = P_t · S_i / Σ S`) is only this vintage’s budget split. That residue, by itself, is what vintages already accepted. Subtracting **euros** from `S` is a **unit FX** (a conversion rate, like a foreign-exchange rate: each euro invoiced retires one `S`). Remaining `S` is remaining euros if later pools cover the stock. Same class of fact as burning 5,000 `p` per €5,000 ([cheap-share euro par](../mistakes/2026-09-04_cheap-share-euro-par.md)) and as remaining `p` = remaining euros ([ADR 2026-09-04](../decisions/2026-09-04_fee-cap-not-unit-price.md)).
 
 `dS = a · dC` then makes `a` a €/point mint. If year-1 `a = 1`, grant is “1 point → €1 of remaining claim.” If `P_t > Σ S`, `S_i − R_i` goes negative unless clipped; clipping makes the par louder (euro cap, open on day one → gold rush at about `a ×` points-as-euros).
 
-What would **not** price `S`: keep it as a dimensionless weight; split `P_t` by share of `S`; do **not** burn `S` for taking the vintage. Retire via a documented-effort ceiling, sunset, or exit. An effort cap on the **invoice** is not a unit FX of `S`.
+What would **not** price `S`: keep it as a dimensionless weight; split `P_t` by share of `S`; do **not** burn `S` for taking the vintage. Retire via a documented-effort ceiling, sunset, or exit. An effort cap on the **invoice** is not a unit FX of `S` (it does not convert tokens into euros).
 
 ### Can `S` be transferable?
 

@@ -136,17 +136,17 @@ Two different GA jobs get confused:
 
 Ex-post return still **scales with how well Refaqt is doing** (goal 4): good years have larger `P_t`, so opened caps fill faster. They do **not** jump to `k×` on the first fat invoice. That is not the GA targeting `v* = ROI × points / certificates`. If Refaqt does poorly, vintages are small or skipped and the opened cap is never reached. The extra multiple is compensation for **unpaid waiting**, not a default windfall.
 
-Do not publish `P_t / Σ W` as a certificate price. The contributor sees an **invoice amount**. If someone divides it by their weight, that is hindsight on a budget split, not a running FX rate at mint.
+Do not publish `P_t / Σ W` as a certificate price. The contributor sees an **invoice amount**. If someone divides it by their weight, that is hindsight on a budget split, not a running conversion rate (unit FX: euros per token) at mint.
 
 ### Does `(k × hours × rate) / Δp` price `p`?
 
 That arithmetic is the natural next objection: if you cannot invoice more than `k × E_L`, then one `p` looks “worth” `cap / Δp` euros, and VAT/PIT should attach at grant.
 
-It answers the wrong question. Three objects get mixed (the cheap-share dead-end used the first two at once; [cheap-share-route.md](cheap-share-route.md)):
+It answers the wrong question. Three objects get mixed (the cheap-share dead-end used the first two at once; [cheap-share-route.md](cheap-share-route.md)). **FX** here is a conversion rate (as in foreign exchange), not a currency-market product. A **unit FX** is euros = `p` × a rate, the same rate for everyone at a date.
 
 | Object | What it is | In this vintage model |
 | --- | --- | --- |
-| **Unit FX** | euros = `p` × a rate, the same rate for everyone at a date | **Not used.** No `w`, no `v = P/N`, no 1 `p` = €1 |
+| **Unit FX** (euros per token, same rate for everyone at a date) | euros = `p` × a rate | **Not used.** No `w`, no `v = P/N`, no 1 `p` = €1 |
 | **Effort ceiling** | `pay ≤` opened cap on documented effort `E_L` (hours × frozen contractor band, or a task estimate) | **Used.** Arm’s-length brake (art. 49 WIB 92). Independent of how many `p` that lot minted |
 | **Ex-post return** | cash actually received / `E_L`, after the fact | Always exists once money has moved. Not a mint-time quote |
 
@@ -178,7 +178,7 @@ A contractor success-fee clause is the same object: “you share this year’s b
 
 ### Vacuuming without a euro rate `w`
 
-The spreadsheet used `w` so a lone offerer could not empty the pool. Default-in does that job without a price: the denominator is (almost) **everyone**, so one person cannot vacuum. The opened cap is a second brake. You do not need leftover-in-pool or a bonding-curve FX rate for that behaviour.
+The spreadsheet used `w` so a lone offerer could not empty the pool. Default-in does that job without a price: the denominator is (almost) **everyone**, so one person cannot vacuum. The opened cap is a second brake. You do not need leftover-in-pool or a bonding-curve conversion rate (euros per token) for that behaviour.
 
 ### Time-opened cap vs a static `k×` vs “ROI pricing”
 
@@ -313,7 +313,7 @@ VAT: invoice in year t; pool specified **VAT-exclusive** (already in the 2026-09
 | Keep | Drop |
 | --- | --- |
 | Mint `p = c0 · c^k` as a **weight** function | `w = dc/dp` in euros, at mint or at payout |
-| Non-transferable, off-chain, no peer market | `v = pool / N_issued` as the burn FX |
+| Non-transferable, off-chain, no peer market | `v = pool / N_issued` as the burn conversion rate (euros per token retired) |
 | GA/board sets the **size** of each pool | `v = pool / N_cap` or any ROI-calibrated cap on `N` |
 | Members for **governance** (small cash share) | Leftover recycling into the certificate pot |
 | Employees on euro payroll | Opt-in + burn-on-withdraw as the default cash-out |

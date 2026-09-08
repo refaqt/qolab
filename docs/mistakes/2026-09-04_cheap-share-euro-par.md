@@ -10,7 +10,7 @@ The €1 share does not do the economic work; `p` does. Share *count* still trac
 
 ## Prevention rule
 
-Do not issue extra profit-sharing shares whose number is set by contribution points, including at a €1 ticket price. Do not give `p` a euro par (cap, burn, or FX). Keep the governance share off the reward. A points-minted right is a fee story (option 2) or it will be recharacterised as one; dressing it as a dividend does not win option 1.
+Do not issue extra profit-sharing shares whose number is set by contribution points, including at a €1 ticket price or at €0.10 vs €10 investor shares. Do not give `p` a euro par (cap, burn, or conversion rate). Keep the governance share off the reward. A points-minted right is a fee story (option 2) or it will be recharacterised as one; dressing it as a dividend does not win option 1.
 
 ## Related
 
@@ -18,3 +18,4 @@ Do not issue extra profit-sharing shares whose number is set by contribution poi
 - [docs/decisions/2026-09-04_cheap-share-route-dead-end.md](../decisions/2026-09-04_cheap-share-route-dead-end.md)
 - [docs/mistakes/2026-09-03_unit-price-on-growing-pool.md](2026-09-03_unit-price-on-growing-pool.md)
 - [docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md](2026-09-03_immediate-multiple-gold-rush.md)
+- [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](../log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md) (same class of fact at €0.10 vs €10, no burn)
