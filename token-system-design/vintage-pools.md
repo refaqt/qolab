@@ -193,7 +193,7 @@ For each lot `L` with documented effort `E_L` (hours × frozen contractor band, 
 
 1. **Record date.** Lots minted in fiscal year `Y` first sit in vintage `Y+1`.
 2. **Opened cap starts at 1×.** At first eligibility: `cap_L = E_L`.
-3. **The extra multiple opens only while principal is unpaid.** At the start of each later vintage, if `paid_L < E_L`: `cap_L = min(k × E_L, cap_L × (1+r))`. If `paid_L ≥ E_L`, **freeze** `cap_L`. No trailing bonus after a short payback.
+3. **The extra multiple opens only while principal is unpaid.** At the start of each later vintage, if `paid_L < E_L`: `cap_L = min(k × E_L, cap_L × (1+r))`. If `paid_L ≥ E_L`, **freeze** `cap_L` (stop further opening). Freeze does **not** forfeit remaining headroom: `remaining_L = cap_L − paid_L` can still be invoiced. Do not treat freeze as “only 1× ever.”
 4. **Payout:** `pay_i = min(gross_i, Σ remaining_L)` with `remaining_L = cap_L − paid_L`, oldest unpaid lot first.
 
 That is still not setting `v` so that people *realise* a target ROI:

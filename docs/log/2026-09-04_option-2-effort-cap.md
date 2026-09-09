@@ -2,6 +2,8 @@
 
 **Role(s):** finance, business-dev
 
+**Later notes:** Freeze after 1× **stops opening**; remaining `cap − paid` stays invoiceable — [2026-09-09 log](2026-09-09_hours-cap-and-project-contractor.md). Hours-only input (do not derive `c` from euros). Sub-projects copy this cap for the **project entity** at the project rate; euros then split inside by `p_j`.
+
 ## What happened
 
 Next option-2 pass: keep minting weights with `p = c0 · c^k`; contractors invoice from a yearly pool `P_t` set by the GA; replace the parked per-lot `E_L` packaging with a simpler personal invoice ceiling.

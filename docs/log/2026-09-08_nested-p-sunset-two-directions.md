@@ -2,6 +2,8 @@
 
 **Role(s):** finance, business-dev
 
+**Closed 2026-09-09:** Direction B is the live cash path, specified in [ADR 2026-09-09](../decisions/2026-09-09_project-as-contractor.md) and [nested-mint-budgets.md](../../token-system-design/nested-mint-budgets.md). The project cap is admitted hours × **project band**, not `c × €1`. Direction A (local pot of parent `p` distributed to people) is **not** the live model. Session: [2026-09-09 log](2026-09-09_hours-cap-and-project-contractor.md). The mint gate of [ADR 2026-09-08](../decisions/2026-09-08_nested-mint-budgets.md) is unchanged. This log stays as the fork record.
+
 ## What happened
 
 Nested mint budgets are already the accepted **mint gate** ([nested-mint-budgets.md](../../token-system-design/nested-mint-budgets.md), [ADR 2026-09-08](../decisions/2026-09-08_nested-mint-budgets.md)): unofficial work does not move parent `c`; the parent later spends a mint budget; cash pool `P_t` stays global. Still open: how local weight `p_j` / `p_ij` **sunsets** when a sub-project distributes, and whether the sub-project’s own pool is parent `p` or euros.
