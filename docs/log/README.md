@@ -18,3 +18,4 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-08 | [Proportional burn of p against remaining opened cap](2026-09-08_p-burn-remaining-cap.md) | finance, business-dev | 0 |
 | 2026-09-08 | [Nested mint budgets for sub-projects](2026-09-08_nested-mint-budgets.md) | finance, business-dev | 0 |
 | 2026-09-08 | [Nested `p` sunset: local p-pool vs project-as-contractor](2026-09-08_nested-p-sunset-two-directions.md) | finance, business-dev | 0 |
+| 2026-09-09 | [Hours-only ledgers, freeze remainder, project as contractor](2026-09-09_hours-cap-and-project-contractor.md) | finance, business-dev | 0 |

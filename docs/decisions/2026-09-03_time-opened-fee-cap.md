@@ -19,7 +19,7 @@ Until counsel and an accountant say otherwise:
 1. Track **lots** (mint event / contribution year), not one blended ceiling per person.
 2. **Record date:** lots minted in fiscal year `Y` first sit in vintage `Y+1`.
 3. **Opened cap starts at 1×** documented effort `E_L` (hours × frozen contractor band, or a task estimate).
-4. At the start of each later vintage, if `paid_L < E_L`: `cap_L = min(k × E_L, cap_L × (1+r))`. If `paid_L ≥ E_L`, **freeze** `cap_L`. No trailing bonus after a short payback.
+4. At the start of each later vintage, if `paid_L < E_L`: `cap_L = min(k × E_L, cap_L × (1+r))`. If `paid_L ≥ E_L`, **freeze** `cap_L` (stop further opening; remaining `cap_L − paid_L` stays invoiceable). No trailing bonus after a short payback.
 5. `pay_i = min(gross_i, Σ remaining_L)` with `remaining_L = cap_L − paid_L`. Allocate oldest unpaid lot first. Leftover of `P_t` still goes to **operating reserves**.
 6. `k` and `r` are GA/board policy. They are a **fee cap**, not a published return. Do not book `cap_L` as a growing receivable. Worked examples use `k = 3`, `r = 0.20` as parameters, not a promise.
 7. Sunset `T` may sit on top. It does not replace the opened cap.
