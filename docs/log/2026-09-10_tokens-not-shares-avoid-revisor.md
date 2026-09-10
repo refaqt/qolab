@@ -8,7 +8,7 @@
 
 ## What happened
 
-Asked whether contributors can be paid with **tokens instead of shares**, so each contribution does not need a **bedrijfsrevisor** and is not **inbreng in nijverheid**. VAT and tax if the tokens have monetary value is acceptable for this fork. Then compared phantom shares, revenue-share and profit-share tokens, asked whether a BV or CV can issue those (or only an NV), whether returns must stay **arm’s length**, and whether a **warrant** exercised in cash later would work — including cashless exercise and a sale back to Refaqt.
+Asked whether contributors can be paid with **tokens instead of shares**, so each contribution does not need a **bedrijfsrevisor** and is not **inbreng in nijverheid**. VAT and tax if the tokens have monetary value is acceptable for this fork. Then compared phantom shares, revenue-share and profit-share tokens, asked whether a BV or CV can issue those (or only an NV), whether returns must stay **arm’s length**, and whether a **warrant** exercised in cash later would work — including cashless exercise and a sale back to Refaqt. Later asked how to keep a **10× upside** if the CV accepts **no deduction**, **VenB first**, and **30% WHT**, while having the administration **not look at arm’s length**, still without a revisor (see §7).
 
 ### 1. Tokens instead of shares skip the inbreng-revisor
 
@@ -98,17 +98,104 @@ Two objects: **inschrijvingsrechten** (WVV security: new shares from the company
 
 The warrant only does the intended job if someone **other than Refaqt** pays the €20,000. Then the €15,000 is equity upside funded by a buyer. That is a different product from option 2: no deduction of the upside at Refaqt; real shares; dilution; *voorkeurrecht*; FSMA if offered broadly; Optiewet valuation of an unlisted company. It does not scale to every contribution.
 
+### 7. 10× of contribution, VenB + 30% WHT, no arm’s length, still no revisor
+
+Asked how to keep a **larger upside (10× the contribution)** if the CV **accepts that the payout may not be deductible**, that **VenB is paid first**, and that payment is preceded by **30% WHT** — and, at the same time, make it so the administration **does not look at arm’s length**, while still **avoiding the bedrijfsrevisor**.
+
+**The combination does not exist on one labour-minted instrument.** “10× this person’s contribution” is a labour price. Arm’s length is how Belgian tax prices labour. Choosing not to deduct, paying VenB first, and withholding 30% does not turn that formula into a capital return. That is the same prevention rule as [cheap-share labour-quota dividends](../mistakes/2026-09-04_cheap-share-euro-par.md): share *count* or token *payout* that tracks work stays a fee story. There is still no third tax box ([§1](#1-tokens-instead-of-shares-skip-the-inbreng-revisor)).
+
+#### What “don’t look at arm’s length” actually requires
+
+FPS apply an arm’s-length / excess test when the payment is **pay for work**:
+
+- Art. 49 WIB 92 if you deduct (not excessive professional expense).
+- Art. 26 WIB 92 (abnormal or benevolent advantage) even if you do **not** deduct.
+- Disguised remuneration of a member, plus VAT and professional income on the recipient.
+
+They generally do **not** ask “is this too much for 50 hours?” of a **pro-rata dividend on shares acquired as capital**. A company may distribute all distributable profit. The tests are then WVV net-asset / liquidity, a GA decision, and “is this really a return on shares?”
+
+The administration stops treating the **amount** as a service price only if the cash is a **residual claim on capital**, allocated by **shareholding** (or a real NV profit security), not by contribution points `p` or hours.
+
+That is the opposite of “10× the contribution.” If the payout is still `k × documented effort`, you have told them the comparable: hours × band. Then `k = 10` is DVB item **(p)** — a success-fee bound they can trim — not a dividend they ignore ([dvb-questions.md](../../token-system-design/dvb-questions.md); [cap-opening log](2026-09-10_pt-distribution-and-cap-opening.md)).
+
+#### Not deducting does not buy a free pass
+
+If you book a non-deductible contractual payout to members, you can still get VenB (no deduction) **and** 30% WHT if they call it a hidden dividend **and** VAT + PIT/social if they call it a fee **and**, in a bad identification case, art. 219 (geheime commissielonen). You cannot elect “only VenB + 30%.” Characterisation is facts, not a booking choice.
+
+Option 1 (dividend) is: after-tax profit → GA distribution → 30% *roerende voorheffing*, not deductible, no VAT if it **holds**. That box needs a **share** (or a real profit security). A CV share may only be issued **in ruil voor een inbreng** (art. 6:39). Work-for-shares is *inbreng* again → revisor + valuation.
+
+If instead you keep a **contract** and merely **withhold 30%** and refuse the deduction, you have option-2 facts with option-1 tax. Allocation by points is still the smoking gun that the cause is labour. Ticket price and “we won’t deduct” do not fix the quota ([2026-09-08 log](2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
+
+*Werkende vennoot* case law helps only when profit is a return on **capital at risk** in a joint enterprise, not a points printer on a trivial cash share.
+
+#### Revisor (unchanged from §1)
+
+| Action | Revisor? |
+| --- | --- |
+| Small **cash** membership share (*inbreng in geld*) | No |
+| Contractor invoice, phantom, revenue-share **contract**, bonus | No |
+| Shares (or conversion of a token / receivable into shares) for **work** | Yes |
+| Exercise of a warrant / new shares for **real cash** | No (cash *inbreng*) |
+| Same exercise **set off** against a claim on Refaqt, or cashless sale **to** Refaqt | Looks like inbreng of a claim or *inkoop van eigen aandelen* — revisor / distribution risk returns |
+
+A CV still cannot issue NV-style *winstbewijzen* or *inschrijvingsrechten* (art. 6:19). Contractual profit-share tokens are available, but they are **fees**, so arm’s length stays ([§3](#3-can-a-bv-or-cv-issue-profit-share-tokens-not-only-an-nv), [§4](#4-arms-length)).
+
+#### Structures that can actually work
+
+**A. Two instruments (the only clean way to keep both goals).** Labour stays off the share register: dienstenovereenkomst, contingent invoice, effort near **1×** (or a DVB-blessed wait-dependent cap). That is option 2. Deductible if it holds. Arm’s length is expected and bounded. No revisor.
+
+Upside is a **separate capital claim** that does not scale with this week’s hours:
+
+- Everyone who should share residual profit **buys cash shares** (same class, or a statutory labour *class* that is **not** `f(p)` — e.g. one share per contributing member, or a fixed split with the investor class, as left open on [2026-09-08](2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
+- 10× appears if the **company** grows and dividends / NAV grow, like ordinary startup equity — 10× of **paid-in capital or company value**, not 10× of hours.
+- Payment: VenB first, 30% WHT, not deductible.
+- FPS look at affectio / capital at risk / loss absorption, not at art. 49 on the dividend quantum.
+
+Do not mint extra shares from `p`. Do not convert `p` into shares later. Do not put an issuer at a GA-set “share price.” Those bring back labour quota, *inbreng*, or a discretionary bonus ([§5](#5-worked-phantom-4568-p-ga-price-to-50-put-to-refaqt)).
+
+This matches the live design rule: membership share for voting; credits are not parts; do not mix dividend and fee on the **same** instrument ([ADR 2026-09-02](../decisions/2026-09-02_tax-aware-contribution-credits.md)).
+
+**B. NV *winstbewijzen* (only if you leave the CV form for this vehicle).** Classic *winstbewijzen* (arts. 7:58–7:59) are an **NV** security that does not represent capital. Distributions are usually dividends (VenB + 30%, not deductible). They are **not** a CV tool.
+
+They help the revisor story only if they are **not** issued as pay for this contribution (and not as conversion of a work receivable). If the number of *winstbewijzen* is still `f(p)`, you have the same quota. Grant of a real security for work is often taxed **at grant** on FMV. Doctrine on a BV substitute is split; voting still cannot sit on a non-share. Different product from option 2: NV (or conversion), FSMA hygiene if offered broadly, counsel.
+
+**C. Warrant / option, cash in, third-party cash out.** Already [§6](#6-warrants-exercise-in-cash-net-15000-with-refaqt): the warrant only does equity-upside work if **someone other than Refaqt** pays the exit price. Cash exercise = *inbreng in geld* → no inbreng-revisor. Netting with Refaqt is a buyback / fee. A CV cannot issue *inschrijvingsrechten*. Does not scale to every contribution and still has grant-time valuation. It does **not** make a 10× labour token “not arm’s length.”
+
+**D. Live option 2 with gated 10× (arm’s length stays).** The [2026-09-10 cap-opening path](2026-09-10_pt-distribution-and-cap-opening.md) — lots, **1× in the first unpaid year**, then open toward **10× after ~10 unpaid years**, freeze when that lot’s 1× is paid — is how you argue 10× **as a success fee**. DVB **(p)** is exactly “is `k = 10` still a fee?” You **want** them to look at arm’s length; that is how the deduction survives.
+
+That path is the opposite of “accept no deduction and 30% WHT.” If you need 10× **even when they were paid in year 2**, the same log already says that is **shares**, not a higher fee cap.
+
+#### What not to do
+
+- A puttable phantom at a GA-set price so 4,568 `p` become €228k. Grant ≈ invoice can be a cost; the later multiple is a discretionary bonus / related-party advantage. A GA number is not a market.
+- Cheap or tenth-euro shares with a `p` quota, with or without burn.
+- Booking a contractual profit-share as a non-deductible “dividend” so art. 49 “does not apply.” Art. 26 and recharacterisation still do.
+- Cashless warrant exercise against an *inkoop* by Refaqt.
+- Promising 10× or “beats ETFs” in the regulation.
+
+#### Practical target for counsel / DVB
+
+Ask for **two boxes**, not one:
+
+1. **Credits `p`:** contingent success fee; no shares; no conversion; no revisor; arm’s length via a documented effort ceiling (file **(a)–(d)**, **(h)–(j)**, **(p)** if you keep a high `k`).
+2. **Residual 10×-shaped upside:** cash-issued shares (or, only if you change form, NV *winstbewijzen*) whose **count is not** `f(p)`; distributions are real dividends; VenB + 30% WHT; no art. 49 on the dividend amount.
+
+If the political goal is “contributors who work more should get more of the 10×,” that **is** the labour quota. Then you stay in option 2 and you **do** invite the arm’s-length discussion — the gated 10× path is the honest version of that. You cannot have that quota, skip the revisor, skip arm’s length, and keep a clean 30% dividend.
+
 ## Decisions
 
-None. Sketch stays **open**. Not an ADR. Does not replace option 2. Does not revive cheap-share or bonding-curve shares. Does not unpark vintages.
+None. Sketch stays **open**. Not an ADR. Does not replace option 2. Does not revive cheap-share or bonding-curve shares. Does not unpark vintages. Does not accept a labour-minted 10× as a dividend that FPS will not arm’s-length.
 
 Working conclusions (still for counsel):
 
 - Avoiding the inbreng-revisor = **do not issue (or convert into) shares for the work**. Keep a small cash membership share for voting.
 - Phantom / revenue-share / profit-share tokens are available to a **BV and a CV as contracts**. Classic *winstbewijzen* are not a CV tool and are a poor BV substitute for a share class.
-- Arm’s length still applies; an effort cap still belongs unless a real third-party market prices the instrument.
+- Arm’s length still applies to any **labour-priced** token; an effort cap still belongs unless a real third-party market prices the instrument.
 - A GA-set phantom price plus an issuer put is not uncapped equity. Grant ≈ invoice can be a cost; the later multiple is the problem.
 - Warrants are a **BV/NV** (or contractual-option) path. Cashless sale **to Refaqt** is a buyback / fee, not a clean share gain.
+- **VenB first + 30% WHT + no deduction does not remove arm’s length** from a payout sized as `k × contribution`. That formula stays a fee (or a labour-quota dividend that recharacterises). The administration ignores the service-price test only on a **residual claim on capital** allocated by shareholding, not by `p`.
+- Clean split: **option 2** for labour (revisor off; arm’s length expected; deduction if it holds) **beside** cash-issued shares for residual upside (VenB + 30% WHT; no art. 49 on the dividend quantum; 10× of company value, not of hours). Do not mix those boxes on the same instrument.
+- Gated option-2 10× after a long **unpaid** wait ([cap-opening log](2026-09-10_pt-distribution-and-cap-opening.md), DVB **(p)**) is the path that *invites* arm’s length so the deduction can survive. It is not the “don’t look” path.
 
 ## Open Questions
 
@@ -117,10 +204,14 @@ Working conclusions (still for counsel):
 - DVB: grant-time VAT/PIT on a puttable phantom; fee vs disguised distribution when a member cashes above documented effort; Optiewet vs contractor VAT if warrants are used.
 - If warrants: BV vs contractual option on a CV; who the third-party buyer is at exit; pool size / *voorkeurrecht*.
 - How any of this sits next to live option 2 (`P_t`, effort cap, nested mint, project-as-contractor) — replace, sit beside, or drop.
+- Whether a **statutory profit split** between a membership class that is **not** `f(p)` (e.g. one cash share per contributing member, or a fixed % vs the investor class) is worth a separate option-1 sketch for the residual box.
+- Whether an NV vehicle (or conversion) for *winstbewijzen* is in scope at all, given the live entity is a CV.
+- Counsel / DVB: confirm that “we will not deduct” does **not** keep a points-allocated contractual payout out of art. 26 / professional income / possible art. 219.
 
 ## Next Steps
 
-- Keep this as an exploration log; do not treat phantom/warrant as the live spec.
-- Next design pass stays **option 2** with reduced complexity unless a later decision picks a contract-token fork.
-- Counsel + accountant before anyone is promised phantoms, profit-share tokens, or warrants.
+- Keep this as an exploration log; do not treat phantom/warrant, nor a labour-minted 10× dividend, as the live spec.
+- Next design pass stays **option 2** with reduced complexity unless a later decision picks a contract-token fork **or** a two-instrument residual (cash shares beside the fee).
+- Counsel + accountant before anyone is promised phantoms, profit-share tokens, warrants, or a 10× that “is not arm’s length.”
 - Do not add an issuer put at a GA-set share price without an effort cap. Do not net warrant exercise against an *inkoop* by Refaqt if the goal is capital-gains / non-fee treatment.
+- Do not book a contractual `k × contribution` as a non-deductible dividend in the hope that FPS will skip arm’s length.
