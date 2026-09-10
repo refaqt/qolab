@@ -6,6 +6,7 @@ QOLAB is a contribution-credit system for work on Refaqt projects. The live desi
 - Tax and company-law analysis: [token-system-design/token-system.md](../token-system-design/token-system.md)
 - DVB questions **(a)–(p)** (filing catalog): [token-system-design/dvb-questions.md](../token-system-design/dvb-questions.md)
 - `P_t` / cap-opening discussion (lots, year-1 1×, path to 10×): [docs/log/2026-09-10_pt-distribution-and-cap-opening.md](log/2026-09-10_pt-distribution-and-cap-opening.md)
+- Q-token for supplier-network access (**open**, not live spec): `p` distributes Q minted from OSS designs/tools; Q gates supplier orders (not fiat payment) — [docs/log/2026-09-10_q-token-supplier-network.md](log/2026-09-10_q-token-supplier-network.md)
 - Vintage pools (parked): [token-system-design/vintage-pools.md](../token-system-design/vintage-pools.md)
 - Why an effort fee cap is not a unit price of `p`: [docs/decisions/2026-09-04_fee-cap-not-unit-price.md](decisions/2026-09-04_fee-cap-not-unit-price.md)
 - Option-2 personal effort cap (working sketch): [docs/log/2026-09-04_option-2-effort-cap.md](log/2026-09-04_option-2-effort-cap.md)
