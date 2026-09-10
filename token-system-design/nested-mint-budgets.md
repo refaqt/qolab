@@ -145,7 +145,7 @@ Two levels are enough to start. Deeper nesting is the same protocol (a project i
 
 ## DVB / counsel
 
-Existing items **(a)–(d)**, **(i)** (effort cap vs implied `€/p`), and **(j)** (proportional root-`p` burn) still apply. Nested:
+Existing items **(a)–(d)**, **(i)** (effort cap vs implied `€/p`), and **(j)** (proportional root-`p` burn) still apply. Nested **(k)–(o)** below. Full catalog: [dvb-questions.md](dvb-questions.md).
 
 - **(k)** Delayed mint of root `p` after unofficial logged work: taxable event at local accept, at first `B_{t,j} > 0`, or still only at invoice?
 - **(l)** `p_j` as a non-claim on `P_t`; only a split key for the subpool.

@@ -147,4 +147,6 @@ Existing items **(a)–(d)** and **(i)** (effort cap vs implied €/`p`) still a
 
 - **(j)** Proportional burn of `p` against remaining opened cap: is remaining `p` remaining consideration, or still a dimensionless weight plus an invoice ceiling?
 
+Full catalog: [dvb-questions.md](dvb-questions.md).
+
 Until that sign-off, do not describe the burn as “€X per certificate” or “paying `p` down in euros.”
