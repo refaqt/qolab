@@ -19,7 +19,7 @@ How to set up, run, and navigate this repository.
 | Doc | Use |
 | --- | --- |
 | `docs/architecture.md` | Pointer to the working design |
-| `token-system-design/` | Bonding-curve draft, spreadsheets, Belgian tax/legal analysis, parked vintage note, accepted `p` burn against remaining cap, accepted nested mint budgets and project-as-contractor cash path, cheap-share and bonding-curve-shares dead-ends |
+| `token-system-design/` | Bonding-curve draft, spreadsheets, Belgian tax/legal analysis, [DVB questions (a)–(p)](../token-system-design/dvb-questions.md), parked vintage note, accepted `p` burn against remaining cap, accepted nested mint budgets and project-as-contractor cash path, cheap-share and bonding-curve-shares dead-ends |
 | `.agents-local/skills/patterns/SKILL.md` | Project-specific reusable patterns |
 | `docs/decisions/` | Past technical decisions (ADRs) |
 | `docs/mistakes/` | What went wrong and how to avoid it |
