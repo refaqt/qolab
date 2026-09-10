@@ -2,7 +2,7 @@
 
 **Role(s):** finance, business-dev
 
-**Status:** Open. Not accepted. Not the live option-2 pass. No ADR.
+**Status:** Open. Not accepted. Not the live option-2 pass. No ADR. **Different Q** from the [Cred-weighted euro-par payout](2026-09-10_cred-value-q-euro-par.md) (that path is `1 Q = €1` from `P_t`, invoiced; this path is an access ticket with no par).
 
 **Prevention rules applied:** [do not put a euro spot price on a growing pool](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not treat remaining `p` as remaining euros](../mistakes/2026-09-04_cheap-share-euro-par.md); a peer market prints a euro price ([S-burn log](2026-09-07_s-burn-euro-par.md)). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels.
 
@@ -51,6 +51,7 @@ None. Sketch stays **open**. Not an ADR. Does not replace option 2. Does not unp
 - No cap on Q obtained: does `p` still get a euro value, or only if Q stays scarce vs order-flow?
 - Automatic time-burn of `p`: does that still leave a euro value on remaining `p` if Q is priced?
 - How Q relates to live option 2 (`P_t` invoices, effort cap) — replace the euro pool, sit beside it, or neither?
+- Rename vs the [euro-par Cred Q](2026-09-10_cred-value-q-euro-par.md) before a spec draft (two different tokens, same letter).
 - Other uses of Q besides supplier-network access.
 
 ## Next Steps
