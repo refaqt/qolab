@@ -168,7 +168,7 @@ That path is the opposite of “accept no deduction and 30% WHT.” If you need 
 #### What not to do
 
 - A puttable phantom at a GA-set price so 4,568 `p` become €228k. Grant ≈ invoice can be a cost; the later multiple is a discretionary bonus / related-party advantage. A GA number is not a market.
-- Cheap or tenth-euro shares with a `p` quota, with or without burn.
+- Cheap or tenth-euro shares with a `p` quota, with or without burn. Same if there are no investors yet, and same if the quota sits only in a side ledger “until we put it on paper” — [2026-09-10](2026-09-10_no-investors-euro-shares.md).
 - Booking a contractual profit-share as a non-deductible “dividend” so art. 49 “does not apply.” Art. 26 and recharacterisation still do.
 - Cashless warrant exercise against an *inkoop* by Refaqt.
 - Promising 10× or “beats ETFs” in the regulation.
