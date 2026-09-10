@@ -26,3 +26,4 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-10 | [Startup-style unpaid shares, revaluations, MoU, then a contributor class](2026-09-10_startup-equity-mou.md) | finance, business-dev | 0 |
 | 2026-09-10 | [Cred-weighted euro-par Q (value royalty, viable path)](2026-09-10_cred-value-q-euro-par.md) | finance, business-dev | 0 |
 | 2026-09-10 | [Inbreng in nijverheid (dead-end)](2026-09-10_inbreng-in-nijverheid-dead-end.md) | finance, business-dev | 0 |
+| 2026-09-10 | [Repo review: arm's length, the 10× cap, and what DVB can settle](2026-09-10_arms-length-10x-and-repo-review.md) | finance, business-dev | 0 |
