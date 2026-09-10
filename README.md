@@ -20,6 +20,8 @@ Humans on Windows may double-click `setup-tooling.bat` instead.
 - [docs/onboarding.md](docs/onboarding.md) — how to set up and navigate this repository
 - [docs/architecture.md](docs/architecture.md) — purpose and layout
 - [token-system-design/token-system.md](token-system-design/token-system.md) — Belgian tax/legal analysis of the contribution-credit system
+- [token-system-design/dvb-questions.md](token-system-design/dvb-questions.md) — questions **(a)–(q)** for the ruling commission
+- [docs/log/2026-09-10_arms-length-10x-and-repo-review.md](docs/log/2026-09-10_arms-length-10x-and-repo-review.md) — review of the whole analysis; arm's length and the 10× cap
 - [token-system-design/vintage-pools.md](token-system-design/vintage-pools.md) — why not `v = pool / N` (parked: complexity)
 - [token-system-design/p-burn-remaining-cap.md](token-system-design/p-burn-remaining-cap.md) — amortize `p` against remaining opened cap (**accepted**)
 - [token-system-design/nested-mint-budgets.md](token-system-design/nested-mint-budgets.md) — nested mint budgets; project entity invoices `P_t`, euros split inside by `p_j` (**accepted**)

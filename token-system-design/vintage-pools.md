@@ -150,7 +150,7 @@ It answers the wrong question. Three objects get mixed (the cheap-share dead-end
 | Object | What it is | In this vintage model |
 | --- | --- | --- |
 | **Unit FX** (euros per token, same rate for everyone at a date) | euros = `p` × a rate | **Not used.** No `w`, no `v = P/N`, no 1 `p` = €1 |
-| **Effort ceiling** | `pay ≤` opened cap on documented effort `E_L` (hours × frozen contractor band, or a task estimate) | **Used.** Arm’s-length brake (art. 49 WIB 92). Independent of how many `p` that lot minted |
+| **Effort ceiling** | `pay ≤` opened cap on documented effort `E_L` (hours × frozen contractor band, or a task estimate) | **Used.** Arm’s-length brake (art. 53, 10° WIB 92 for the excess; art. 49 for the conditions of deductibility). Independent of how many `p` that lot minted |
 | **Ex-post return** | cash actually received / `E_L`, after the fact | Always exists once money has moved. Not a mint-time quote |
 
 The reconstruction of the flow is otherwise right: each year a budget `P_t` is split by share of eligible weights; a person cannot take more than the opened cap on that lot’s effort. Corrections that matter for tax:
@@ -200,7 +200,7 @@ That is still not setting `v` so that people *realise* a target ROI:
 
 - The opened cap is an **upper bound**. Actual pay can be less. If `P_t` is zero, nothing is owed.
 - It is not used to compute a unit price or to choose `N_cap`.
-- It exists so Refaqt cannot be drained without bound, so a short engagement cannot extract the long-risk multiple, and so the fee stays in shouting distance of the work (arm’s length / art. 49 WIB 92).
+- It exists so Refaqt cannot be drained without bound, so a short engagement cannot extract the long-risk multiple, and so the fee stays in shouting distance of the work (arm’s length / art. 53, 10° WIB 92 for the excess, art. 49 for the conditions).
 - Do not describe `r` as interest on a balance. Do not book a growing receivable.
 
 Sunset `T` can stay as a **second** bound: lots lapse after `T` vintages. It does not replace the opened cap; a fat year inside `T` would still fill a static `k×`.
