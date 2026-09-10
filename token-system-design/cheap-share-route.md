@@ -27,6 +27,16 @@ This is **design input for counsel and an accountant**, not a ruling. Companion 
 
 Still this dead-end. Sketch: class A at €0.10, members buy up to a quota set by `p`; class B at €10 for investors; dividend by number of shares; private-person shareholders; no euro cap or burn of `p`. A 0.1 vs 1,000 split was dropped as too extreme; 0.1 vs 10 is the same labour-quota mapping with a 100:1 issue-price gap (one `p` plus ten cents gets the same dividend as €10 of B capital). Company law can write two classes. Option 1 still fails because share *count* tracks work. Session: [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md).
 
+### 2026-09-10 variant (no investors yet; not on paper yet)
+
+Still this dead-end. Sketch: no investor class; contributors buy €1 shares in proportion to contribution; optionally keep that mapping informal “just to start.” Absence of B capital does not change the quota: share *count* still tracks work, and 100% of residual profit then follows labour. An informal ledger is not a share (art. 6:39 WVV issuance); it is a contractual labour claim. Papering later is often *inbreng* of a work receivable (revisor + valuation). Start-off that *is* allowed: equal cash membership share + `p` weights that never become extra shares. Session: [docs/log/2026-09-10_no-investors-euro-shares.md](../docs/log/2026-09-10_no-investors-euro-shares.md).
+
+### 2026-09-10 variant (startup unpaid / revaluation / MoU → given class)
+
+Still this dead-end **if** the number of shares tracks contribution. Sketch: like a “normal startup,” do not buy in; issue unpaid / “given” shares; revalue prices; start with an MoU that shares will follow contribution; later create class L and give each contributor that share.
+
+Startups do not mint shares from hours. Founders subscribe at par when FMV is ~zero; new rounds issue **new** shares at a **new** price a buyer pays; old issue prices stay. A CV **cannot** give shares (art. 6:39). Unpaid is a remaining **debt** (art. 1:9), not a gift. A GA revaluation is not a market. An MoU “based on contribution” is the informal quota; converting it is *inbreng in nijverheid* / of a receivable (arts. 6:8, 6:110, 6:11 lapse). **One cash share per contributing member** (count not `f(p)`) stays the open membership sketch. Session: [docs/log/2026-09-10_startup-equity-mou.md](../docs/log/2026-09-10_startup-equity-mou.md).
+
 ---
 
 ## How the route worked
@@ -123,6 +133,8 @@ It tried to make option 1 *look* true by inserting a €1 share between the poin
 - Cheap extra shares as the reward vehicle.
 - Any 1 `p` = €1 (or 5,000 `p` per €5,000) burn, cap, or par.
 - Two-class €0.10 / €10 shares with a `p` quota and dividend per share ([2026-09-08](../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
+- €1 labour-quota shares among contributors because there are no investors yet, on paper or as an informal “we’ll issue them later” ledger ([2026-09-10](../docs/log/2026-09-10_no-investors-euro-shares.md)).
+- MoU → unpaid / “given” / revalued contributor class whose number tracks work ([2026-09-10](../docs/log/2026-09-10_startup-equity-mou.md)).
 - Inbreng in nijverheid as a tax shelter (it is a valuation event).
 - VVPRbis on €1 labour-quota shares.
 

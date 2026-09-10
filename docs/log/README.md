@@ -22,3 +22,5 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-10 | [`P_t` distribution and cap opening (discussion)](2026-09-10_pt-distribution-and-cap-opening.md) | finance, business-dev | 0 |
 | 2026-09-10 | [Q-token for supplier-network access (open)](2026-09-10_q-token-supplier-network.md) | finance, business-dev | 0 |
 | 2026-09-10 | [Tokens not shares, to avoid the bedrijfsrevisor (discussion)](2026-09-10_tokens-not-shares-avoid-revisor.md) | finance, business-dev | 0 |
+| 2026-09-10 | [€1 shares in proportion to contribution, no investors yet](2026-09-10_no-investors-euro-shares.md) | finance, business-dev | 0 |
+| 2026-09-10 | [Startup-style unpaid shares, revaluations, MoU, then a contributor class](2026-09-10_startup-equity-mou.md) | finance, business-dev | 0 |
