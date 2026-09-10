@@ -13,3 +13,4 @@ Architecture Decision Records. One file per decision: `YYYY-MM-DD_topic.md`.
 | 2026-09-08 | [Proportional burn of `p` against remaining opened cap](2026-09-08_p-burn-remaining-cap.md) |
 | 2026-09-08 | [Nested mint budgets for sub-projects](2026-09-08_nested-mint-budgets.md) |
 | 2026-09-09 | [Sub-project as contractor (euros in a subpool)](2026-09-09_project-as-contractor.md) |
+| 2026-09-10 | [Inbreng in nijverheid is a dead-end](2026-09-10_inbreng-in-nijverheid-dead-end.md) |

@@ -72,7 +72,7 @@ A Belgian CV’s native tools are **shares**, possibly in classes, issued for ca
 | VAT (WBTW arts. 22, 26; Tolsma) | Points → `p` → extra shares is a direct link between labour and consideration. Equal-per-member surplus might be a member distribution; this is not that. |
 | VVPRbis 18% | There is €1 cash, so someone will ask. Unlikely to stick: labour is the real inbreng; forced redemption after extracting the cap looks like the share was never equity. Do not plan on 18%. |
 | Volunteer / cooperative spirit | A profit-distributing CV that pays the same people via a labour-quota share class is deferred pay. Wet 3 juli 2005 is a poor fit. |
-| Inbreng in nijverheid done honestly (art. 1:8 WVV) | Shares for a commitment to work must be **valued**. Tax on that value at issuance, then 30% on later dividends, plus lapse/non-compete rules. Often **worse** than a contingent fee. Paying €1 does not turn labour into a cash contribution. |
+| Inbreng in nijverheid done honestly (art. 1:8 WVV) | Shares for a commitment to work must be **valued before issuance**. Tax on that value at issuance, then 30% on later dividends, plus lapse/non-compete rules. Needs a **plan-ahead** commitment; cannot reward unplanned work later. Often **worse** than a contingent fee. Paying €1 does not turn labour into a cash contribution. **Dead-end:** [ADR 2026-09-10](../docs/decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md). |
 
 You still pick **one** tax box. Dividends on shares **and** “this is pay for contributions” on the same instrument is how you get 30% *and* VAT/PIT/RSZ. [token-system.md](token-system.md) §3: putting the right in a share class “still does not stop tax recharacterisation when the number of class-B shares equals contribution points.” This route *is* that mapping.
 
@@ -135,7 +135,7 @@ It tried to make option 1 *look* true by inserting a €1 share between the poin
 - Two-class €0.10 / €10 shares with a `p` quota and dividend per share ([2026-09-08](../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
 - €1 labour-quota shares among contributors because there are no investors yet, on paper or as an informal “we’ll issue them later” ledger ([2026-09-10](../docs/log/2026-09-10_no-investors-euro-shares.md)).
 - MoU → unpaid / “given” / revalued contributor class whose number tracks work ([2026-09-10](../docs/log/2026-09-10_startup-equity-mou.md)).
-- Inbreng in nijverheid as a tax shelter (it is a valuation event).
+- Inbreng in nijverheid as a tax shelter or as a later-reward path without a plan-ahead commitment (it is a valuation of a **promised** contribution **before** shares exist) — [ADR 2026-09-10](../docs/decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md).
 - VVPRbis on €1 labour-quota shares.
 
 ---
