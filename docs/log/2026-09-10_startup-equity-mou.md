@@ -31,7 +31,7 @@ Art. **6:39 WVV**: a share may only be issued **in ruil voor een inbreng**. Ther
 - a **cash** inbreng (they did buy in, even at €0.01), or
 - **inbreng in nijverheid** / inbreng of a work receivable (art. **1:8**: a commitment to supply labour, which is inbreng in natura) → founder/board report + **bedrijfsrevisor** (arts. **6:8**, **6:110**), valuation, tax on FMV at grant, then 30% on later dividends.
 
-Honest inbreng in nijverheid is often **worse** than a contingent fee ([cheap-share-route.md](../../token-system-design/cheap-share-route.md); [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md)). Extra company-law teeth: the subscriber **owes** what they promised (art. **1:9**), including a **non-compete** for the duration of a nijverheid inbreng; the shares **lapse** on death or lasting incapacity (art. **6:11**, unless statutes say otherwise).
+Honest inbreng in nijverheid is often **worse** than a contingent fee ([cheap-share-route.md](../../token-system-design/cheap-share-route.md); [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md)). It also cannot reward **unplanned** work later — the revisor values a **promised** commitment **before** shares exist ([ADR 2026-09-10](../decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md)). Extra company-law teeth: the subscriber **owes** what they promised (art. **1:9**), including a **non-compete** for the duration of a nijverheid inbreng; the shares **lapse** on death or lasting incapacity (art. **6:11**, unless statutes say otherwise).
 
 Creating a **new class** does not skip 6:39. Class L still needs an inbreng. A class whose **number** of shares is `f(contribution)` is the labour quota ([2026-09-08](2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
 

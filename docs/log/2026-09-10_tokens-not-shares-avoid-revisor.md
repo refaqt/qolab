@@ -2,9 +2,9 @@
 
 **Role(s):** finance, business-dev
 
-**Status:** Open exploration. Not accepted. Does not replace the option-2 pass. No ADR. Design input for counsel, not a ruling.
+**Status:** Open exploration for **contract** tokens / two-instrument residual. Not accepted. Does not replace the option-2 pass. No ADR for the token fork. *Inbreng in nijverheid* as the share path for later reward is a **dead-end** ([ADR 2026-09-10](../decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md)). Design input for counsel, not a ruling.
 
-**Prevention rules applied:** [do not put a euro spot price on certificates](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not dress labour-quota cheap shares as a dividend](../mistakes/2026-09-04_cheap-share-euro-par.md); [do not combine a cheap grant value with a steep curve](../mistakes/2026-09-07_steep-curve-low-grant.md). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels.
+**Prevention rules applied:** [do not put a euro spot price on certificates](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not dress labour-quota cheap shares as a dividend](../mistakes/2026-09-04_cheap-share-euro-par.md); [do not combine a cheap grant value with a steep curve](../mistakes/2026-09-07_steep-curve-low-grant.md); [do not use inbreng in nijverheid to reward unplanned later work](../mistakes/2026-09-10_inbreng-in-nijverheid-plan-ahead.md). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels.
 
 ## What happened
 
@@ -184,7 +184,7 @@ If the political goal is “contributors who work more should get more of the 10
 
 ## Decisions
 
-None. Sketch stays **open**. Not an ADR. Does not replace option 2. Does not revive cheap-share or bonding-curve shares. Does not unpark vintages. Does not accept a labour-minted 10× as a dividend that FPS will not arm’s-length.
+None on the **token** fork. Sketch stays **open** for contracts / two-instrument residual. Not an ADR. Does not replace option 2. Does not revive cheap-share, bonding-curve shares, or *inbreng in nijverheid* ([ADR 2026-09-10](../decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md)). Does not unpark vintages. Does not accept a labour-minted 10× as a dividend that FPS will not arm’s-length.
 
 Working conclusions (still for counsel):
 
@@ -210,7 +210,7 @@ Working conclusions (still for counsel):
 
 ## Next Steps
 
-- Keep this as an exploration log; do not treat phantom/warrant, nor a labour-minted 10× dividend, as the live spec.
+- Keep this as an exploration log; do not treat phantom/warrant, nor a labour-minted 10× dividend, nor *inbreng in nijverheid* shares, as the live spec.
 - Next design pass stays **option 2** with reduced complexity unless a later decision picks a contract-token fork **or** a two-instrument residual (cash shares beside the fee).
 - Counsel + accountant before anyone is promised phantoms, profit-share tokens, warrants, or a 10× that “is not arm’s length.”
 - Do not add an issuer put at a GA-set share price without an effort cap. Do not net warrant exercise against an *inkoop* by Refaqt if the goal is capital-gains / non-fee treatment.

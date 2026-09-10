@@ -21,3 +21,4 @@ Do not issue extra profit-sharing shares whose number is set by contribution poi
 - [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](../log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md) (same class of fact at €0.10 vs €10, no burn)
 - [docs/log/2026-09-10_no-investors-euro-shares.md](../log/2026-09-10_no-investors-euro-shares.md) (same quota with no investors; informal mapping is still a quota)
 - [docs/log/2026-09-10_startup-equity-mou.md](../log/2026-09-10_startup-equity-mou.md) (unpaid / given / revalued / MoU class still a quota if `N = f(work)`)
+- [docs/mistakes/2026-09-10_inbreng-in-nijverheid-plan-ahead.md](2026-09-10_inbreng-in-nijverheid-plan-ahead.md) (honest nijverheid still needs a plan-ahead commitment)
