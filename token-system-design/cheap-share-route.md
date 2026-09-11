@@ -37,6 +37,12 @@ Still this dead-end **if** the number of shares tracks contribution. Sketch: lik
 
 Startups do not mint shares from hours. Founders subscribe at par when FMV is ~zero; new rounds issue **new** shares at a **new** price a buyer pays; old issue prices stay. A CV **cannot** give shares (art. 6:39). Unpaid is a remaining **debt** (art. 1:9), not a gift. A GA revaluation is not a market. An MoU “based on contribution” is the informal quota; converting it is *inbreng in nijverheid* / of a receivable (arts. 6:8, 6:110, 6:11 lapse). **One cash share per contributing member** (count not `f(p)`) stays the open membership sketch. Session: [docs/log/2026-09-10_startup-equity-mou.md](../docs/log/2026-09-10_startup-equity-mou.md).
 
+### 2026-09-11 variant (linear A quota, €100 B class, 10-year sunset)
+
+Still this dead-end, in all four combinations. Sketch: `p = c/1000`; `p` sets how many **class A** shares (€1 in price **and** in liquidation value) a contributor may buy; dividend by ratio of shares; optionally a **class B** at €100 with dividends by **number** of shares; each case with and without a **10-year sunset** (no dividends on shares older than 10 years).
+
+Company law writes it more cheaply than the earlier sketches (disproportionate profit split by statute; €1 exit matches the CV default *scheidingsaandeel*). Option 1 still fails: `N_A = f(hours)`. Three findings specific to this pass. (1) With 100 points/hour, the A/B price pair **publishes a euro rate for an hour**: `100 × 100 / 1000 = €10` of investor capital per contributor hour — a euro spot price on contribution, arriving through the issue-price ratio instead of through `w` or `v`. (2) The sunset bounds **duration, not amount**: it turns unbounded dilution of B into a steady state (`10·a_A / (10·a_A + N_B)`), but 10 years of an uncapped share is still unbounded in euros, and a profit right expiring 10 years after the work is deferred pay on its face — plus it is *easier* to value at grant. (3) A vintage-keyed dividend right creates one **soort** per vintage by operation of law; the cheaper route is *uittreding van rechtswege* on loss of a statutory *hoedanigheid* (arts. 6:121–6:122 WVV), which is also forced redemption at par after a decade of dividends. Keep the sunset on **weights** (DVB **(g)**), not on shares. Session: [docs/log/2026-09-11_cheap-share-ab-classes-sunset.md](../docs/log/2026-09-11_cheap-share-ab-classes-sunset.md).
+
 ---
 
 ## How the route worked
@@ -134,6 +140,7 @@ It tried to make option 1 *look* true by inserting a €1 share between the poin
 - Any 1 `p` = €1 (or 5,000 `p` per €5,000) burn, cap, or par.
 - Two-class €0.10 / €10 shares with a `p` quota and dividend per share ([2026-09-08](../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
 - €1 labour-quota shares among contributors because there are no investors yet, on paper or as an informal “we’ll issue them later” ledger ([2026-09-10](../docs/log/2026-09-10_no-investors-euro-shares.md)).
+- Two-class €1 / €100 shares with a linear `p = c/1000` quota and dividend per share, with or without a 10-year sunset of the profit right ([2026-09-11](../docs/log/2026-09-11_cheap-share-ab-classes-sunset.md)).
 - MoU → unpaid / “given” / revalued contributor class whose number tracks work ([2026-09-10](../docs/log/2026-09-10_startup-equity-mou.md)).
 - Inbreng in nijverheid as a tax shelter or as a later-reward path without a plan-ahead commitment (it is a valuation of a **promised** contribution **before** shares exist) — [ADR 2026-09-10](../docs/decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md).
 - VVPRbis on €1 labour-quota shares.
