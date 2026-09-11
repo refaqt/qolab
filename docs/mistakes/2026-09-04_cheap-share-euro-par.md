@@ -10,7 +10,7 @@ The €1 share does not do the economic work; `p` does. Share *count* still trac
 
 ## Prevention rule
 
-Do not issue extra profit-sharing shares whose number is set by contribution points, including at a €1 ticket price, at €0.10 vs €10 investor shares, **when there are no investors yet**, as an **informal** or **MoU** “we’ll put it on paper later” ledger, or as **unpaid / “given”** paper that is meant to look like startup founder stock. Do not give `p` a euro par (cap, burn, or conversion rate). Keep the governance share off the reward. A points-minted right is a fee story (option 2) or it will be recharacterised as one; dressing it as a dividend does not win option 1.
+Do not issue extra profit-sharing shares whose number is set by contribution points, including at a €1 ticket price, at €0.10 vs €10 investor shares, **when there are no investors yet**, as an **informal** or **MoU** “we’ll put it on paper later” ledger, or as **unpaid / “given”** paper that is meant to look like startup founder stock. Do not set the issue prices of a contributor class and an investor class so that a published quota converts hours into euros of capital (€1 / €100 with `p = c/1000` states €10 of capital per hour). Do not try to rescue the quota with a **sunset** of the profit right: it bounds duration, not amount, it reads as deferred pay for the work that minted it, and it makes the grant easier to value. Do not give `p` a euro par (cap, burn, or conversion rate). Keep the governance share off the reward. A points-minted right is a fee story (option 2) or it will be recharacterised as one; dressing it as a dividend does not win option 1.
 
 ## Related
 
@@ -21,4 +21,5 @@ Do not issue extra profit-sharing shares whose number is set by contribution poi
 - [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](../log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md) (same class of fact at €0.10 vs €10, no burn)
 - [docs/log/2026-09-10_no-investors-euro-shares.md](../log/2026-09-10_no-investors-euro-shares.md) (same quota with no investors; informal mapping is still a quota)
 - [docs/log/2026-09-10_startup-equity-mou.md](../log/2026-09-10_startup-equity-mou.md) (unpaid / given / revalued / MoU class still a quota if `N = f(work)`)
+- [docs/log/2026-09-11_cheap-share-ab-classes-sunset.md](../log/2026-09-11_cheap-share-ab-classes-sunset.md) (linear quota, €1 / €100 classes, 10-year sunset — same rejection; the price pair publishes €/hour)
 - [docs/mistakes/2026-09-10_inbreng-in-nijverheid-plan-ahead.md](2026-09-10_inbreng-in-nijverheid-plan-ahead.md) (honest nijverheid still needs a plan-ahead commitment)
