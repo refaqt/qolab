@@ -300,6 +300,8 @@ m = tier(task) × verified × (1 + first_of_kind + recurrence + external + citat
 - Does 19 conflict with anything in the copyleft/defensive-publication cadence, i.e. could weight pressure cause premature publication of something still commercially sensitive? Publication timing should stay a board call, with the multiplier following it.
 - **(r)** unchanged, and now sharper: 16 (“a counterparty signed”) is closer to pay-for-performance optics than anything in the first list. Same question to counsel, with 16 as the worked example.
 
+**Measurement, per-role instances, and administration cost for each of these: [2026-09-12 measurement specs](2026-09-12_mint-variable-measurement-specs.md).** That pass adds two constraints (every variable evaluable for every role; no variable may add review or negotiation work), which demotes 14 and drops the estimate-versus-actual form of 9.
+
 ## Next Steps (second pass)
 
 - Decide the shortlist against real board data, not in the abstract: take one past quarter across all roles, compute `m` under the revised formula, and look at the dispersion **per role** before anything is written into the option-2 spec.
