@@ -7,6 +7,7 @@ QOLAB is a contribution-credit system for work on Refaqt projects. The live desi
 - Working overview: [token-system-design/architecture.md](../token-system-design/architecture.md)
 - Tax and company-law analysis: [token-system-design/token-system.md](../token-system-design/token-system.md)
 - DVB questions **(a)–(p)** (filing catalog): [token-system-design/dvb-questions.md](../token-system-design/dvb-questions.md)
+- What a DVB ruling can and cannot settle about `k`: [docs/log/2026-09-10_arms-length-10x-and-repo-review.md](log/2026-09-10_arms-length-10x-and-repo-review.md). Launch without a ruling (consequences, cash reserve, how far back FPS can go): [docs/log/2026-09-14_no-ruling-reserve-and-lookback.md](log/2026-09-14_no-ruling-reserve-and-lookback.md)
 - `P_t` / cap-opening discussion (lots, year-1 1×, path to 10×): [docs/log/2026-09-10_pt-distribution-and-cap-opening.md](log/2026-09-10_pt-distribution-and-cap-opening.md)
 - Q-token for supplier-network access (**open**, not live spec): `p` distributes Q minted from OSS designs/tools; Q gates supplier orders (not fiat payment) — [docs/log/2026-09-10_q-token-supplier-network.md](log/2026-09-10_q-token-supplier-network.md)
 - Cred-weighted euro-par Q (**viable path**, not live spec): SourceCred-style value split; `P_t` mints `P_t` Q at `1 Q = €1`; contributor BV invoices / self-bills; no hours; fee/royalty not mining; accepts priced consideration — [docs/log/2026-09-10_cred-value-q-euro-par.md](log/2026-09-10_cred-value-q-euro-par.md)

@@ -29,3 +29,4 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-10 | [Repo review: arm's length, the 10× cap, and what DVB can settle](2026-09-10_arms-length-10x-and-repo-review.md) | finance, business-dev | 0 |
 | 2026-09-11 | [Cheap-share route: A/B classes and a 10-year sunset](2026-09-11_cheap-share-ab-classes-sunset.md) | finance, business-dev | 0 |
 | 2026-09-14 | [Refaqt mission as a design constraint](2026-09-14_refaqt-mission.md) | business-dev, finance | 0 |
+| 2026-09-14 | [Launch without a DVB ruling: reserve and look-back](2026-09-14_no-ruling-reserve-and-lookback.md) | finance, business-dev | 0 |
