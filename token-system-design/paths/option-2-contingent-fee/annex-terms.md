@@ -5,7 +5,7 @@
 ## A. Nature of the compensation
 
 1. Compensation for accepted work is a **contingent success fee**, payable **only if** the CV opens a pool `P_t` under the regulation’s waterfall. No hourly invoice. No fixed fee.
-2. `f` (documented effort: hours × the band frozen at accept, or a quoted effort) is a **ceiling** on cumulative invoices for that lot. It is not a fee earned, not a receivable, not “fees the contractor would normally have invoiced.”
+2. `f` (documented effort: hours × the band frozen at accept, or a quoted effort) is a **ceiling** on cumulative invoices for that lot. It is not a fee earned, not a receivable, not “fees the contractor would normally have invoiced.” Hardware and equipment are not documented effort and do not enter `f`.
 3. Nothing in the annex, a dashboard, or a statement may express remaining cap, remaining `p`, or `(k × E) / Δp` as euros owed or as a unit value of `p`.
 4. `p` are dimensionless weights: contractually **not** parts or shares, never convertible into shares, non-transferable except to treasury, on death, or to a successor vehicle of the same beneficial owner.
 5. The membership share (governance) is a separate instrument and does not set the payout.

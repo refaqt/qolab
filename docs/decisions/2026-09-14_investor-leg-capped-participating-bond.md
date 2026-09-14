@@ -77,3 +77,4 @@ Until counsel and a DVB prefiling say otherwise:
 - **FSMA is now live.** A bond offered beyond members is an offer of investment instruments, with an *informatienota* or prospectus question attached. Earlier paths could stay in member-only territory; this one cannot, by design.
 - Bonds over bilateral loans is a cost as well as a choice: an investment instrument, a register, and formal issuance. The bilateral fallback exists but is weaker on exactly the point that motivated the change.
 - `k_I` cannot stay open for ever, for the same reason `k` cannot: it is what makes the leg filable.
+- A later use of this same bond: a contributor who needs equipment for an experiment subscribes like any holder; the CV buys the tool and lends it ([ADR 2026-09-14 hardware](2026-09-14_hardware-via-bond-and-loan.md)). That is not a third instrument.

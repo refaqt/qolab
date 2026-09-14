@@ -386,6 +386,7 @@ Questions the repo has not checked and that belong to counsel or an accountant r
 | FSMA: *informatienota* or prospectus for a **bond offered beyond members** (Wet 11 juli 2018; €5,000,000 / 12 months), and any recognised-cooperative exemption | This is the first path that cannot stay member-only by design | [loan-regulations clause 24](../paths/capped-participating-bond/loan-regulations.md) |
 | Accountant: principal booked as a liability while the **uplift is not accrued** until the board opens the leg | Mirror of clause 27 in the other direction; if the uplift is accrued the contingency is gone | [loan-regulations clauses 22–23](../paths/capped-participating-bond/loan-regulations.md) |
 | **Winwinlening** as a wrapper for small Flemish lenders | Attractive, but it requires repayment at term, so it conflicts with contingent repayment and cannot carry `k_I` | [capped-participating-bond §7](../paths/capped-participating-bond/README.md) |
+| Loan for use of company equipment after a bond subscription: benefit in kind if used privately; VAT on the purchase and on the loan; hire vs free loan; destruction | The hardware path must not put a machine's price on the labour row, and must not earmark a bond to a serial number | [capped-participating-bond §8.1](../paths/capped-participating-bond/README.md#81-hardware-for-experiments); [ADR 2026-09-14 hardware](../../docs/decisions/2026-09-14_hardware-via-bond-and-loan.md) |
 
 ---
 

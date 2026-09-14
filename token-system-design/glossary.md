@@ -6,7 +6,7 @@ Symbols and terms used across the design notes. Where two notes use the same let
 
 | Symbol | Meaning | Not |
 | --- | --- | --- |
-| hours | The one input per accepted item (role, task, project). Logged when the work is accepted. | Reconstructed years later |
+| hours | The one input per accepted item (role, task, project). Logged when the work is accepted. | Reconstructed years later; hardware invoices |
 | `c` | Contribution points, `c = hours × 100` for everyone. A weight scale that renames hours. | A wage; never calibrated to a market €/hour |
 | `p` | Non-transferable weights minted on the global curve `p = c0 · c^k` (early work mints more `Δp` per `Δc`). Splits `P_t`. | A euro claim; remaining `p` is not remaining euros |
 | `k` (mint) | Exponent of the mint curve (`≈ 0.737` in the 2026-09-03 sheet). | The fee-cap multiple below |
@@ -43,7 +43,7 @@ The [capped-participating-bond path](paths/capped-participating-bond/README.md).
 
 | Symbol | Meaning | Not |
 | --- | --- | --- |
-| `I_i(n)` | **Cumulative** principal advanced by holder `i` up to and including year `n`. Cash only; never issued for work. Mirrors `E_i(n)` | An amount set by hours, `c`, `p`, or the contribution ledger |
+| `I_i(n)` | **Cumulative** principal advanced by holder `i` up to and including year `n`. Cash only; never issued for work. Mirrors `E_i(n)` | An amount set by hours, `c`, `p`, or the contribution ledger; title to a machine |
 | `ΔI_i(n)` | The year's advance, a flow. Mirrors `e_i(n)` | |
 | `U^I_i(n)` | **Principal still outstanding** — the base the uplift accrues on. An amortising balance | **Not the contributor's `U`.** Contributor `U` is *unrecovered effort* and falls to zero when the work has been paid for; `U^I` falls as principal is repaid and drives no freeze |
 | `O^I_i(n)` | Accrued but **unpaid** uplift. Reduced proportionally by every payment | |
@@ -54,6 +54,7 @@ The [capped-participating-bond path](paths/capped-participating-bond/README.md).
 | `k_I` | Lifetime lid: `D ≤ k_I · I`. GA policy, and rate-capped in practice by art. 55 WIB 92 because the uplift is deducted | `k`; a target; a promised multiple |
 | freeze | **Does not exist on this leg.** Work stops being at risk once it has been paid for; money stays at risk while it is still in the company | The lid, which does exist. The two are different objects — [path note §3.1](paths/capped-participating-bond/README.md) |
 | close-out | `d = rem^I` sets the haircut to zero and ends the position. A de-minimis threshold pays out the tail rather than amortising asymptotically | |
+| loan for use | The CV owns equipment and lends it for an accepted experiment. Separate from the bond: the bond is money lent **to** the CV; the tool is a machine lent **by** the CV. Dutch wording is counsel's (*bruikleen*). [path note §8.1](paths/capped-participating-bond/README.md#81-hardware-for-experiments) | A hardware-bond class; an in-kind subscription; reimbursement from `P^C_t` |
 
 ## Two-leg waterfall
 
