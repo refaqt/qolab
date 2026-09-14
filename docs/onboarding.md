@@ -20,7 +20,10 @@ How to set up, run, and navigate this repository.
 | --- | --- |
 | `docs/mission.md` | Refaqt mission; binding on token, statute, and DVB drafts |
 | `docs/architecture.md` | Pointer to the working design |
-| `token-system-design/` | Bonding-curve draft, spreadsheets, Belgian tax/legal analysis, [DVB questions (a)–(p)](../token-system-design/dvb-questions.md), parked vintage note, accepted `p` burn against remaining cap, accepted nested mint budgets and project-as-contractor cash path, cheap-share and bonding-curve-shares dead-ends |
+| `token-system-design/README.md` | **Path map** — every token system, its status (live / viable / open / parked / dead-end), its entry document |
+| `token-system-design/paths/option-2-contingent-fee/` | Live spec (contingent invoiced fee, `p` as weights), annex terms, accepted `p` burn, nested mint budgets |
+| `token-system-design/analysis/` | Belgian tax / company-law analysis; [DVB questions (a)–(s)](../token-system-design/analysis/dvb-questions.md) |
+| `token-system-design/parked/`, `dead-ends/`, `spreadsheets/` | Parked vintage note; rejected sketches; calculation sheets |
 | `.agents-local/skills/patterns/SKILL.md` | Project-specific reusable patterns |
 | `docs/decisions/` | Past technical decisions (ADRs) |
 | `docs/mistakes/` | What went wrong and how to avoid it |

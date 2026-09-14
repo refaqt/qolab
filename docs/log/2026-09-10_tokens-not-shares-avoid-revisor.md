@@ -2,6 +2,10 @@
 
 **Role(s):** finance, business-dev
 
+**Citation note (2026-09-14):** where this log cites **art. 49 WIB 92** for “not excessive,” read **art. 53, 10° WIB 92** (excess; burden of proof on the administration; partial rejection only) with art. 49 for the conditions of deductibility. **Art. 26 §1 WIB 92** does not add back an advantage that is taken into account in the Belgian recipient’s taxable income, so it is largely neutral for an invoicing contributor. Corrected by the [2026-09-10 review §3](2026-09-10_arms-length-10x-and-repo-review.md); logged as [mistake 2026-09-14](../mistakes/2026-09-14_wrong-article-for-excess-test.md).
+
+**Status note (2026-09-14):** structure A (§7) is now the [cash-shares path](../../token-system-design/paths/cash-shares-residual/README.md); §1–§6 are summarised in [contract-tokens](../../token-system-design/paths/contract-tokens/README.md).
+
 **Status:** Open exploration for **contract** tokens / two-instrument residual. Not accepted. Does not replace the option-2 pass. No ADR for the token fork. *Inbreng in nijverheid* as the share path for later reward is a **dead-end** ([ADR 2026-09-10](../decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md)). Design input for counsel, not a ruling.
 
 **Prevention rules applied:** [do not put a euro spot price on certificates](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not dress labour-quota cheap shares as a dividend](../mistakes/2026-09-04_cheap-share-euro-par.md); [do not combine a cheap grant value with a steep curve](../mistakes/2026-09-07_steep-curve-low-grant.md); [do not use inbreng in nijverheid to reward unplanned later work](../mistakes/2026-09-10_inbreng-in-nijverheid-plan-ahead.md). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels.
@@ -21,7 +25,7 @@ That is already the company-law reason for option 2. The extra option-2 machiner
 
 To stay out of share-land the token must not look like a *soort aandeel*: no vote via the token, no residual claim on NAV / liquidation, no peer market, cash-out is an invoice / contractual sum, **never convert** balances into shares. Statutes already say credits are not parts/shares ([ADR 2026-09-02](../decisions/2026-09-02_tax-aware-contribution-credits.md)). If those facts slip, FPS or a court can still say the real contribution was *inbreng in nijverheid*.
 
-There is no third tax box. Priced tokens for labour are a **fee** (VAT 21% + professional income / VenB), not a dividend. You cannot have both “not a dividend” and “not a fee” ([token-system.md](../../token-system-design/token-system.md)).
+There is no third tax box. Priced tokens for labour are a **fee** (VAT 21% + professional income / VenB), not a dividend. You cannot have both “not a dividend” and “not a fee” ([belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md)).
 
 ### 2. Phantom shares vs revenue-share vs profit-share tokens
 
@@ -58,7 +62,7 @@ Revenue-share is **not** the only BV/CV option. A BV/CV cannot reliably issue NV
 
 For all three contract types, the money is still **pay for work**. Art. 49 WIB 92 (not excessive), art. 26 (abnormal advantage to a related party), *vennootschapsbelang*. The comparable is the market price of the **service**, including how independents price delay and non-payment — not a “fair ROI on phantom equity.”
 
-The live effort cap is that brake: an invoice ceiling on documented effort, not a yield on `p` ([vintage-pools.md](../../token-system-design/vintage-pools.md); [ADR 2026-09-04](../decisions/2026-09-04_fee-cap-not-unit-price.md)).
+The live effort cap is that brake: an invoice ceiling on documented effort, not a yield on `p` ([vintage-pools.md](../../token-system-design/parked/vintage-pools.md); [ADR 2026-09-04](../decisions/2026-09-04_fee-cap-not-unit-price.md)).
 
 If lifetime or expected payout ≈ hours × frozen contractor band, that **is** the arm’s length quantum. Paying less because the fee is contingent is still arm’s length. Paying more needs a real *ex ante* success-fee reason (risk of earning nothing). A `k×` open on day one with a forecasted fat pool is the [gold-rush](../mistakes/2026-09-03_immediate-multiple-gold-rush.md) pattern.
 
@@ -116,7 +120,7 @@ They generally do **not** ask “is this too much for 50 hours?” of a **pro-ra
 
 The administration stops treating the **amount** as a service price only if the cash is a **residual claim on capital**, allocated by **shareholding** (or a real NV profit security), not by contribution points `p` or hours.
 
-That is the opposite of “10× the contribution.” If the payout is still `k × documented effort`, you have told them the comparable: hours × band. Then `k = 10` is DVB item **(p)** — a success-fee bound they can trim — not a dividend they ignore ([dvb-questions.md](../../token-system-design/dvb-questions.md); [cap-opening log](2026-09-10_pt-distribution-and-cap-opening.md)).
+That is the opposite of “10× the contribution.” If the payout is still `k × documented effort`, you have told them the comparable: hours × band. Then `k = 10` is DVB item **(p)** — a success-fee bound they can trim — not a dividend they ignore ([dvb-questions.md](../../token-system-design/analysis/dvb-questions.md); [cap-opening log](2026-09-10_pt-distribution-and-cap-opening.md)).
 
 #### Not deducting does not buy a free pass
 

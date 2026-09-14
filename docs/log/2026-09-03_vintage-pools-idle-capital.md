@@ -4,7 +4,7 @@
 
 ## What happened
 
-The `v = pool / certificates issued` fallback (and `v = pool / capped N`) was checked against withdrawal incentives. Both create a unit price on a growing stock: people wait for a decent ROI, then withdraw together; the pot cannot be invested; delayed option-2 payouts let Refaqt VenB and BV VenB stack. Wrote [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md) and proposed [ADR 2026-09-03](../decisions/2026-09-03_vintage-pools-no-unit-price.md). Logged the failed approach in [docs/mistakes/2026-09-03_unit-price-on-growing-pool.md](../mistakes/2026-09-03_unit-price-on-growing-pool.md).
+The `v = pool / certificates issued` fallback (and `v = pool / capped N`) was checked against withdrawal incentives. Both create a unit price on a growing stock: people wait for a decent ROI, then withdraw together; the pot cannot be invested; delayed option-2 payouts let Refaqt VenB and BV VenB stack. Wrote [token-system-design/parked/vintage-pools.md](../../token-system-design/parked/vintage-pools.md) and proposed [ADR 2026-09-03](../decisions/2026-09-03_vintage-pools-no-unit-price.md). Logged the failed approach in [docs/mistakes/2026-09-03_unit-price-on-growing-pool.md](../mistakes/2026-09-03_unit-price-on-growing-pool.md).
 
 ## Decisions
 

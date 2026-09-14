@@ -2,7 +2,7 @@
 
 **Role(s):** finance, business-dev
 
-**Status:** Review of the whole repo against Belgian sources. No ADR. Does not accept, unpark, or revive anything. Design input for counsel, not a ruling. Citation fixes from §3 were applied to [dvb-questions.md](../../token-system-design/dvb-questions.md) in the same pass.
+**Status:** Review of the whole repo against Belgian sources. No ADR. Does not accept, unpark, or revive anything. Design input for counsel, not a ruling. Citation fixes from §3 were applied to [dvb-questions.md](../../token-system-design/analysis/dvb-questions.md) in the same pass.
 
 **Prevention rules applied:** [do not put a euro spot price on a growing pool](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not dress labour-quota cheap shares as a dividend](../mistakes/2026-09-04_cheap-share-euro-par.md); [do not keep paid-off `p` as seniority](../mistakes/2026-09-08_unburned-p-after-cap.md); [do not use inbreng in nijverheid to reward unplanned later work](../mistakes/2026-09-10_inbreng-in-nijverheid-plan-ahead.md).
 
@@ -31,11 +31,11 @@ So there is **no order and no cap**. What exists is a negotiation whose output i
 
 ### 1.2 There is no "3×" anywhere in Belgian law
 
-`k = 3` is **your own illustrative parameter** from [vintage-pools.md](../../token-system-design/vintage-pools.md) and [ADR 2026-09-03](../decisions/2026-09-03_time-opened-fee-cap.md), not a legal benchmark. The repo already says "no statutory max `k`" in the [cap-opening log](2026-09-10_pt-distribution-and-cap-opening.md) — that is correct and should not drift into a belief that 3× is safe and 10× is not. There is no multiple table. There is only: *would an independent party have agreed this ex ante for this risk?*
+`k = 3` is **your own illustrative parameter** from [vintage-pools.md](../../token-system-design/parked/vintage-pools.md) and [ADR 2026-09-03](../decisions/2026-09-03_time-opened-fee-cap.md), not a legal benchmark. The repo already says "no statutory max `k`" in the [cap-opening log](2026-09-10_pt-distribution-and-cap-opening.md) — that is correct and should not drift into a belief that 3× is safe and 10× is not. There is no multiple table. There is only: *would an independent party have agreed this ex ante for this risk?*
 
 ### 1.3 The likeliest DVB outcome is that they confirm the box and refuse the number
 
-This is the finding that most changes planning. The repo (README, [token-system.md](../../token-system-design/token-system.md) §"What to take into the next design iteration" item 8, [dvb-questions.md](../../token-system-design/dvb-questions.md) "How to file") assumes a ruling settles `k`. Expect instead:
+This is the finding that most changes planning. The repo (README, [belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md) §"What to take into the next design iteration" item 8, [dvb-questions.md](../../token-system-design/analysis/dvb-questions.md) "How to file") assumes a ruling settles `k`. Expect instead:
 
 - **Confirmed:** characterisation (fee, not dividend — item **(b)**), no taxable event at mint (**(a)**), VAT time of supply (**(c)**), contractor vs employee (**(d)**), deductibility timing (**(e)**). These are legal-qualification questions and are squarely rulable.
 - **Not confirmed:** whether €50,000 is a reasonable price for €5,000 of documented effort. That is a valuation / appreciation question. The DVB gives decisions on the tax treatment of a described transaction, and the KB of 17 January 2003 already carves tax rates and the calculation of tax out of its remit. Expect a decision that confirms the mechanism **subject to the condition that the remuneration is at arm's length**, which hands the quantum straight back to a future auditor.
@@ -92,7 +92,7 @@ The royalty base is the one path in the repo that reaches 10× **without** an ar
 
 Arm's length is tested on the **ex ante** bargain, not the ex post winner. A ceiling that pays 10× only in the branch where a lot waited ~10 years fully unpaid, and 0 in every branch where `P_t` never arrives, has an **expected value near 1×**. That is a standard contingent-fee shape (no cure, no pay), not a 26%/year yield.
 
-The repo has the pieces — `P_t` may be zero, lots expire unpaid, freeze after 1× paid, no opening after repayment — and never puts them together into the one sentence DVB needs. To file it you must also be able to **evidence** it: real years with `P_t = 0`, real lots that lapsed unpaid, and a written policy that does not promise the multiple. Note the tension with [(e)](../../token-system-design/dvb-questions.md) same-year invoicing: the more reliably the pool pays every year, the weaker this argument gets. The [cap-opening log](2026-09-10_pt-distribution-and-cap-opening.md) spots the symptom ("looks like an annual billing cycle") without connecting it to the 10× defence.
+The repo has the pieces — `P_t` may be zero, lots expire unpaid, freeze after 1× paid, no opening after repayment — and never puts them together into the one sentence DVB needs. To file it you must also be able to **evidence** it: real years with `P_t = 0`, real lots that lapsed unpaid, and a written policy that does not promise the multiple. Note the tension with [(e)](../../token-system-design/analysis/dvb-questions.md) same-year invoicing: the more reliably the pool pays every year, the weaker this argument gets. The [cap-opening log](2026-09-10_pt-distribution-and-cap-opening.md) spots the symptom ("looks like an annual billing cycle") without connecting it to the 10× defence.
 
 ### 1.7 Practical recommendation
 
@@ -146,7 +146,7 @@ Art. 26 is therefore **not** the main quantum risk here. The conclusion of §7 (
 
 ### 3.3 "DVB + counsel before anyone is promised a certificate" assumes a ruling can settle `k`
 
-See §1.3. The gating assumption in [token-system.md](../../token-system-design/token-system.md) item 8 and in the "How to file" section of [dvb-questions.md](../../token-system-design/dvb-questions.md) should be split: file for the **box**, expect the **number** to come back as a condition rather than a confirmation.
+See §1.3. The gating assumption in [belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md) item 8 and in the "How to file" section of [dvb-questions.md](../../token-system-design/analysis/dvb-questions.md) should be split: file for the **box**, expect the **number** to come back as a condition rather than a confirmation.
 
 ### 3.4 Item (c)'s VAT hypothesis is missing the backstop that will be used against it
 
@@ -161,7 +161,7 @@ Item (c) currently invites counsel to discover the hole rather than pre-empting 
 
 ### 3.5 Minor
 
-- The option 1 vs option 2 table in [token-system.md](../../token-system-design/token-system.md) §4 is arithmetically fine, but the "contributor's BV, then VVPRbis 18%" column silently assumes VVPRbis eligibility (shares issued for **cash** from 1 July 2013, small company, fully paid). Many contributor BVs will not qualify. See §4.2.
+- The option 1 vs option 2 table in [belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md) §4 is arithmetically fine, but the "contributor's BV, then VVPRbis 18%" column silently assumes VVPRbis eligibility (shares issued for **cash** from 1 July 2013, small company, fully paid). Many contributor BVs will not qualify. See §4.2.
 - "Royalty WHT 30% can also apply to some IP payments" is fine, but the conclusion that engineering/OSS work does not reach the 15% *auteursrechten* regime should note that the post-2023 narrowing was upheld against the IT sector's annulment challenge — it is settled, not arguable.
 
 ---
@@ -182,7 +182,7 @@ See §1.4. Who eats a €7,000–8,750 add-back: the pool, or the contributor vi
 
 ### 4.4 The `p`-burn makes the (i)/(j) argument harder than the repo admits
 
-[p-burn-remaining-cap.md](../../token-system-design/p-burn-remaining-cap.md) is honest that remaining `p` is now **linear in remaining opened cap** per person, and calls it "more grant-time evidence." That is understated. The strongest leg of the not-a-unit-FX argument is not the algebra (`rem_i/p_i` differs by person) — it is that **a ceiling is not consideration while `P_t` may be zero**. The algebra leg is a second-order point that an auditor can simply decline to be impressed by. Item **(i)** should lead with the ceiling argument and treat the non-uniformity as support, not as the case.
+[p-burn-remaining-cap.md](../../token-system-design/paths/option-2-contingent-fee/p-burn-remaining-cap.md) is honest that remaining `p` is now **linear in remaining opened cap** per person, and calls it "more grant-time evidence." That is understated. The strongest leg of the not-a-unit-FX argument is not the algebra (`rem_i/p_i` differs by person) — it is that **a ceiling is not consideration while `P_t` may be zero**. The algebra leg is a second-order point that an auditor can simply decline to be impressed by. Item **(i)** should lead with the ceiling argument and treat the non-uniformity as support, not as the case.
 
 ### 4.5 Exit, death and succession are unhandled in the live spec
 
@@ -200,7 +200,7 @@ The CV's *coöperatief doel* (art. 6:1 WVV) against a vehicle whose main activit
 
 ## Decisions
 
-None as an ADR. Nothing accepted, unparked, revived, or rejected. Applied to [dvb-questions.md](../../token-system-design/dvb-questions.md) in this pass, as citation corrections rather than design changes:
+None as an ADR. Nothing accepted, unparked, revived, or rejected. Applied to [dvb-questions.md](../../token-system-design/analysis/dvb-questions.md) in this pass, as citation corrections rather than design changes:
 
 1. Excess test is **art. 53, 10° WIB 92**; art. 49 is the conditions of deductibility.
 2. Art. 26 §1 carve-out where the Belgian recipient is taxed on the amount.

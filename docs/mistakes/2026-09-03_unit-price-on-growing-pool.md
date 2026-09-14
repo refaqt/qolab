@@ -14,7 +14,7 @@ Do not give contribution certificates a euro spot price, including payout-time `
 
 ## Related
 
-- [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md)
+- [token-system-design/parked/vintage-pools.md](../../token-system-design/parked/vintage-pools.md)
 - [docs/decisions/2026-09-03_vintage-pools-no-unit-price.md](../decisions/2026-09-03_vintage-pools-no-unit-price.md)
 - [docs/decisions/2026-09-04_fee-cap-not-unit-price.md](../decisions/2026-09-04_fee-cap-not-unit-price.md)
 - [docs/decisions/2026-09-08_p-burn-remaining-cap.md](../decisions/2026-09-08_p-burn-remaining-cap.md)

@@ -6,7 +6,7 @@
 
 Tried another option-1 path that keeps the value of contributions **constant and low** (like cheap shares) and still gives contributors a return. Contribution points mint **shares** on `p = c0 · c^k`; each point is booked at **€0.01**. Revenues also mint shares on the same curve. `k` is very small (~0.041, fitted so 50,000 points → 50,000 shares and 500,000 points → 55,000 shares) so price rises quickly.
 
-Worked it in [token-system-design/2026-09-07_token-system-calculation.ods](../../token-system-design/2026-09-07_token-system-calculation.ods). After €400,000 revenue (2029-10-01, 400,000 points on the curve) the share price is €1.85:
+Worked it in [token-system-design/spreadsheets/2026-09-07_token-system-calculation.ods](../../token-system-design/spreadsheets/2026-09-07_token-system-calculation.ods). After €400,000 revenue (2029-10-01, 400,000 points on the curve) the share price is €1.85:
 
 | | Points | Shares minted | Multiple vs points-as-euros | Share value |
 | --- | ---: | ---: | ---: | ---: |

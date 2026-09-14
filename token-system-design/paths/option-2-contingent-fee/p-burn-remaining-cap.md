@@ -1,8 +1,8 @@
 # Proportional burn of `p` against remaining opened cap
 
-**Status: accepted (design).** Tax characterisation is still a DVB hypothesis, not a ruling. Companion to the option-2 effort-cap sketch ([docs/log/2026-09-04_option-2-effort-cap.md](../docs/log/2026-09-04_option-2-effort-cap.md)) and the parked vintage note ([vintage-pools.md](vintage-pools.md)). ADR: [2026-09-08](../docs/decisions/2026-09-08_p-burn-remaining-cap.md).
+**Status: accepted (design).** Tax characterisation is still a DVB hypothesis, not a ruling. Companion to the option-2 effort-cap sketch ([docs/log/2026-09-04_option-2-effort-cap.md](../../../docs/log/2026-09-04_option-2-effort-cap.md)) and the parked vintage note ([vintage-pools.md](../../parked/vintage-pools.md)). ADR: [2026-09-08](../../../docs/decisions/2026-09-08_p-burn-remaining-cap.md).
 
-**Prevention rules applied:** [do not put a euro spot price on a growing pool](../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not treat remaining `p` as remaining euros](../docs/mistakes/2026-09-04_cheap-share-euro-par.md); [do not open a lifetime multiple on day one](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not keep paid-off `p` as seniority on later work](../docs/mistakes/2026-09-08_unburned-p-after-cap.md).
+**Prevention rules applied:** [do not put a euro spot price on a growing pool](../../../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not treat remaining `p` as remaining euros](../../../docs/mistakes/2026-09-04_cheap-share-euro-par.md); [do not open a lifetime multiple on day one](../../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not keep paid-off `p` as seniority on later work](../../../docs/mistakes/2026-09-08_unburned-p-after-cap.md).
 
 This is **not** the rejected burns: not `cash / w`, not `v = pool / N`, not 1 `p` = €1, not `S ← S − €`.
 
@@ -74,7 +74,7 @@ burned_i = p_i · (revenue received by i in this vintage) / (remaining cap of i)
 2. **Apply every vintage from the start.** Equal treatment of new work needs `p = 0` **before** the new mint, not a one-shot reset mixed with new rem. Mixing old `p` with new rem lets the veteran vacuum until that new rem is filled.
 3. **Haircut on `alloc_i`**, not only on cash received. Default-in; leftover of `P_t` to **reserves**, not an earmarked `p` pot. Opt-out must not preserve `p`.
 4. **Do not publish `rem_i / p_i`** or dashboard “€X of cap still represented by `p`.” Do not book remaining cap or remaining `p` as a receivable.
-5. **Per-lot if lots exist.** Same fraction on lot `L`: `p_L · alloc_L / rem_L`. A blended per-person `p` / `rem` lets a new lot inherit old waiting ([gold rush](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md)). The option-2 personal cap may keep one `p_i` and one `rem_i`; then continuous application (guard 2) is what fixes the “caps filled, then everyone contributes again” case. If they add work while `rem_i > 0`, new `Δp` and new rem stack on the same stock — lots are the fix if that inheritance shows up.
+5. **Per-lot if lots exist.** Same fraction on lot `L`: `p_L · alloc_L / rem_L`. A blended per-person `p` / `rem` lets a new lot inherit old waiting ([gold rush](../../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md)). The option-2 personal cap may keep one `p_i` and one `rem_i`; then continuous application (guard 2) is what fixes the “caps filled, then everyone contributes again” case. If they add work while `rem_i > 0`, new `Δp` and new rem stack on the same stock — lots are the fix if that inheritance shows up.
 
 Opening rem with `r` while unpaid: `p` stays, `rem` grows, so `p / rem` falls; a later payout then burns fewer tokens per euro. At exhaustion, remaining `p` still goes to 0. Do not describe `r` as interest.
 
@@ -124,7 +124,7 @@ A uniform euro burn (`S ← S − €`) would have haircut both by the same fact
 | Invoice clip `pay ≤ rem` on documented effort | Yes (already in the option-2 cap) |
 | Retire the **fraction** `alloc / rem` of that person’s (or lot’s) `p` | Yes |
 
-The payout is still a budget split clipped by an effort ceiling. Burn does not convert tokens into euros; it amortizes **weight** as that ceiling is consumed. `rem_i / p_i` is not unique to `p` (same work, different mint dates, different `Δp`). A real unit FX is the same for all outstanding tokens at a date.
+The payout is still a budget split clipped by an effort ceiling. Burn does not convert tokens into euros; it amortizes **weight** as that ceiling is consumed. **Lead with the ceiling:** a ceiling is not consideration “to be received” (WBTW art. 26) while `P_t` may be zero — remaining `p` after a burn is a claim on nothing until a pool exists. The algebra is **support**, not the case: `rem_i / p_i` is not unique to `p` (same work, different mint dates, different `Δp`), whereas a real unit FX is the same for all outstanding tokens at a date. An auditor can decline to be impressed by the algebra; they cannot tax money that may never be invoiced ([2026-09-10 review §4.4](../../../docs/log/2026-09-10_arms-length-10x-and-repo-review.md)).
 
 Operationally, remaining `p` **is** linear in remaining opened cap for that person or lot. That is more grant-time evidence than “weights never burn.” It is still not a published par. Do not make it one. DVB item **(j)** below.
 
@@ -147,6 +147,6 @@ Existing items **(a)–(d)** and **(i)** (effort cap vs implied €/`p`) still a
 
 - **(j)** Proportional burn of `p` against remaining opened cap: is remaining `p` remaining consideration, or still a dimensionless weight plus an invoice ceiling?
 
-Full catalog: [dvb-questions.md](dvb-questions.md).
+Full catalog: [dvb-questions.md](../../analysis/dvb-questions.md).
 
 Until that sign-off, do not describe the burn as “€X per certificate” or “paying `p` down in euros.”

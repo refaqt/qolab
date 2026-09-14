@@ -10,13 +10,13 @@
 
 Asked: if there are **no investors yet**, could contributors in the Refaqt CV just **buy €1 shares in proportion to how much they contributed**? And: what if that is **not put on paper yet**, just to start off?
 
-That is the [cheap-share route](../../token-system-design/cheap-share-route.md) with two extra hopes: (1) no investor class, so a labour quota among ourselves is “just capital”; (2) staying informal so company-law and tax facts do not attach yet.
+That is the [cheap-share route](../../token-system-design/dead-ends/cheap-share-route.md) with two extra hopes: (1) no investor class, so a labour quota among ourselves is “just capital”; (2) staying informal so company-law and tax facts do not attach yet.
 
 ### 1. No investors does not save option 1
 
 The cheap-share rejection was never “because B capital exists.” It was: **share *count* = `f(work)`**. Paying €1 is a ticket, not skin in the game ([ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md); [2026-09-08](2026-09-08_option-1-tenth-vs-ten-euro-shares.md) at €0.10 vs €10).
 
-Without investors, **all** residual profit is split by that labour quota. That is louder deferred pay, not a cleaner dividend. *Werkende vennoot* still wants real capital at risk in a joint enterprise, not a points printer on a €1 share. Allocation by contribution is the smoking gun that the cause is labour ([token-system.md](../../token-system-design/token-system.md) §3).
+Without investors, **all** residual profit is split by that labour quota. That is louder deferred pay, not a cleaner dividend. *Werkende vennoot* still wants real capital at risk in a joint enterprise, not a points printer on a €1 share. Allocation by contribution is the smoking gun that the cause is labour ([belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md) §3).
 
 A CV share may only be issued **in ruil voor een inbreng** (art. 6:39 WVV). €1 cash is formally *inbreng in geld*. If how many shares you may buy is set by hours or `p`, the real contribution is work → *inbreng in nijverheid* (art. 1:8), which must be **valued** and typically needs a **bedrijfsrevisor**. That is the trigger the [tokens-not-shares](2026-09-10_tokens-not-shares-avoid-revisor.md) note was trying to avoid. Paying €1 does not turn labour into a cash contribution. Doing nijverheid honestly still cannot reward unplanned work later ([ADR 2026-09-10](../decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md)).
 
@@ -58,6 +58,6 @@ Proposed (not a new ADR): do not implement €1 labour-quota shares among contri
 
 ## Next Steps
 
-- Keep the cheap-share route rejected; note this variant on [cheap-share-route.md](../../token-system-design/cheap-share-route.md).
+- Keep the cheap-share route rejected; note this variant on [cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md).
 - Start-off, if needed: equal cash membership + `p` weights + later invoices. Do not promise those weights will become extra shares.
 - Counsel + accountant on the simpler option-2 spec, not on an informal labour-quota.

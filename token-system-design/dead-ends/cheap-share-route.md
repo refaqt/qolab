@@ -2,13 +2,13 @@
 
 **Status: dead-end.** Do not implement. Do not promise holders this wrapper.
 
-Vintages were parked as too complicated to explain ([vintage-pools.md](vintage-pools.md)). This note is the next sketch: mint `p` from contribution points; `p` is both a **euro cap** on dividends and a **quota** of cheap €1 shares; annual profit is split by shares; every €5,000 received (floor, carried) forces a share sell-back and burns 5,000 `p`.
+Vintages were parked as too complicated to explain ([vintage-pools.md](../parked/vintage-pools.md)). This note is the next sketch: mint `p` from contribution points; `p` is both a **euro cap** on dividends and a **quota** of cheap €1 shares; annual profit is split by shares; every €5,000 received (floor, carried) forces a share sell-back and burns 5,000 `p`.
 
 It is easier to tell. It does **not** survive Belgian tax/company-law facts, and it puts a **euro par on `p`**. Next pass is **option 2** (invoiced contingent fee) with **less machinery** than vintages + time-opened lots — not this.
 
-This is **design input for counsel and an accountant**, not a ruling. Companion tax analysis: [token-system.md](token-system.md).
+This is **design input for counsel and an accountant**, not a ruling. Companion tax analysis: [belgian-tax-and-company-law.md](../analysis/belgian-tax-and-company-law.md).
 
-**Prevention rules applied:** [do not put a euro spot price on certificates](../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not dress labour-quota cheap shares as a dividend](../docs/mistakes/2026-09-04_cheap-share-euro-par.md). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels; do not publish a euro par on contribution credits.
+**Prevention rules applied:** [do not put a euro spot price on certificates](../../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not dress labour-quota cheap shares as a dividend](../../docs/mistakes/2026-09-04_cheap-share-euro-par.md). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels; do not publish a euro par on contribution credits.
 
 ---
 
@@ -25,23 +25,23 @@ This is **design input for counsel and an accountant**, not a ruling. Companion 
 
 ### 2026-09-08 variant (€0.10 vs €10, no cap)
 
-Still this dead-end. Sketch: class A at €0.10, members buy up to a quota set by `p`; class B at €10 for investors; dividend by number of shares; private-person shareholders; no euro cap or burn of `p`. A 0.1 vs 1,000 split was dropped as too extreme; 0.1 vs 10 is the same labour-quota mapping with a 100:1 issue-price gap (one `p` plus ten cents gets the same dividend as €10 of B capital). Company law can write two classes. Option 1 still fails because share *count* tracks work. Session: [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md).
+Still this dead-end. Sketch: class A at €0.10, members buy up to a quota set by `p`; class B at €10 for investors; dividend by number of shares; private-person shareholders; no euro cap or burn of `p`. A 0.1 vs 1,000 split was dropped as too extreme; 0.1 vs 10 is the same labour-quota mapping with a 100:1 issue-price gap (one `p` plus ten cents gets the same dividend as €10 of B capital). Company law can write two classes. Option 1 still fails because share *count* tracks work. Session: [docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md](../../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md).
 
 ### 2026-09-10 variant (no investors yet; not on paper yet)
 
-Still this dead-end. Sketch: no investor class; contributors buy €1 shares in proportion to contribution; optionally keep that mapping informal “just to start.” Absence of B capital does not change the quota: share *count* still tracks work, and 100% of residual profit then follows labour. An informal ledger is not a share (art. 6:39 WVV issuance); it is a contractual labour claim. Papering later is often *inbreng* of a work receivable (revisor + valuation). Start-off that *is* allowed: equal cash membership share + `p` weights that never become extra shares. Session: [docs/log/2026-09-10_no-investors-euro-shares.md](../docs/log/2026-09-10_no-investors-euro-shares.md).
+Still this dead-end. Sketch: no investor class; contributors buy €1 shares in proportion to contribution; optionally keep that mapping informal “just to start.” Absence of B capital does not change the quota: share *count* still tracks work, and 100% of residual profit then follows labour. An informal ledger is not a share (art. 6:39 WVV issuance); it is a contractual labour claim. Papering later is often *inbreng* of a work receivable (revisor + valuation). Start-off that *is* allowed: equal cash membership share + `p` weights that never become extra shares. Session: [docs/log/2026-09-10_no-investors-euro-shares.md](../../docs/log/2026-09-10_no-investors-euro-shares.md).
 
 ### 2026-09-10 variant (startup unpaid / revaluation / MoU → given class)
 
 Still this dead-end **if** the number of shares tracks contribution. Sketch: like a “normal startup,” do not buy in; issue unpaid / “given” shares; revalue prices; start with an MoU that shares will follow contribution; later create class L and give each contributor that share.
 
-Startups do not mint shares from hours. Founders subscribe at par when FMV is ~zero; new rounds issue **new** shares at a **new** price a buyer pays; old issue prices stay. A CV **cannot** give shares (art. 6:39). Unpaid is a remaining **debt** (art. 1:9), not a gift. A GA revaluation is not a market. An MoU “based on contribution” is the informal quota; converting it is *inbreng in nijverheid* / of a receivable (arts. 6:8, 6:110, 6:11 lapse). **One cash share per contributing member** (count not `f(p)`) stays the open membership sketch. Session: [docs/log/2026-09-10_startup-equity-mou.md](../docs/log/2026-09-10_startup-equity-mou.md).
+Startups do not mint shares from hours. Founders subscribe at par when FMV is ~zero; new rounds issue **new** shares at a **new** price a buyer pays; old issue prices stay. A CV **cannot** give shares (art. 6:39). Unpaid is a remaining **debt** (art. 1:9), not a gift. A GA revaluation is not a market. An MoU “based on contribution” is the informal quota; converting it is *inbreng in nijverheid* / of a receivable (arts. 6:8, 6:110, 6:11 lapse). **One cash share per contributing member** (count not `f(p)`) stays the open membership sketch. Session: [docs/log/2026-09-10_startup-equity-mou.md](../../docs/log/2026-09-10_startup-equity-mou.md).
 
 ### 2026-09-11 variant (linear A quota, €100 B class, 10-year sunset)
 
 Still this dead-end, in all four combinations. Sketch: `p = c/1000`; `p` sets how many **class A** shares (€1 in price **and** in liquidation value) a contributor may buy; dividend by ratio of shares; optionally a **class B** at €100 with dividends by **number** of shares; each case with and without a **10-year sunset** (no dividends on shares older than 10 years).
 
-Company law writes it more cheaply than the earlier sketches (disproportionate profit split by statute; €1 exit matches the CV default *scheidingsaandeel*). Option 1 still fails: `N_A = f(hours)`. Three findings specific to this pass. (1) With 100 points/hour, the A/B price pair **publishes a euro rate for an hour**: `100 × 100 / 1000 = €10` of investor capital per contributor hour — a euro spot price on contribution, arriving through the issue-price ratio instead of through `w` or `v`. (2) The sunset bounds **duration, not amount**: it turns unbounded dilution of B into a steady state (`10·a_A / (10·a_A + N_B)`), but 10 years of an uncapped share is still unbounded in euros, and a profit right expiring 10 years after the work is deferred pay on its face — plus it is *easier* to value at grant. (3) A vintage-keyed dividend right creates one **soort** per vintage by operation of law; the cheaper route is *uittreding van rechtswege* on loss of a statutory *hoedanigheid* (arts. 6:121–6:122 WVV), which is also forced redemption at par after a decade of dividends. Keep the sunset on **weights** (DVB **(g)**), not on shares. Session: [docs/log/2026-09-11_cheap-share-ab-classes-sunset.md](../docs/log/2026-09-11_cheap-share-ab-classes-sunset.md).
+Company law writes it more cheaply than the earlier sketches (disproportionate profit split by statute; €1 exit matches the CV default *scheidingsaandeel*). Option 1 still fails: `N_A = f(hours)`. Three findings specific to this pass. (1) With 100 points/hour, the A/B price pair **publishes a euro rate for an hour**: `100 × 100 / 1000 = €10` of investor capital per contributor hour — a euro spot price on contribution, arriving through the issue-price ratio instead of through `w` or `v`. (2) The sunset bounds **duration, not amount**: it turns unbounded dilution of B into a steady state (`10·a_A / (10·a_A + N_B)`), but 10 years of an uncapped share is still unbounded in euros, and a profit right expiring 10 years after the work is deferred pay on its face — plus it is *easier* to value at grant. (3) A vintage-keyed dividend right creates one **soort** per vintage by operation of law; the cheaper route is *uittreding van rechtswege* on loss of a statutory *hoedanigheid* (arts. 6:121–6:122 WVV), which is also forced redemption at par after a decade of dividends. Keep the sunset on **weights** (DVB **(g)**), not on shares. Session: [docs/log/2026-09-11_cheap-share-ab-classes-sunset.md](../../docs/log/2026-09-11_cheap-share-ab-classes-sunset.md).
 
 ---
 
@@ -63,7 +63,7 @@ Worked example (year 1, €10,000 profit):
 
 After year 1: Alex 46,000 `p` / 10 shares; Bill 39,000 `p` / 8 shares. Lifetime remaining cash is whatever `p` is left. Carry/floor only chunks the same **1:1 par** into €5,000 steps.
 
-If year 1 profit had been €200,000 instead, the day-one cap would bind: Alex takes min(11/19 × €200,000, €51,000) = **€51,000**, then sells down and burns `p`. Bill likewise up to €39,000. Forecasted success → pile in work → extract ~1× points-as-euros immediately. That is the [gold-rush](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md) pattern at ~1× rather than 3×.
+If year 1 profit had been €200,000 instead, the day-one cap would bind: Alex takes min(11/19 × €200,000, €51,000) = **€51,000**, then sells down and burns `p`. Bill likewise up to €39,000. Forecasted success → pile in work → extract ~1× points-as-euros immediately. That is the [gold-rush](../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md) pattern at ~1× rather than 3×.
 
 ---
 
@@ -78,9 +78,9 @@ A Belgian CV’s native tools are **shares**, possibly in classes, issued for ca
 | VAT (WBTW arts. 22, 26; Tolsma) | Points → `p` → extra shares is a direct link between labour and consideration. Equal-per-member surplus might be a member distribution; this is not that. |
 | VVPRbis 18% | There is €1 cash, so someone will ask. Unlikely to stick: labour is the real inbreng; forced redemption after extracting the cap looks like the share was never equity. Do not plan on 18%. |
 | Volunteer / cooperative spirit | A profit-distributing CV that pays the same people via a labour-quota share class is deferred pay. Wet 3 juli 2005 is a poor fit. |
-| Inbreng in nijverheid done honestly (art. 1:8 WVV) | Shares for a commitment to work must be **valued before issuance**. Tax on that value at issuance, then 30% on later dividends, plus lapse/non-compete rules. Needs a **plan-ahead** commitment; cannot reward unplanned work later. Often **worse** than a contingent fee. Paying €1 does not turn labour into a cash contribution. **Dead-end:** [ADR 2026-09-10](../docs/decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md). |
+| Inbreng in nijverheid done honestly (art. 1:8 WVV) | Shares for a commitment to work must be **valued before issuance**. Tax on that value at issuance, then 30% on later dividends, plus lapse/non-compete rules. Needs a **plan-ahead** commitment; cannot reward unplanned work later. Often **worse** than a contingent fee. Paying €1 does not turn labour into a cash contribution. **Dead-end:** [ADR 2026-09-10](../../docs/decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md). |
 
-You still pick **one** tax box. Dividends on shares **and** “this is pay for contributions” on the same instrument is how you get 30% *and* VAT/PIT/RSZ. [token-system.md](token-system.md) §3: putting the right in a share class “still does not stop tax recharacterisation when the number of class-B shares equals contribution points.” This route *is* that mapping.
+You still pick **one** tax box. Dividends on shares **and** “this is pay for contributions” on the same instrument is how you get 30% *and* VAT/PIT/RSZ. [belgian-tax-and-company-law.md](../analysis/belgian-tax-and-company-law.md) §3: putting the right in a share class “still does not stop tax recharacterisation when the number of class-B shares equals contribution points.” This route *is* that mapping.
 
 If it *did* hold as a dividend: VenB at Refaqt first, then 30% WHT — **not** a same-year deductible cost. Pocket math on an already-taxed pool ignores that the same euros as a fee would have reduced VenB.
 
@@ -94,13 +94,13 @@ Three different “prices” get mixed. This route uses the first two at once.
 
 | Kind | This route | Vintage (parked, not this dead-end) |
 | --- | --- | --- |
-| **Unit FX** (conversion rate: euros per token) | 5,000 `p` burned per €5,000 → **1 `p` = €1** | No conversion rate. Budget `P_t` split across weights. Amortize `p` by `alloc / rem` of remaining opened cap — not euros per token ([p-burn-remaining-cap.md](p-burn-remaining-cap.md)). |
+| **Unit FX** (conversion rate: euros per token) | 5,000 `p` burned per €5,000 → **1 `p` = €1** | No conversion rate. Budget `P_t` split across weights. Amortize `p` by `alloc / rem` of remaining opened cap — not euros per token ([p-burn-remaining-cap.md](../paths/option-2-contingent-fee/p-burn-remaining-cap.md)). |
 | **Ceiling** | Remaining `p` *is* remaining euros. Open in full on day one. | Ceiling is documented effort `E_L`, not minted `p`. Opens at 1×. |
 | **Ex-post return** | Always exists after the fact. | Same. |
 
 Belgian VAT and income tax look at ascertainable value, not at the word “cap.” At mint a holder can say: “I received 51,000 `p`, each of which can become €1 of dividend if the GA distributes.” That is a mark-to-market of the *ceiling*. The bonding curve then prices **work in euros**, not only in weight: Alex’s 50,000 points mint a €51,000 cap; Bill’s 40,000 points mint a €39,000 cap.
 
-A fee cap tied to **documented effort** is a different object: it bounds an invoice so the fee stays near the work (art. 49 WIB 92 / arm’s length). It is not a quote of `p`. Dividing that cap by `Δp` (`(k × E) / Δp`) does **not** turn it into a unit FX (euros per token) — same work, different mint dates, same cap, different implied €/`p`. Full argument: [vintage-pools.md](vintage-pools.md) (“Does `(k × hours × rate) / Δp` price `p`?”). Here `p` *is* the euro cap, so minting `p` *is* stating the euro value of that contribution’s remaining claim.
+A fee cap tied to **documented effort** is a different object: it bounds an invoice so the fee stays near the work (arm’s length: art. 53, 10° WIB 92 for the excess, art. 49 for the conditions of deductibility). It is not a quote of `p`. Dividing that cap by `Δp` (`(k × E) / Δp`) does **not** turn it into a unit FX (euros per token) — same work, different mint dates, same cap, different implied €/`p`. Full argument: [vintage-pools.md](../parked/vintage-pools.md) (“Does `(k × hours × rate) / Δp` price `p`?”). Here `p` *is* the euro cap, so minting `p` *is* stating the euro value of that contribution’s remaining claim.
 
 Burn-on-payout also reopens stock-model incentives even without an earmarked pot: taking this year’s dividend **shrinks next year’s share count**. If a fat year is visible, holders want the GA to **retain** earnings so they keep shares for the jackpot, then hit the full `p` cap in one go.
 
@@ -138,11 +138,11 @@ It tried to make option 1 *look* true by inserting a €1 share between the poin
 
 - Cheap extra shares as the reward vehicle.
 - Any 1 `p` = €1 (or 5,000 `p` per €5,000) burn, cap, or par.
-- Two-class €0.10 / €10 shares with a `p` quota and dividend per share ([2026-09-08](../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
-- €1 labour-quota shares among contributors because there are no investors yet, on paper or as an informal “we’ll issue them later” ledger ([2026-09-10](../docs/log/2026-09-10_no-investors-euro-shares.md)).
-- Two-class €1 / €100 shares with a linear `p = c/1000` quota and dividend per share, with or without a 10-year sunset of the profit right ([2026-09-11](../docs/log/2026-09-11_cheap-share-ab-classes-sunset.md)).
-- MoU → unpaid / “given” / revalued contributor class whose number tracks work ([2026-09-10](../docs/log/2026-09-10_startup-equity-mou.md)).
-- Inbreng in nijverheid as a tax shelter or as a later-reward path without a plan-ahead commitment (it is a valuation of a **promised** contribution **before** shares exist) — [ADR 2026-09-10](../docs/decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md).
+- Two-class €0.10 / €10 shares with a `p` quota and dividend per share ([2026-09-08](../../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
+- €1 labour-quota shares among contributors because there are no investors yet, on paper or as an informal “we’ll issue them later” ledger ([2026-09-10](../../docs/log/2026-09-10_no-investors-euro-shares.md)).
+- Two-class €1 / €100 shares with a linear `p = c/1000` quota and dividend per share, with or without a 10-year sunset of the profit right ([2026-09-11](../../docs/log/2026-09-11_cheap-share-ab-classes-sunset.md)).
+- MoU → unpaid / “given” / revalued contributor class whose number tracks work ([2026-09-10](../../docs/log/2026-09-10_startup-equity-mou.md)).
+- Inbreng in nijverheid as a tax shelter or as a later-reward path without a plan-ahead commitment (it is a valuation of a **promised** contribution **before** shares exist) — [ADR 2026-09-10](../../docs/decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md).
 - VVPRbis on €1 labour-quota shares.
 
 ---

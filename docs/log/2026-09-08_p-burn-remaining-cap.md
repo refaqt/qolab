@@ -4,7 +4,7 @@
 
 ## What happened
 
-Without burning `p`, large contributors whose caps were already filled still held historical weight. After everyone contributed again — same point on the global bonding curve, same new risk — veterans took much more of every later vintage than newcomers. Accepted burn: `p_i · (revenue_i / remaining opened cap_i)` (allocation before payout; `rem = 0` ⇒ `p = 0`). Not a euro par. Wrote [token-system-design/p-burn-remaining-cap.md](../../token-system-design/p-burn-remaining-cap.md), [ADR 2026-09-08](../decisions/2026-09-08_p-burn-remaining-cap.md), and [mistake 2026-09-08](../mistakes/2026-09-08_unburned-p-after-cap.md).
+Without burning `p`, large contributors whose caps were already filled still held historical weight. After everyone contributed again — same point on the global bonding curve, same new risk — veterans took much more of every later vintage than newcomers. Accepted burn: `p_i · (revenue_i / remaining opened cap_i)` (allocation before payout; `rem = 0` ⇒ `p = 0`). Not a euro par. Wrote [token-system-design/paths/option-2-contingent-fee/p-burn-remaining-cap.md](../../token-system-design/paths/option-2-contingent-fee/p-burn-remaining-cap.md), [ADR 2026-09-08](../decisions/2026-09-08_p-burn-remaining-cap.md), and [mistake 2026-09-08](../mistakes/2026-09-08_unburned-p-after-cap.md).
 
 ## Decisions
 

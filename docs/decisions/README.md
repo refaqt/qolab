@@ -1,6 +1,6 @@
 # Decisions
 
-Architecture Decision Records. One file per decision: `YYYY-MM-DD_topic.md`.
+Architecture Decision Records. One file per decision: `YYYY-MM-DD_topic.md`. Which path each decision belongs to: [token-system-design/README.md](../../token-system-design/README.md).
 
 | Date | Decision |
 | ---- | -------- |
@@ -15,3 +15,5 @@ Architecture Decision Records. One file per decision: `YYYY-MM-DD_topic.md`.
 | 2026-09-09 | [Sub-project as contractor (euros in a subpool)](2026-09-09_project-as-contractor.md) |
 | 2026-09-10 | [Inbreng in nijverheid is a dead-end](2026-09-10_inbreng-in-nijverheid-dead-end.md) |
 | 2026-09-14 | [Refaqt mission is a binding design constraint](2026-09-14_refaqt-mission-design-constraint.md) |
+| 2026-09-14 | [Two bases: the large multiple comes off the effort base](2026-09-14_two-bases-10x-off-effort.md) (Proposed) |
+| 2026-09-14 | [Exit, death, succession and disallowance: contract defaults](2026-09-14_exit-death-and-disallowance-defaults.md) (Proposed) |

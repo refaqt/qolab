@@ -4,7 +4,7 @@
 
 ## What happened
 
-Parked vintages: the time-opened fee cap per lot is too complicated to explain. Investigated a simpler-looking option-1 sketch — contribution points mint `p`; `p` caps dividends over time and sets how many €1 shares a contributor may buy (1 per 5,000 `p`, round up); profit is split by shares; every €5,000 received (floor, carried) forces selling one share and burning 5,000 `p`. Worked the Alex / Bill year-1 example (€10,000 profit → 11 vs 8 shares). Wrote [token-system-design/cheap-share-route.md](../../token-system-design/cheap-share-route.md). Rejected the route: [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md). Logged the failed approach in [docs/mistakes/2026-09-04_cheap-share-euro-par.md](../mistakes/2026-09-04_cheap-share-euro-par.md).
+Parked vintages: the time-opened fee cap per lot is too complicated to explain. Investigated a simpler-looking option-1 sketch — contribution points mint `p`; `p` caps dividends over time and sets how many €1 shares a contributor may buy (1 per 5,000 `p`, round up); profit is split by shares; every €5,000 received (floor, carried) forces selling one share and burning 5,000 `p`. Worked the Alex / Bill year-1 example (€10,000 profit → 11 vs 8 shares). Wrote [token-system-design/dead-ends/cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md). Rejected the route: [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md). Logged the failed approach in [docs/mistakes/2026-09-04_cheap-share-euro-par.md](../mistakes/2026-09-04_cheap-share-euro-par.md).
 
 ## Decisions
 

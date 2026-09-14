@@ -14,6 +14,8 @@ Canonical text and how to apply it: [`docs/mission.md`](../../docs/mission.md). 
 - Documentation tooling: `doqs/` (`refaqt/doqs`).
 - Repo-specific guidance: this file and `.agents-local/skills/`.
 - Living docs: `docs/mission.md`, `docs/architecture.md`, `docs/decisions/`, `docs/log/`, `docs/mistakes/`.
+- Token-system design lives in `token-system-design/`, one folder per path; the path map `token-system-design/README.md` lists every token system with its status. New sketches get a row there and a path note (or a dead-ends row), never a loose file at the folder root.
+- Cite art. 53, 10° WIB 92 for the excess test and art. 49 for the conditions of deductibility (`docs/mistakes/2026-09-14_wrong-article-for-excess-test.md`). Never publish 10×, `r`, or ROI language.
 - Do not create DOQS machine folders (`cad/`, `bom/`, `modules/`, `firmware/`, `okh.toml`) unless that scope is explicitly requested.
 
 ## Stack

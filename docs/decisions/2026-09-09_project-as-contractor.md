@@ -15,7 +15,7 @@ The intended object is simpler: a sub-project is a **contractor** with one rate 
 
 [2026-09-08 Direction B](../log/2026-09-08_nested-p-sunset-two-directions.md) asked for this analysis and warned against `c × €1`. The cap object is documented effort: admitted hours × **frozen project band**.
 
-Full note: [token-system-design/nested-mint-budgets.md](../../token-system-design/nested-mint-budgets.md). Session: [docs/log/2026-09-09_hours-cap-and-project-contractor.md](../log/2026-09-09_hours-cap-and-project-contractor.md).
+Full note: [token-system-design/paths/option-2-contingent-fee/nested-mint-budgets.md](../../token-system-design/paths/option-2-contingent-fee/nested-mint-budgets.md). Session: [docs/log/2026-09-09_hours-cap-and-project-contractor.md](../log/2026-09-09_hours-cap-and-project-contractor.md).
 
 ## Decision
 

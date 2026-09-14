@@ -13,7 +13,7 @@ Parked vintages retired a lot when its opened cap was exhausted (a cliff). Euro-
 
 Proposed identity: burn `p_i · (revenue_i / remaining_cap_i)`.
 
-Full note: [token-system-design/p-burn-remaining-cap.md](../../token-system-design/p-burn-remaining-cap.md).
+Full note: [token-system-design/paths/option-2-contingent-fee/p-burn-remaining-cap.md](../../token-system-design/paths/option-2-contingent-fee/p-burn-remaining-cap.md).
 
 ## Decision
 

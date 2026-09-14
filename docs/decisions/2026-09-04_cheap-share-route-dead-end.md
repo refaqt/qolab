@@ -12,7 +12,7 @@ The vintage design (annual budget `P_t`, default-in, no unit `v`, time-opened ca
 
 The alternative sketch: contribution points mint `p`; `p` is a cap on dividends over time **and** a quota of cheap €1 shares (1 share per 5,000 `p`, round up); year-end profit is split by shares; every €5,000 received (floor, carried) forces selling 1 share and burning 5,000 `p`.
 
-Full note: [token-system-design/cheap-share-route.md](../../token-system-design/cheap-share-route.md).
+Full note: [token-system-design/dead-ends/cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md).
 
 ## Decision
 

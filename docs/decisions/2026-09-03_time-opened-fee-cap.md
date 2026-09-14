@@ -10,7 +10,7 @@ Vintages stop wait-and-run: each year a budget `P_t`, default-in, leftover to re
 
 The mint curve `p = c0 · c^k` only changes weight. A late lot still mints `Δp` and races to the same `k×`. A blended per-person ceiling lets last week’s work inherit years of “waited” cap.
 
-Full note: [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md) (time-opened cap and the three worked stories).
+Full note: [token-system-design/parked/vintage-pools.md](../../token-system-design/parked/vintage-pools.md) (time-opened cap and the three worked stories).
 
 ## Decision
 

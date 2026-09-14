@@ -4,7 +4,7 @@
 
 ## What happened
 
-The vintage option still paid a default `k × effort` from the first vintage, so a short payback (sudden success, large `P_t`) delivered the long-risk multiple. Forecasted revenue would pull contributions as a sure bet. Replaced the static ceiling with a per-lot **time-opened fee cap** (1× at first eligibility; opens with unpaid wait only; freeze after 1× is paid; record date `Y+1`). Wrote the three stories into [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md). Proposed [ADR 2026-09-03](../decisions/2026-09-03_time-opened-fee-cap.md). Logged the failed approach in [docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md](../mistakes/2026-09-03_immediate-multiple-gold-rush.md).
+The vintage option still paid a default `k × effort` from the first vintage, so a short payback (sudden success, large `P_t`) delivered the long-risk multiple. Forecasted revenue would pull contributions as a sure bet. Replaced the static ceiling with a per-lot **time-opened fee cap** (1× at first eligibility; opens with unpaid wait only; freeze after 1× is paid; record date `Y+1`). Wrote the three stories into [token-system-design/parked/vintage-pools.md](../../token-system-design/parked/vintage-pools.md). Proposed [ADR 2026-09-03](../decisions/2026-09-03_time-opened-fee-cap.md). Logged the failed approach in [docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md](../mistakes/2026-09-03_immediate-multiple-gold-rush.md).
 
 ## Decisions
 

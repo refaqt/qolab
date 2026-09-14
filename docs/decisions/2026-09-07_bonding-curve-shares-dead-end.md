@@ -10,7 +10,7 @@
 
 Cheap extra shares were already rejected as a dividend wrapper: share count still tracks labour, and a euro par on `p` prices the mint. A follow-up sketch tried to keep grant-time contribution value **constant and low** (€0.01 per point) and still pay a return by minting **shares** on `p = c0 · c^k` with a very small `k`, and by letting **revenues mint on the same curve** so price rises quickly.
 
-Spreadsheet: [token-system-design/2026-09-07_token-system-calculation.ods](../../token-system-design/2026-09-07_token-system-calculation.ods). Session note: [docs/log/2026-09-07_bonding-curve-shares-dead-end.md](../log/2026-09-07_bonding-curve-shares-dead-end.md).
+Spreadsheet: [token-system-design/spreadsheets/2026-09-07_token-system-calculation.ods](../../token-system-design/spreadsheets/2026-09-07_token-system-calculation.ods). Session note: [docs/log/2026-09-07_bonding-curve-shares-dead-end.md](../log/2026-09-07_bonding-curve-shares-dead-end.md).
 
 The curve that makes price rise fast mints almost all shares at the origin. Later contributions get a very low number of shares. The multiple needed to climb out of the cheap grant value is extreme and unpractical for anyone but the first mover.
 

@@ -14,7 +14,7 @@ Do not issue extra profit-sharing shares whose number is set by contribution poi
 
 ## Related
 
-- [token-system-design/cheap-share-route.md](../../token-system-design/cheap-share-route.md)
+- [token-system-design/dead-ends/cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md)
 - [docs/decisions/2026-09-04_cheap-share-route-dead-end.md](../decisions/2026-09-04_cheap-share-route-dead-end.md)
 - [docs/mistakes/2026-09-03_unit-price-on-growing-pool.md](2026-09-03_unit-price-on-growing-pool.md)
 - [docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md](2026-09-03_immediate-multiple-gold-rush.md)

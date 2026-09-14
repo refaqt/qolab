@@ -18,7 +18,7 @@ Canonical text: [docs/mission.md](../mission.md). Session: [docs/log/2026-09-14_
 
 1. **Treat the mission as a binding constraint** on token-system, statute, DVB, and contract drafts. Check every sketch against [docs/mission.md](../mission.md). Reject drafts whose only story is private profit extraction or a tax result.
 2. **Statutes, when drafted, must state this *doel* / *voorwerp*.** Dutch statutory wording is counsel, not this ADR.
-3. **Surplus, membership, and instruments** should be narratable as serving that manufacturing mission (local, on-demand, less resource and energy use, democratized tools)—including why unallocated profit stays investable in the mission ([token-system.md](../../token-system-design/token-system.md) item 5).
+3. **Surplus, membership, and instruments** should be narratable as serving that manufacturing mission (local, on-demand, less resource and energy use, democratized tools)—including why unallocated profit stays investable in the mission ([belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md) item 5).
 4. The mission is a **non-tax rationale**, not a tax box, volunteer claim, or ruling. It does not convert contributors into volunteers, mix a dividend story and a fee on the same instrument, or revive labour-quota shares.
 
 ## Consequences

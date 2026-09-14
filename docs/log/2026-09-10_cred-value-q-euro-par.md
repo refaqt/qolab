@@ -2,6 +2,10 @@
 
 **Role(s):** finance, business-dev
 
+**Citation note (2026-09-14):** where this log cites **art. 49 WIB 92** for “not excessive,” read **art. 53, 10° WIB 92** (excess; burden of proof on the administration; partial rejection only) with art. 49 for the conditions of deductibility. **Art. 26 §1 WIB 92** does not add back an advantage that is taken into account in the Belgian recipient’s taxable income, so it is largely neutral for an invoicing contributor. Corrected by the [2026-09-10 review §3](2026-09-10_arms-length-10x-and-repo-review.md); logged as [mistake 2026-09-14](../mistakes/2026-09-14_wrong-article-for-excess-test.md).
+
+**Status note (2026-09-14):** promoted to a path note with a scoping rule — [paths/scoped-royalty-cred-q/](../../token-system-design/paths/scoped-royalty-cred-q/README.md); proposed base for the large upside under [ADR 2026-09-14 (Proposed)](../decisions/2026-09-14_two-bases-10x-off-effort.md). DVB **(s)**.
+
 **Status:** **Viable path.** Open. Not accepted as the live spec. No ADR. Does not replace the hours-capped option-2 pass until a later decision. Distinct from [supplier-network Q](2026-09-10_q-token-supplier-network.md) (that Q has **no** euro par and is an access ticket, not a payout). Design input for counsel, not a ruling.
 
 **Prevention rules applied:** [do not put a euro spot price on a growing pool](../mistakes/2026-09-03_unit-price-on-growing-pool.md) — this fork **accepts** `1 Q = €1` and therefore **accepts** priced consideration (the live option-2 hypothesis tries to avoid that); [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md) — no invoice cap is a remaining art. 49 / art. 26 risk, not a reason to call this labour-hours; [do not dress a labour-quota instrument as a dividend](../mistakes/2026-09-04_cheap-share-euro-par.md). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels. Bitcoin mining is **not** the analogue (identifiable customer).

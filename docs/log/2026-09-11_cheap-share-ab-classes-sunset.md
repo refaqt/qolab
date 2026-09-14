@@ -2,7 +2,7 @@
 
 **Role(s):** finance, business-dev
 
-**Status:** Same rejection as the [cheap-share dead-end](../../token-system-design/cheap-share-route.md) for all four combinations. Not a new option, not an ADR. Confirms [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md). Design input for counsel, not a ruling. The **sunset** is the one genuinely new object; §5 and §8 say where it is worth keeping.
+**Status:** Same rejection as the [cheap-share dead-end](../../token-system-design/dead-ends/cheap-share-route.md) for all four combinations. Not a new option, not an ADR. Confirms [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md). Design input for counsel, not a ruling. The **sunset** is the one genuinely new object; §5 and §8 say where it is worth keeping.
 
 **Prevention rules applied:** [do not dress labour-quota cheap shares as a dividend](../mistakes/2026-09-04_cheap-share-euro-par.md); [do not put a euro spot price on certificates](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not use inbreng in nijverheid to reward unplanned later work](../mistakes/2026-09-10_inbreng-in-nijverheid-plan-ahead.md). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels.
 
@@ -65,7 +65,7 @@ Internally this is the **most proportionate** structure in the file: every share
 
 That is also why it fails. With no other class, **100% of residual profit follows hours, forever**. This is verbatim the [2026-09-10 no-investors variant](2026-09-10_no-investors-euro-shares.md): louder deferred pay, not a cleaner dividend. *Werkende vennoot* case law wants profit as a return on **capital at risk** in a joint enterprise; capital at risk here is €1 per 10 hours.
 
-No cap and no burn means no bound on lifetime extraction — the objection [vintage-pools.md](../../token-system-design/vintage-pools.md) raised against an unlimited lifetime share of every future `P_t`.
+No cap and no burn means no bound on lifetime extraction — the objection [vintage-pools.md](../../token-system-design/parked/vintage-pools.md) raised against an unlimited lifetime share of every future `P_t`.
 
 ### 3.2 With sunset
 
@@ -73,7 +73,7 @@ Now the tail stops. Three consequences:
 
 - **Where does the residual go?** A shares have a €1 *scheidingsaandeel* and, after year 10, no profit right. If contributions ever stop, no share is entitled to profit and no share has NAV upside. The accumulated surplus then belongs to **nobody unless the statutes name a taker** (reserves, a purpose, another class). That must be written. As a design this is steward-ownership shaped — which is a legitimate thing to build, but it is the **opposite** of the capital-at-risk story option 1 needs.
 - **Characterisation gets worse, not better.** A profit right that expires exactly 10 years after the work that generated it is a **10-year payment plan for that work**. Equity does not evaporate on an anniversary.
-- **Grant-time valuation gets easier.** A bounded stream can be valued; a perpetual contingent one is harder. The uncertainty that helps deferral ([token-system.md](../../token-system-design/token-system.md) §1) is the uncertainty of the *pool*, and the sunset does not touch that — but it removes the "unbounded and unquantifiable" half of the argument.
+- **Grant-time valuation gets easier.** A bounded stream can be valued; a perpetual contingent one is harder. The uncertainty that helps deferral ([belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md) §1) is the uncertainty of the *pool*, and the sunset does not touch that — but it removes the "unbounded and unquantifiable" half of the argument.
 
 ---
 
@@ -131,7 +131,7 @@ Two more points:
 
 - **Leonine question at the tail.** A clause denying a shareholder (or class) any participation in profit is void (art. 4:2 WVV; the BV rule of art. 5:41 says each share participates in the profit **or** the liquidation balance, with statutes free to set the proportion). A post-sunset A share keeps a €1 liquidation entitlement, so it probably still "participates." Counsel item — do not assume it, and do not write a share that has neither.
 - **Governance side effect.** Holders with ageing vintages want the GA to **distribute before their shares expire**. That is the mirror image of the old burn design's "retain until the fat year" ([mistake 2026-09-04](../mistakes/2026-09-04_cheap-share-euro-par.md)) and is genuinely healthier, but it is pressure to pay out cash the CV may need, against WVV net-asset and liquidity tests.
-- **Anti-abuse.** A sunset has a defensible **non-fiscal** rationale (keep the reward with active contributors, rotate ownership), which is useful against art. 344 §1 *fiscaal misbruik* — [DVB item (q)](../../token-system-design/dvb-questions.md). It does not repair the allocation key.
+- **Anti-abuse.** A sunset has a defensible **non-fiscal** rationale (keep the reward with active contributors, rotate ownership), which is useful against art. 344 §1 *fiscaal misbruik* — [DVB item (q)](../../token-system-design/analysis/dvb-questions.md). It does not repair the allocation key.
 
 **Net:** the sunset bounds **duration**, not **amount**. Ten years of dividends on an uncapped share is still unbounded in euros, so it does not answer the arm's-length quantum question at all.
 
@@ -158,7 +158,7 @@ Two honest observations.
 
 ## 7. What does **not** change from previous passes
 
-- No deduction for the CV: the reward is paid out of post-VenB profit, so the same euros as an option-2 fee would have reduced VenB first ([token-system.md](../../token-system-design/token-system.md) §4).
+- No deduction for the CV: the reward is paid out of post-VenB profit, so the same euros as an option-2 fee would have reduced VenB first ([belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md) §4).
 - Employment / RSZ: unchanged. Private-person shareholders and "no employees" help only if there is no subordination; a share quota per hour worked is close to a piece rate.
 - MiCA / DAC8: irrelevant here — these are registered shares in a register, not tokens.
 - You still pick **one** box. A dividend on shares *and* "this is the reward for contributions" on the same instrument is how you get 30% **and** VAT/PIT/RSZ.
@@ -181,7 +181,7 @@ Proposed (not a new ADR):
 1. **Reject all four combinations** as an option-1 path. Linear `p = c/1000`, par equal to liquidation value, a €100 investor class with per-share dividends, and a 10-year sunset do not cure `N_A = f(work)`. Confirms [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md).
 2. **Do not publish a labour↔capital issue-price ratio.** Two classes with equal per-share dividends and a 100:1 price gap state a euro price for an hour. Treat that as the same class of fact as `w`, `v = pool/N` and 1 `p` = €1.
 3. **Keep the sunset as an option-2 object** (lapse of weights / lots, DVB **(g)**), not as a share right.
-4. Note the variant on [cheap-share-route.md](../../token-system-design/cheap-share-route.md) and extend the prevention rule in [docs/mistakes/2026-09-04](../mistakes/2026-09-04_cheap-share-euro-par.md) to the sunset and the €1/€100 pair.
+4. Note the variant on [cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md) and extend the prevention rule in [docs/mistakes/2026-09-04](../mistakes/2026-09-04_cheap-share-euro-par.md) to the sunset and the €1/€100 pair.
 
 ## Open Questions
 
@@ -197,7 +197,7 @@ Proposed (not a new ADR):
 
 - Do not promise contributors A shares, a per-hour share quota, or 30%/18% treatment on any of these four.
 - If the sunset is wanted, specify it on **weights** in the next option-2 pass and file DVB **(g)** with it.
-- If an option-1 residual is wanted beside option 2, sketch the **active-member equal-share class** (not `f(p)`), with the art. 344 §1 point from [DVB (q)](../../token-system-design/dvb-questions.md) in mind.
+- If an option-1 residual is wanted beside option 2, sketch the **active-member equal-share class** (not `f(p)`), with the art. 344 §1 point from [DVB (q)](../../token-system-design/analysis/dvb-questions.md) in mind.
 - Counsel + accountant on the items above before any statutes are drafted.
 
 ## Sources checked

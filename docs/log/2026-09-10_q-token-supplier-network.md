@@ -2,6 +2,8 @@
 
 **Role(s):** finance, business-dev
 
+**Status note (2026-09-14):** path note at [paths/q-supplier-access/](../../token-system-design/paths/q-supplier-access/README.md); still open; to be renamed away from “Q.”
+
 **Status:** Open. Not accepted. Not the live option-2 pass. No ADR. **Different Q** from the [Cred-weighted euro-par payout](2026-09-10_cred-value-q-euro-par.md) (that path is `1 Q = €1` from `P_t`, invoiced; this path is an access ticket with no par).
 
 **Prevention rules applied:** [do not put a euro spot price on a growing pool](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not treat remaining `p` as remaining euros](../mistakes/2026-09-04_cheap-share-euro-par.md); a peer market prints a euro price ([S-burn log](2026-09-07_s-burn-euro-par.md)). Token-engineering: labels do not take compensation outside VAT or income tax; facts beat labels.

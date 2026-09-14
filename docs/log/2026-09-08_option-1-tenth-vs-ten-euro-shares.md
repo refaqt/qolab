@@ -12,7 +12,7 @@ Dropping the old cap/burn makes the A share look more like a share (you keep it 
 
 Private persons and “no employees” help a little on RSZ employment only if there is no subordination. They do not turn a points-quota dividend into a capital return. Recharacterisation still stacks VenB at Refaqt (dividend not deductible) with professional tax on the natural person.
 
-Same prevention rule: [cheap-share euro par](../mistakes/2026-09-04_cheap-share-euro-par.md). Not a new incident. Confirms [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md). Note added on [cheap-share-route.md](../../token-system-design/cheap-share-route.md).
+Same prevention rule: [cheap-share euro par](../mistakes/2026-09-04_cheap-share-euro-par.md). Not a new incident. Confirms [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md). Note added on [cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md).
 
 If labour and capital should both eat **without** a points printer: a statutory split (for example 50/50 of distributable profit; inside A, one share per contributing member). If `p` must scale what someone takes, that leg is option 2 and B shares stay ordinary capital.
 
