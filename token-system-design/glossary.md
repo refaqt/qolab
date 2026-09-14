@@ -10,9 +10,13 @@ Symbols and terms used across the design notes. Where two notes use the same let
 | `c` | Contribution points, `c = hours × 100` for everyone. A weight scale that renames hours. | A wage; never calibrated to a market €/hour |
 | `p` | Non-transferable weights minted on the global curve `p = c0 · c^k` (early work mints more `Δp` per `Δc`). Splits `P_t`. | A euro claim; remaining `p` is not remaining euros |
 | `k` (mint) | Exponent of the mint curve (`≈ 0.737` in the 2026-09-03 sheet). | The fee-cap multiple below |
-| `f`, `E`, `E_L` | Documented effort: hours × **frozen contractor band**, or a quoted effort in the annex. The invoice **ceiling** at cash-out. | An unissued invoice; “fees he would normally have invoiced” |
+| `f`, `E` | Documented effort: hours × **frozen contractor band**, or a quoted effort in the annex. The invoice **ceiling** at cash-out. | An unissued invoice; “fees he would normally have invoiced”; the letter `f` is **not** fees paid |
+| `e_i(n)`, `E_i(n)` | Documented effort accepted in year `n` (a flow), and its cumulative total. | A payment |
+| `a_i(n)`, `A_i(n)` | Allocation in vintage `n` (= `alloc_i`, counted whether or not invoiced) and its cumulative total. | Cash only; a forfeited slice counts too |
+| `U_i(n)` | **Unrecovered effort:** `max(0, E_i(n−1) − A_i(n))`. The part of the documented work that is still at risk. The base the opening multiplies. | A principal; a debt |
+| `O_i(n)` | Accumulated opening: `min(O_i(n−1) + r · U_i(n), (k−1) · E_i(n))`. | Accrued interest |
 | band | A rate-card line (junior / senior / specialist €/h, or a project rate) frozen at join / accept. | A live market rate |
-| lot `L` | One accepted block of work (typically a contribution year) with its own `E`, `paid`, opened cap, freeze. | A blended personal ceiling |
+| lot `L` | **Retired for option 2** since [ADR 2026-09-14 one-row cap](../docs/decisions/2026-09-14_simplified-cap-one-row.md). The cap is one row per contributor. The term survives only in the [parked vintage note](parked/vintage-pools.md). | The live option-2 cap |
 | `p_j`, `c_j`, `f_j` | Local ledger of sub-project `j`. `p_j` splits **euros** in `j`’s subpool; `f_j` is the project entity’s ceiling at the project band. | A claim on parent `P_t` |
 | `A_{t,j}`, `B_{t,j}` | Points admitted / mint budget the parent spends on project `j` per period. | A euro valuation of the project |
 
@@ -23,14 +27,14 @@ Symbols and terms used across the design notes. Where two notes use the same let
 | `P_t` | This year’s budget: `min(policy % of profit or EBITDA, optional revenue cap, cash after reserves)`. A **flow**, set under bound discretion. May be zero. |
 | vintage | The year-`t` pool and its one split / invoice round. |
 | `gross_i` | `P_t · p_i / Σ p`. |
-| `rem_i` | Remaining **opened** cap before this vintage’s allocation: opened cap − already paid. |
+| `rem_i` | Remaining **opened** cap before this vintage’s allocation: `max(0, cap_i − A_i)`. The one number a contributor needs. |
 | `alloc_i` | `min(gross_i, max(0, rem_i))`. Assigned whether or not invoiced. Uninvoiced slices forfeit to operating reserves. |
-| opened cap | 1× `E` for the first 12 unpaid months of a lot, then opening toward `k × E` only while `paid < E`; frozen when `paid ≥ E` (remainder stays invoiceable). |
-| `k` (cap) | Lifetime multiple lid on a lot, GA/board policy. Under the [two-bases ADR](../docs/decisions/2026-09-14_two-bases-10x-off-effort.md) the default for time-based work is at or near 1×. Not a return. |
-| `r` | Cap-opening parameter per unpaid period. Not interest, not a yield, never published as one. |
+| opened cap | `cap_i(n) = E_i(n) + O_i(n)`, one row per contributor. Work opens only after it has survived one full vintage unpaid; opening stops on its own when `U = 0`; `cap ≤ k · E` for life. |
+| `k` (cap) | Lifetime multiple lid on the row, GA/board policy. Under the [two-bases ADR](../docs/decisions/2026-09-14_two-bases-10x-off-effort.md) the default for time-based work is at or near 1×. Not a return. Without it the ceiling is unbounded and `p` never retires. |
+| `r` | Cap-opening parameter per unpaid year. It multiplies **unrecovered effort** `U`, never a balance: `O += r · U`, linear, not compound. Not interest, not a yield, never published as one — the argument is in the [spec §5.2](paths/option-2-contingent-fee/README.md). |
 | burn | `p_i ← p_i · (rem_i − alloc_i) / rem_i`; `rem_i = 0 ⇒ p_i = 0`. Amortizes weight as the ceiling is consumed. |
-| freeze | Stop raising the ceiling. Not “only 1× ever”; not forfeiture of opened headroom. |
-| sunset `T` | Optional lapse of a lot after `T` vintages unpaid. Bounds duration, not amount. DVB **(g)**. |
+| freeze | Opening stops because `U = 0`, not because a separate rule fired. Not “only 1× ever”; not forfeiture of opened headroom. |
+| sunset `T` | Optional bound on **duration**: after `T` years the opening stops (`O` frozen) while `rem` stays invoiceable. Under one row there is no lot to lapse. The lid `k` bounds the amount. DVB **(g)**. |
 | default-in | Everyone eligible is allocated; opting out forfeits the slice and still haircuts `p`. |
 
 ## Three objects that get confused

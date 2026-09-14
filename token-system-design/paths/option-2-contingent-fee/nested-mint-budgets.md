@@ -109,7 +109,7 @@ Two levels are enough to start. Deeper nesting is the same protocol (a project i
 
 ## Fee cap and tax hygiene
 
-- Open `r` / `k×` on **`f_j`** from **first root-`p` eligibility** for the project, not from year 1 of unofficial logging. A sale year plus years of “unpaid opening” on wilderness hours recreates the [day-one lifetime multiple](../../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md).
+- Run the same one-row recursion ([spec §5](README.md)) per project entity. Open `r` / `k×` on **`f_j`** from **first root-`p` eligibility** for the project, not from year 1 of unofficial logging. A sale year plus years of “unpaid opening” on wilderness hours recreates the [day-one lifetime multiple](../../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md).
 - Freeze after 1× of `f_j` is paid **stops further opening**; it does not forfeit remaining opened headroom ([2026-09-09 log](../../../docs/log/2026-09-09_hours-cap-and-project-contractor.md)).
 - Do not book remaining mint budget, remaining `p_j`, remaining root `p`, or remaining cap as a receivable.
 - Do not publish `€/p`, `€/p_j`, or `rem / p`.

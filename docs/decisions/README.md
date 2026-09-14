@@ -17,3 +17,4 @@ Architecture Decision Records. One file per decision: `YYYY-MM-DD_topic.md`. Whi
 | 2026-09-14 | [Refaqt mission is a binding design constraint](2026-09-14_refaqt-mission-design-constraint.md) |
 | 2026-09-14 | [Two bases: the large multiple comes off the effort base](2026-09-14_two-bases-10x-off-effort.md) (Proposed) |
 | 2026-09-14 | [Exit, death, succession and disallowance: contract defaults](2026-09-14_exit-death-and-disallowance-defaults.md) (Proposed) |
+| 2026-09-14 | [The option-2 cap is one row per contributor](2026-09-14_simplified-cap-one-row.md) (Proposed) |

@@ -8,7 +8,7 @@ Several distinct token systems have been sketched. This page says which one is l
 
 | Path | Status | Mechanism in one line | Entry document |
 | --- | --- | --- | --- |
-| **Option 2 — contingent invoiced fee, `p` as weights** | **Live (next pass)** | Hours → `c` (weight scale) and `f` (invoice ceiling); `p = c0 · c^k` weights; yearly solvency-checked `P_t` split by `p`, clipped by the opened cap on documented effort; `p` amortizes by `alloc / rem`; nested mint budgets + project-as-contractor for sub-projects; effort target **~1×** | [paths/option-2-contingent-fee/](paths/option-2-contingent-fee/README.md) |
+| **Option 2 — contingent invoiced fee, `p` as weights** | **Live (next pass)** | Hours → `c` (weight scale) and `f` (invoice ceiling); `p = c0 · c^k` weights; yearly solvency-checked `P_t` split by `p`, clipped by a **one-row** cap on documented effort (opening on unrecovered effort, lid `k · E`); `p` amortizes by `alloc / rem`; nested mint budgets + project-as-contractor for sub-projects; effort target **~1×** | [paths/option-2-contingent-fee/](paths/option-2-contingent-fee/README.md) |
 | **Scoped royalty / Cred-weighted euro-par Q** | **Viable; proposed base for the 10×** ([ADR 2026-09-14 two bases](../docs/decisions/2026-09-14_two-bases-10x-off-effort.md), Proposed) | Value-based split (Cred), royalty **scoped to the products that embody the contribution**; `1 Q = €1` coupon minted from that pool; invoice or self-bill; accepts tax at allocation | [paths/scoped-royalty-cred-q/](paths/scoped-royalty-cred-q/README.md) |
 | **Cash-subscribed shares, count not `f(p)`** | **Open** (second instrument of structure A) | Equal share per contributing member, or a fixed statutory split against an investor class; real dividends; residual upside is company value; DVB **(q)** | [paths/cash-shares-residual/](paths/cash-shares-residual/README.md) |
 | **Contract tokens** (phantom / revenue-share / warrants) | **Open, not pursued** | Contracts, not shares; still fees; arm’s length applies; warrants are a BV/NV path | [paths/contract-tokens/](paths/contract-tokens/README.md) |
@@ -34,7 +34,8 @@ The [2026-09-10 review](../docs/log/2026-09-10_arms-length-10x-and-repo-review.m
 - Governance membership (small cash share) is **not** the reward. Share count never tracks contribution.
 - Do not mix a dividend story and a fee on the same instrument. Pick the tax box first.
 - Non-transferable, off-chain, no peer market. Employees stay on euro payroll.
-- Do not publish 10×, `r`, a target ROI, or “beats ETFs” language anywhere.
+- Do not publish 10×, `r`, a target ROI, or “beats ETFs” language anywhere. One carve-out since [ADR 2026-09-14 one-row cap](../docs/decisions/2026-09-14_simplified-cap-one-row.md): a **contracted contributor** may receive a statement of **their own** ceiling, under the limits in [annex-terms.md](paths/option-2-contingent-fee/annex-terms.md) clauses 24–27. Public and promotional material, and any return or yield framing, stay banned.
+- Never write a ceiling as a running balance multiplied by `(1 + r)`. The opening multiplies **unrecovered effort**, and it is bounded ([mistake 2026-09-14](../docs/mistakes/2026-09-14_cap-as-balance-times-one-plus-r.md)).
 - Cite **art. 53, 10° WIB 92** for the excess test and art. 49 for the conditions of deductibility ([mistake 2026-09-14](../docs/mistakes/2026-09-14_wrong-article-for-excess-test.md)).
 
 ## Adoption constraint
@@ -55,7 +56,7 @@ Take **(a)–(d)** to DVB prefiling as the box question. Expect the quantum (`k`
 | Exit / death / succession of an unpaid opened cap | Continue as if present — [option-2 spec § Exit](paths/option-2-contingent-fee/README.md); DVB **(r)** |
 | Art. 344 §1 exposure of the two-instrument split | DVB **(q)**; [cash-shares path](paths/cash-shares-residual/README.md) |
 | Art. 6:1 WVV *coöperatief doel*; *werkende vennoot* strength; DVB appetite for confirming a quantum | [dvb-questions.md § Counsel items](analysis/dvb-questions.md#counsel-items-not-numbered-dvb-items) |
-| Opening curve after month 12; oldest-lot-first vs junior/senior; sunset `T` | [option-2 spec § Open questions](paths/option-2-contingent-fee/README.md) |
+| Values of `r` and `k`; whether a sunset `T` stops the opening; contributor-statement template | [option-2 spec § Open questions](paths/option-2-contingent-fee/README.md) |
 | Which token letter for the access token vs the euro-par Q | [q-supplier-access](paths/q-supplier-access/README.md) |
 
 Stack is not chosen. Default is an off-chain ledger, not a chain.

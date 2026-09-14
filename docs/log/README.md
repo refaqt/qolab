@@ -31,3 +31,4 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-14 | [Refaqt mission as a design constraint](2026-09-14_refaqt-mission.md) | cross-cutting | business-dev, finance | 0 |
 | 2026-09-14 | [Launch without a DVB ruling: reserve and look-back](2026-09-14_no-ruling-reserve-and-lookback.md) | cross-cutting / option-2 | finance, business-dev | 0 |
 | 2026-09-14 | [Review follow-ups applied; design folder restructured by path](2026-09-14_review-followups-and-path-restructure.md) | cross-cutting | finance, business-dev | 0 |
+| 2026-09-14 | [Cap simplified to one row; `r` as an opening factor](2026-09-14_simplified-cap-and-r-as-not-interest.md) | option-2 | finance, business-dev | 0 |

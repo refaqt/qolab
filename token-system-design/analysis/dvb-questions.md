@@ -25,7 +25,7 @@ Companion analysis: [belgian-tax-and-company-law.md](belgian-tax-and-company-law
 | **(e)** | Same-year deduction of a default-in `P_t` allocation? | Yes if yearly pool |
 | **(f)** | Forfeiture of uninvoiced / opt-out slices (and haircut of `p`)? | Yes |
 | **(g)** | Opened cap vs sunset as the lifetime bound? | If sunset is used |
-| **(h)** | Time-opened cap vs interest / receivable? | Yes |
+| **(h)** | Time-opened cap vs interest / receivable? Plus the accounting treatment | Yes |
 | **(i)** | Effort cap vs implied `€/p` at grant? | Yes |
 | **(j)** | Proportional `p` burn vs remaining consideration? | Yes |
 | **(k)** | Taxable event at local accept, first root `p`, or invoice (nested)? | If nested |
@@ -147,15 +147,15 @@ Companion analysis: [belgian-tax-and-company-law.md](belgian-tax-and-company-law
 
 **Working hypothesis.** The invoice ceiling is the opened cap. Sunset is a second, contractual lapse, not a unit price.
 
-**Ask DVB.** If sunset is in the regulation, whether lapse is a taxable event or simply no invoice.
+**Ask DVB.** If sunset is in the regulation, whether lapse is a taxable event or simply no invoice. Under the one-row cap ([spec §5.1](../paths/option-2-contingent-fee/README.md)) there is no lot to lapse: a sunset stops the **opening** and leaves the remaining ceiling invoiceable, so the question is about the stop, not about a disposal.
 
 ---
 
 ## (h) Time-opened fee cap vs interest / receivable
 
-**Question.** Opening extra cap while principal is unpaid (`O` grows with time, `r` a parameter, only while `Fr > 0` / `paid < E`) — is that **interest on a balance**, a **growing receivable**, or still only a **ceiling** on a future contingent invoice?
+**Question.** Opening extra cap while documented work is still unrecovered (`O += r · U`, `r` a parameter, only while `U > 0`) — is that **interest on a balance**, a **growing receivable**, or still only a **ceiling** on a future contingent invoice?
 
-**Why it exists.** WBTW art. 26: taxable amount includes what is to be received. Booking `cap` as a CV liability or contributor receivable crystallises euros without cash. Describing `r` as interest invites roerende voorheffing on the `O` slice. Opening after `paid ≥ E` is the rejected trailing coupon / gold rush and looks like interest on a repaid balance.
+**Why it exists.** WBTW art. 26: taxable amount includes what is to be received. Booking `cap` as a CV liability or contributor receivable crystallises euros without cash. Describing `r` as interest invites roerende voorheffing on the `O` slice. Opening after the work has been paid at 1× is the rejected trailing coupon / gold rush and looks like interest on a repaid balance.
 
 **Cases.**
 
@@ -164,11 +164,15 @@ Companion analysis: [belgian-tax-and-company-law.md](belgian-tax-and-company-law
 | `r` as “yield”; dashboard “€X still owed”; book debt | Strong — avoid |
 | Proportional paydown of remaining principle `F` and `O` like a loan | Strong — **discarded** 2026-09-09 |
 | `O += Fr × 0.08` **per month** from month 1 (~2× at first `P_t`) | Strong yield path — not the filing version |
-| Per **lot**: 1× for 12 unpaid months, then open toward `k×` only while that lot’s principal is unpaid; freeze when `paid ≥ E`; do not book a receivable; do not call `r` interest | Intended filing version |
+| `cap ← cap × (1 + r) + effort − paid`: one running number, compounding, no lid, no freeze | **Strongest of all** — it is literally the arithmetic of a loan; rejected [2026-09-14](../../docs/mistakes/2026-09-14_cap-as-balance-times-one-plus-r.md) |
+| One row: `O += r · U` where `U` is documented effort already on the books at the start of the year and still unrecovered at its end; `cap ≤ k · E`; do not book a receivable; do not call `r` interest | Intended filing version ([spec §5](../paths/option-2-contingent-fee/README.md)) |
 
-**Working hypothesis.** A ceiling is not consideration to be received while `P_t` may be zero. FPS look at substance, not the word “cap.” Year-1 freeze and freeze-after-1×-paid are what make it look like a **wait-dependent fee bound**, not a loan.
+**Working hypothesis.** A ceiling is not consideration to be received while `P_t` may be zero. FPS look at substance, not the word “cap.” Four facts carry the argument, in this order: there is **no principal** (work was supplied, not money, so there is no sum whose use is being paid for); there is **no claim** (`P_t` may be zero and the row may lapse); the opening **stops when the work stops being at risk** (`U = 0`), which is what ties it to contingency rather than to the calendar; and it is **bounded** by `k`. The object multiplied matters: `r · U` prices unrecovered work, `cap × (1 + r)` prices money. Full argument: [spec §5.2](../paths/option-2-contingent-fee/README.md).
 
-**Ask DVB.** Explicitly: time-opened cap with **year-1 at 1×** and later opening vs interest / receivable. Confirm no income as `O` accrues.
+**Ask DVB.** Two things, not one.
+
+1. The one-row cap with the one-round gate on new work, the automatic stop at `U = 0`, and the lid `k`: ceiling or interest / receivable? Confirm no income as `O` accrues.
+2. **The accounting treatment, explicitly.** Is any provision, liability or financial charge required at the CV as `O` accrues, and is anything recognised at the contributor? This is where the characterisation is decided in practice: if a bookkeeper puts the ceiling on a balance sheet, the tax analysis follows the books whatever the annex says. Asking a question that might be lost here is cheaper than an auditor raising it in year six.
 
 ---
 
@@ -275,7 +279,7 @@ Companion analysis: [belgian-tax-and-company-law.md](belgian-tax-and-company-law
 
 **The argument to actually file (ex ante, not ex post).** Arm’s length is tested on the **bargain at the time it was struck**, not on the winning branch. A ceiling that pays 10× **only** where a lot waited ~10 years **fully unpaid**, and **0** in every branch where `P_t` never arrives, has an **expected value near 1×**. That is a no-cure-no-pay contingent fee, not a 26%/year yield. The pieces are already in the spec (`P_t` may be zero; lots lapse unpaid; freeze after 1× paid; no opening after repayment) — file them as one argument. It must be **evidenced**: real years with `P_t = 0`, real lots that lapsed unpaid, and a regulation that does not promise the multiple. Note the tension with **(e)**: the more reliably the pool pays every year, the weaker this gets.
 
-**Status since 2026-09-14.** Under [ADR 2026-09-14 two bases (Proposed)](../../docs/decisions/2026-09-14_two-bases-10x-off-effort.md) option 2 targets ~1× on documented effort and the large upside moves to a scoped royalty (**(s)**) or cash shares (**(q)**). This item is filed only if that decision is not taken and a large `k` is kept on the effort base.
+**Status since 2026-09-14.** Under [ADR 2026-09-14 two bases (Proposed)](../../docs/decisions/2026-09-14_two-bases-10x-off-effort.md) option 2 targets ~1× on documented effort and the large upside moves to a scoped royalty (**(s)**) or cash shares (**(q)**). This item is filed only if that decision is not taken and a large `k` is kept on the effort base. Since [ADR 2026-09-14 one-row cap](../../docs/decisions/2026-09-14_simplified-cap-one-row.md) this fallback also needs the retired per-lot machinery back, so reviving it is two decisions (the packaging and the number), not one.
 
 **Base of the ceiling is the real problem, not the number.** Writing the cap as `k × hours × frozen band` hands FPS the comparable (hours × rate), so every euro above 1× must be defended as a risk premium **on a wage-like benchmark**. A **royalty scoped to the products that embody the contribution** is compared against royalty rates instead, and a 10× lifetime return on the effort is then an ordinary outcome nobody computes. See the [review log](../../docs/log/2026-09-10_arms-length-10x-and-repo-review.md) §1.5 and the [Cred/Q path](../../docs/log/2026-09-10_cred-value-q-euro-par.md).
 
