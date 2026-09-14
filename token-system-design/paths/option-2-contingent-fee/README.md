@@ -100,7 +100,7 @@ Same table one level down for the subpool. Membership (governance share) and the
 
 ## 9. Disallowance risk (default, Proposed)
 
-If the administration later disallows part of a fee as excessive (art. 53, 10° WIB 92), the **pool absorbs** it: the add-back and its VenB are borne by the CV out of reserves and the next `P_t`; there is no clawback from the contributor, whose own tax position is unchanged (they invoiced and were taxed on the full amount either way). Clause text and rationale: [annex-terms.md](annex-terms.md).
+If the administration later disallows part of a fee as excessive (art. 53, 10° WIB 92), the **pool absorbs** it: the add-back and its VenB are borne by the CV out of reserves and the next `P_t`; there is no clawback from the contributor, whose own tax position is unchanged (they invoiced and were taxed on the full amount either way). Clause text and rationale: [annex-terms.md](annex-terms.md). A cash reserve for this is treasury, not a deductible provision; size it to tax on the excess for **open years only** (3-year ordinary clock) — [2026-09-14 no-ruling log](../../../docs/log/2026-09-14_no-ruling-reserve-and-lookback.md).
 
 ## 10. Size drives deductibility; shape drives characterisation
 

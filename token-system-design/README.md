@@ -43,7 +43,7 @@ For a Belgian natural person, option 2 lands at roughly 63% combined levies; thr
 
 ## Filing order
 
-Take **(a)–(d)** to DVB prefiling as the box question. Expect the quantum (`k`) to come back as a condition (“provided the remuneration is at arm’s length”), not a confirmation; treat that as success. **(p)** is not the gate. Add **(r)** (exit / death) and **(s)** (scoped royalty) with the path that uses them. Full order: [dvb-questions.md § How to file](analysis/dvb-questions.md#how-to-file).
+Take **(a)–(d)** to DVB prefiling as the box question. Expect the quantum (`k`) to come back as a condition (“provided the remuneration is at arm’s length”), not a confirmation; treat that as success. **(p)** is not the gate. Add **(r)** (exit / death) and **(s)** (scoped royalty) with the path that uses them. Full order: [dvb-questions.md § How to file](analysis/dvb-questions.md#how-to-file). A ruling is optional insurance, not a licence to operate: launching without one is a normal Belgian choice; a cash reserve sized to an art. 53, 10° disallowance on **open years** covers the cheap failure, not a requalification; FPS look-back is a rolling 3/4/7-year clock (RSZ 3/10) — [2026-09-14 no-ruling log](../docs/log/2026-09-14_no-ruling-reserve-and-lookback.md).
 
 ## Open questions (tracked where they belong)
 
