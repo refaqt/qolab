@@ -18,6 +18,7 @@ Sources consolidated here: [option-2 effort cap (2026-09-04)](../../../docs/log/
 | Documented effort `f` (`e_i(n)` per year, `E_i` cumulative) | `hours × frozen band`, or a quoted effort in the annex | Invoice **ceiling** at cash-out (§5) |
 
 - **Hours** are the one degree of freedom per accepted item (role hours/week, task estimate, project estimate). Log `c` and `f` when the work is **accepted**.
+- **Hardware and equipment are not documented effort.** They do not enter `f`, `E`, `c`, or `p`, and they are not reimbursed from `P^C_t`. When a contributor wants to put money in so an experiment can have a tool, that cash goes through the [capped participating bond](../capped-participating-bond/README.md#81-hardware-for-experiments): the CV buys the tool and lends it. [ADR 2026-09-14 hardware](../../../docs/decisions/2026-09-14_hardware-via-bond-and-loan.md).
 - 100 points/hour only renames hours. It must never be chosen *because* the work is €100/hour; industry rates stay off the points rule.
 - **Do not** mint `p` from `f` (that reconstructs `w = df/dp` in €/`p`). **Do not** derive points from euros (`c = f / rate`, `hours = budget / band`, a mint sized from a valuation). `× €1` on dimensionless points is a published par.
 - A band is frozen at join / accept (or at contractor join for a project entity). Contract wording: `f` is quoted effort for a **ceiling**; there is no hourly invoice; compensation is a contingent success fee **if** a pool exists. Never “fees he would normally have invoiced.”
@@ -172,6 +173,7 @@ Two different failure modes that earlier notes blurred into one “recharacteris
 - Any euro par on `p`, transferable `p`, a peer market, a GA-set “price,” `c × €1`.
 - A large multiple on the effort base as the recommended design (fallback only, §5).
 - Attributing product revenue to projects.
+- Hardware or equipment on the effort row, or reimbursed from `P^C_t`. That cost is capital: [capped-participating-bond §8.1](../capped-participating-bond/README.md#81-hardware-for-experiments).
 
 ## 12. Open questions
 
@@ -182,6 +184,7 @@ Two different failure modes that earlier notes blurred into one “recharacteris
 - Legal invoicing party when a sub-project is a database row (**(o)**).
 - Internal fee-cap clock for contributors invoicing a subpool; unused mint budget expires vs rolls (default: expire).
 - Interaction with the [investor leg](../capped-participating-bond/README.md) if it is adopted: `θ` drifts down over a run, because this leg's opening freezes while the capital leg's accrual does not. That is the design working, but it is the number to watch when `r_I` is set.
+- Whether consumable materials (items used up in an experiment) are ordinary project cost, or something else. Durable equipment is on the [bond path §8.1](../capped-participating-bond/README.md#81-hardware-for-experiments).
 
 ## 13. DVB items that apply
 

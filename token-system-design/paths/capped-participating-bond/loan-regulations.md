@@ -1,6 +1,6 @@
 # Loan Regulations — terms checklist for counsel
 
-**Status: working checklist, not drafting.** Dutch wording of the issue conditions and the Loan Regulations (*leningsreglement*) is counsel's. This page lists what the Regulations must say so that the [path note](README.md), the [option-2 annex](../option-2-contingent-fee/annex-terms.md) and the [DVB filing](../../analysis/dvb-questions.md) describe the same facts. Nothing here is accepted; the path is **open (proposed)** — [ADR 2026-09-14 investor leg](../../../docs/decisions/2026-09-14_investor-leg-capped-participating-bond.md).
+**Status: working checklist, not drafting.** Dutch wording of the issue conditions and the Loan Regulations (*leningsreglement*) is counsel's. This page lists what the Regulations must say so that the [path note](README.md), the [option-2 annex](../option-2-contingent-fee/annex-terms.md) and the [DVB filing](../../analysis/dvb-questions.md) describe the same facts. Nothing here is accepted; the path is **open (proposed)** — [ADR 2026-09-14 investor leg](../../../docs/decisions/2026-09-14_investor-leg-capped-participating-bond.md). Hardware bought after a subscription is a separate operational contract — [ADR 2026-09-14 hardware](../../../docs/decisions/2026-09-14_hardware-via-bond-and-loan.md).
 
 Numbering continues the option-2 annex where a clause is the mirror of one there, so the two documents can be read side by side.
 
@@ -9,8 +9,9 @@ Numbering continues the option-2 annex where a clause is the mirror of one there
 1. The instrument is a **subordinated, profit-participating bond**. It is not a share, not a membership right, and carries no vote in the general assembly.
 2. It is **subordinated** to all other creditors of the CV, has **no fixed maturity** (or a maturity subject to the solvency test), and both principal and uplift are payable **only** out of `P^I_t` under the waterfall in the regulation. The holder may never be repaid.
 3. Positions are **non-transferable** except to a successor vehicle of the same beneficial owner or on death. No peer market, no secondary trading, off-chain register.
-4. **Nothing is issued for work.** Subscription is in **cash only**. The amount a person may advance is not a function of hours, `c`, `p`, or the contribution ledger, and no document, side ledger, or practice links the two.
+4. **Nothing is issued for work.** Subscription is in **cash only**. The amount a person may advance is not a function of hours, `c`, `p`, or the contribution ledger, and no document, side ledger, or practice links the two. The instrument is **not** issued against equipment, and a position is **not** title to a machine.
 5. Holders receive **contractual information rights**, not governance rights.
+5b. **Proceeds are company money.** The Regulations do not earmark a subscription to a named asset, a project, or a serial number. Any later purchase of equipment, and any loan of company property, is an operational contract. Those files are not part of these Regulations and do not appear in an offering document.
 
 ## B. The row
 
@@ -47,6 +48,7 @@ Numbering continues the option-2 annex where a clause is the mirror of one there
 - A target return, a projected multiple, "beats ETFs", or any figure presented as an expected outcome rather than a cap.
 - A promise that a position becomes shares, or that shares will be offered on stated terms later.
 - Wording that accrues the uplift as a liability before the board opens `P^I_t` (see clause 23).
+- A named asset, a serial number, a project, or a person's hours as terms of a position. A loan of company property is a different contract.
 
 ## G. Accounting and disclosure
 

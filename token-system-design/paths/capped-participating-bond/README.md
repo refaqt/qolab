@@ -4,7 +4,7 @@
 
 **Prevention rules applied:** [no euro spot price on `p`](../../../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [no day-one lifetime multiple](../../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md); [no labour-quota cheap shares](../../../docs/mistakes/2026-09-04_cheap-share-euro-par.md) — nothing here is issued for work; [no cap as a balance times `(1 + r)`](../../../docs/mistakes/2026-09-14_cap-as-balance-times-one-plus-r.md); [art. 53, 10° for the excess test](../../../docs/mistakes/2026-09-14_wrong-article-for-excess-test.md); [a second instrument must not publish the comparable the first is designed not to have](../../../docs/mistakes/2026-09-14_second-instrument-publishes-the-comparable.md).
 
-Companion in this folder: [loan-regulations.md](loan-regulations.md) (terms checklist for counsel). Decision: [ADR 2026-09-14 investor leg](../../../docs/decisions/2026-09-14_investor-leg-capped-participating-bond.md). Working notes: [2026-09-14 log](../../../docs/log/2026-09-14_investors-and-the-two-leg-waterfall.md). The labour leg is [option 2](../option-2-contingent-fee/README.md). Symbols: [glossary.md](../../glossary.md). Ruling catalog: [dvb-questions.md](../../analysis/dvb-questions.md).
+Companion in this folder: [loan-regulations.md](loan-regulations.md) (terms checklist for counsel). Decision: [ADR 2026-09-14 investor leg](../../../docs/decisions/2026-09-14_investor-leg-capped-participating-bond.md). Hardware for experiments: [ADR 2026-09-14 hardware](../../../docs/decisions/2026-09-14_hardware-via-bond-and-loan.md), [2026-09-14 log](../../../docs/log/2026-09-14_hardware-via-bond-and-loan.md). Working notes: [2026-09-14 log](../../../docs/log/2026-09-14_investors-and-the-two-leg-waterfall.md). The labour leg is [option 2](../option-2-contingent-fee/README.md). Symbols: [glossary.md](../../glossary.md). Ruling catalog: [dvb-questions.md](../../analysis/dvb-questions.md).
 
 ---
 
@@ -239,6 +239,33 @@ Rules for a person on both legs. This is where art. 344 §1 bites hardest, becau
 5. **Exit, death, exclusion follow each leg's own table.** In particular, **exclusion as a bad-leaver contributor must not touch the bond.** That money was real; confiscating it is a different and much worse problem than lapsing a ceiling that was never a receivable.
 6. **One vote each room.** A person who is both votes once in the GA as a member and once in the holders' meeting as a holder. The overlap is disclosed and recorded — a standing conflict to manage, not a defect to hide.
 
+### 8.1 Hardware for experiments
+
+A contributor who wants to run an experiment may need hardware or equipment. That cost is **not** documented effort and is **not** paid from `P^C_t`. It is funded on this leg, then used as a company tool. Decision: [ADR 2026-09-14 hardware](../../../docs/decisions/2026-09-14_hardware-via-bond-and-loan.md).
+
+The sequence:
+
+1. The contributor **subscribes to this ordinary bond**, in cash, on the same terms as any other holder.
+2. The CV **buys the equipment** from its treasury (which now includes that cash) and **takes title**.
+3. The CV **lends the equipment** to the contributor for the experiment (a loan for use; Dutch wording is counsel's: *bruikleen*). This is not the bond. The bond is money lent **to** the CV. The tool is a machine lent **by** the CV.
+
+Why this shape:
+
+- Putting the invoice on `E` would place euros of capital next to hours. That publishes the comparable the labour row is designed not to have.
+- Letting the contributor buy and own the tool would leave the machine outside the company. That fights the mission (shared access to manufacturing tools) and leaves the CV with no asset if the person leaves.
+- After this sequence the person holds a **subordinated claim**, not the machine. If the CV fails, they stand with the other holders. They cannot take the tool in lieu of repayment.
+
+Guards, all of which follow from §8 and from [the second-instrument rule](../../../docs/mistakes/2026-09-14_second-instrument-publishes-the-comparable.md):
+
+- **No hardware-bond class.** Same `r_I`, `k_I`, waterfall and close-out as every other holder. Only the amount and the year vary.
+- **No earmark in the instrument.** The offering document does not tie a position to a serial number, a project, or a person's hours. The board may still buy a named tool after a subscription; that lives in the purchase file and the loan-for-use contract.
+- **The amount is chosen cash**, not a formula of hours, `c`, `p`, or the contributor row. Do not write "€X of tools for Y hours" in any compelled disclosure.
+- **Three documents stay apart:** contributor annex, bond offering, loan-for-use contract.
+- **Title stays with the CV.** The company may recall the tool, and may lend the same tool to someone else. Exclusion as a contributor does not touch the bond (clause 21); it also does not transfer the machine.
+- **Ordinary capex without a matching subscription stays allowed.** This subsection is the path when a contributor wants to put money in so the experiment can have a tool.
+
+Durable equipment is in scope. Consumable materials (items used up in a run) are not decided here.
+
 ## 9. What this path does not accept
 
 - Any advance whose size is a function of hours, `c`, `p`, or the contribution ledger. That is the [cheap-share route](../../dead-ends/cheap-share-route.md) in a new instrument.
@@ -247,6 +274,8 @@ Rules for a person on both legs. This is where art. 344 §1 bites hardest, becau
 - Cross-leg redistribution of unabsorbed allocations (§4.1 step 6).
 - A discretionary split. If the board can vote `θ`, the formula has stopped doing its governance job (§5.4).
 - Publishing `r` and `r_I` in the same document (§6.1).
+- A special hardware-bond class, a bond issued against equipment rather than cash, or an offering document that matches a position to a serial number (§8.1).
+- Adding equipment cost to documented effort, or reimbursing it from `P^C_t`.
 
 ## 10. Open questions
 
@@ -258,7 +287,8 @@ Rules for a person on both legs. This is where art. 344 §1 bites hardest, becau
 - The de-minimis close-out threshold (§3, property 5).
 - Whether `P_t` should be computed before or after the carry-ledger correction from a prior year (§4.1 step 7).
 - Whether a sunset `T` applies on this leg at all. On the contributor leg it stops the opening; here there is no freeze to reach, so a sunset would have to stop the accrual outright. Not drafted.
+- Hardware for experiments (§8.1): benefit in kind if the tool is used privately; VAT on the purchase and on a loan for use; whether a modest hire is safer than a free loan; what happens if the tool is destroyed; recall, shared use, and location; whether consumable materials are ordinary project cost.
 
 ## 11. DVB items that apply
 
-New: **(t)** art. 344 §1 on the **coupled** waterfall, and **(u)** the participating bond itself. Also **(q)** (rewritten to point at (t)), and **(b)** / **(e)** for the pool. Counsel items from §§5–7 are listed in [dvb-questions.md](../../analysis/dvb-questions.md#counsel-items-not-numbered-dvb-items). File for the box, not for the number.
+New: **(t)** art. 344 §1 on the **coupled** waterfall, and **(u)** the participating bond itself. Also **(q)** (rewritten to point at (t)), and **(b)** / **(e)** for the pool. Counsel items from §§5–8.1 are listed in [dvb-questions.md](../../analysis/dvb-questions.md#counsel-items-not-numbered-dvb-items). File for the box, not for the number.
