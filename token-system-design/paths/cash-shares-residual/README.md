@@ -2,6 +2,8 @@
 
 **Status: open.** The second instrument of **structure A**: labour is paid as an option-2 contingent fee; residual company upside sits on **real shares bought for cash**, whose number does **not** track hours, points, or `p`. Not accepted; no ADR of its own. Named as one of the two possible homes of the large upside in [ADR 2026-09-14 (two bases, Proposed)](../../../docs/decisions/2026-09-14_two-bases-10x-off-effort.md). Design input, not a ruling.
 
+**What moved off this path on 2026-09-14.** A **capped** investor return now has its own path — the [capped participating bond](../capped-participating-bond/README.md) — because a per-investor cap cannot ride on a dividend: a dividend must be equal per share inside a *soort*, so capping one holder and not another is not writable without a class per vintage or a share that amortises to nothing (§ "What stays dead"). This path therefore keeps two jobs, both still open: **governance** (the equal active-member share), and the **uncapped** capital base if a real 10× for capital is ever wanted. That second job is now a live question, because the bond's uplift is deducted and so is rate-capped by art. 55 WIB 92 — the large multiple cannot live on the deductible instrument. See [capped-participating-bond §6](../capped-participating-bond/README.md).
+
 Sources: [tokens not shares §7 structure A](../../../docs/log/2026-09-10_tokens-not-shares-avoid-revisor.md), [startup-equity MoU §6](../../../docs/log/2026-09-10_startup-equity-mou.md), [cheap-share A/B classes and sunset §8.2](../../../docs/log/2026-09-11_cheap-share-ab-classes-sunset.md), [no investors / equal membership share](../../../docs/log/2026-09-10_no-investors-euro-shares.md), [€0.10 vs €10 shares (statutory split idea)](../../../docs/log/2026-09-08_option-1-tenth-vs-ten-euro-shares.md).
 
 **Prevention rules applied:** [no labour-quota cheap shares](../../../docs/mistakes/2026-09-04_cheap-share-euro-par.md) — this path exists **only** because the count is not `f(p)`; [no *inbreng in nijverheid*](../../../docs/mistakes/2026-09-10_inbreng-in-nijverheid-plan-ahead.md) — cash *inbreng* only; [no euro spot price](../../../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md).
@@ -34,6 +36,7 @@ Every share whose number is `f(work)`: cheap €1 shares, €0.10 / €10 classe
 ## Open questions
 
 - Whether this sketch is worth its own statute draft (open since 2026-09-08).
+- Whether **two bases for capital** is pursued: a modest, deductible `k_I` on the [bond](../capped-participating-bond/README.md) beside genuinely uncapped equity here — the mirror of the two-bases answer already taken for labour.
 - Counsel: art. 6:1 *coöperatief doel* of a CV whose main activity is rewarding contributor labour; whether *uittreding van rechtswege* on loss of the “active contributor” *hoedanigheid* is a clean mechanism and how the distribution tests apply to paying the *scheidingsaandeel*.
 - Counsel: leonine-clause exposure (art. 4:2 WVV) of any class with a bounded profit right; VVPRbis *voorkeurrecht* test (art. 269 §2 WIB 92) between classes.
 - Whether to seek NRC recognition or *erkend als sociale onderneming* — art. 8:5 WVV’s ~6% cap on patrimonial advantage fights a 10× residual ([mission.md](../../../docs/mission.md)).

@@ -24,9 +24,9 @@ Symbols and terms used across the design notes. Where two notes use the same let
 
 | Symbol | Meaning |
 | --- | --- |
-| `P_t` | This year’s budget: `min(policy % of profit or EBITDA, optional revenue cap, cash after reserves)`. A **flow**, set under bound discretion. May be zero. |
+| `P_t` | This year’s budget: `min(policy % of profit or EBITDA, optional revenue cap, cash after reserves)`. A **flow**, set under bound discretion. May be zero. Where an investor leg exists it is **split first** into `P^C_t` and `P^I_t` by `θ`, and only `P^C_t` is divided by `p`. |
 | vintage | The year-`t` pool and its one split / invoice round. |
-| `gross_i` | `P_t · p_i / Σ p`. |
+| `gross_i` | `P^C_t · p_i / Σ p` (`P_t · p_i / Σ p` where there is no investor leg). |
 | `rem_i` | Remaining **opened** cap before this vintage’s allocation: `max(0, cap_i − A_i)`. The one number a contributor needs. |
 | `alloc_i` | `min(gross_i, max(0, rem_i))`. Assigned whether or not invoiced. Uninvoiced slices forfeit to operating reserves. |
 | opened cap | `cap_i(n) = E_i(n) + O_i(n)`, one row per contributor. Work opens only after it has survived one full vintage unpaid; opening stops on its own when `U = 0`; `cap ≤ k · E` for life. |
@@ -36,6 +36,34 @@ Symbols and terms used across the design notes. Where two notes use the same let
 | freeze | Opening stops because `U = 0`, not because a separate rule fired. Not “only 1× ever”; not forfeiture of opened headroom. |
 | sunset `T` | Optional bound on **duration**: after `T` years the opening stops (`O` frozen) while `rem` stays invoiceable. Under one row there is no lot to lapse. The lid `k` bounds the amount. DVB **(g)**. |
 | default-in | Everyone eligible is allocated; opting out forfeits the slice and still haircuts `p`. |
+
+## Investor leg (capped participating bond)
+
+The [capped-participating-bond path](paths/capped-participating-bond/README.md). Deliberately **not** the same letters as the contributor row, because the two instruments must never be described by one parameter ([2026-09-14 mistake](../docs/mistakes/2026-09-14_second-instrument-publishes-the-comparable.md)).
+
+| Symbol | Meaning | Not |
+| --- | --- | --- |
+| `I_i(n)` | **Cumulative** principal advanced by holder `i` up to and including year `n`. Cash only; never issued for work. Mirrors `E_i(n)` | An amount set by hours, `c`, `p`, or the contribution ledger |
+| `ΔI_i(n)` | The year's advance, a flow. Mirrors `e_i(n)` | |
+| `U^I_i(n)` | **Principal still outstanding** — the base the uplift accrues on. An amortising balance | **Not the contributor's `U`.** Contributor `U` is *unrecovered effort* and falls to zero when the work has been paid for; `U^I` falls as principal is repaid and drives no freeze |
+| `O^I_i(n)` | Accrued but **unpaid** uplift. Reduced proportionally by every payment | |
+| `Ocum^I_i(n)` | Uplift **ever accrued**, never reduced by a payment. What the lid binds | A balance; a receivable |
+| `rem^I_i(n)` | `U^I_i(n) + O^I_i(n)` — the one number a holder needs | **Not `S`.** `S` stays retired on the rejected 2026-09-07 euro-par burn sketch |
+| `d_i(n)`, `D_i(n)` | Paid on the instrument in year `n`, and cumulative. Covers **principal and uplift together**, so `D = I + Ocum^I` at close-out | A dividend; the instrument is debt |
+| `r_I` | Accrual factor per year on outstanding principal. Simple, not compound | `r`. Same value is allowed; the same **name** is not, and the two never appear in one document |
+| `k_I` | Lifetime lid: `D ≤ k_I · I`. GA policy, and rate-capped in practice by art. 55 WIB 92 because the uplift is deducted | `k`; a target; a promised multiple |
+| freeze | **Does not exist on this leg.** Work stops being at risk once it has been paid for; money stays at risk while it is still in the company | The lid, which does exist. The two are different objects — [path note §3.1](paths/capped-participating-bond/README.md) |
+| close-out | `d = rem^I` sets the haircut to zero and ends the position. A de-minimis threshold pays out the tail rather than amortising asymptotically | |
+
+## Two-leg waterfall
+
+| Symbol | Meaning |
+| --- | --- |
+| `θ(n)` | Contributors' share of the year's outflow: `Σ rem^C_i(n) / ( Σ rem^C_i(n) + Σ rem^I_i(n) )`. **Formulaic, not discretionary** — the board decides how much is distributed, nobody votes on the split |
+| `P^C_t`, `P^I_t` | The two legs of `P_t`: `θ · P_t` to contributors, `(1 − θ) · P_t` to holders. `P_t` itself keeps its existing waterfall, computed before either leg |
+| `rem^C` | `rem_i` of the option-2 row, written with a superscript where both legs appear in one formula |
+| carry ledger | The running record of deviation between the paid split and `θ`, corrected in the following year. Deviation arises only where a leg is cap-constrained |
+| within-leg re-pass | Unabsorbed allocation is redistributed **inside** a leg, never across legs — `θ` has already priced the relative remaining claims, so cross-leg spill double-counts |
 
 ## Three objects that get confused
 
@@ -56,7 +84,7 @@ Symbols and terms used across the design notes. Where two notes use the same let
 | structure A | Two instruments: option-2 fee for labour beside cash-subscribed shares (count not `f(p)`) for residual upside. DVB **(q)**. |
 | option 1 | Dividend box: after-tax profit, GA distribution, 30% RV (18% VVPRbis if eligible), not deductible, no VAT. Needs a share whose count does not track work. |
 | option 2 | Fee box: professional service / royalty, deductible for the CV, VAT 21%, PIT + social or BV VenB. The box for anything allocated by contribution. |
-| `S` | Weight in the rejected 2026-09-07 sketch that burned at euro par. Dead-end. |
+| `S` | Weight in the rejected 2026-09-07 sketch that burned at euro par. Dead-end, and the letter stays retired — the investor leg's remaining amount is `rem^I`, never `rem_S`. |
 | `w`, `v` | Rejected euro rates: withdrawal rate `dc/dp` and payout-time `pool / N`. |
 
 ## Belgian references used most
@@ -67,9 +95,14 @@ Symbols and terms used across the design notes. Where two notes use the same let
 | art. 53, 10° WIB 92 | Excess test: costs that unreasonably exceed professional needs. Burden on the administration; partial rejection only. |
 | art. 26 WIB 92 | Abnormal or benevolent advantage; §1 carve-out where the Belgian recipient is taxed on it — largely neutral here. |
 | art. 206/3 §1 WIB 92 | No offset of losses, DBI, innovation deduction against a supplement carrying a tax increase ≥ 10%. |
-| art. 344 §1 WIB 92 | General anti-abuse rule. DVB **(q)**. |
+| art. 344 §1 WIB 92 | General anti-abuse rule. DVB **(q)**, and **(t)** for the coupled waterfall. |
+| art. 55 WIB 92 | Interest deductible only up to market rate. The test that rate-caps `k_I` once the uplift is deducted. DVB **(u)**. |
+| art. 18, 4° WIB 92 | Interest requalified into dividends above market rate, for interest to directors / shareholders. DVB **(u)**. |
+| art. 198 §1, 11° WIB 92 | Thin capitalisation (5:1) on interest to certain related parties. DVB **(u)**. |
+| art. 44 §3, 5° WBTW | Interest is VAT-exempt, unlike the 21% on a contributor fee. Keeps `P_t` VAT-exclusive on both legs. |
 | art. 18 / 269 WIB 92 | Dividend definition; VVPRbis conditions. |
 | arts. 22, 22bis, 26 WBTW | VAT taxable event, chargeability backstop, taxable amount. |
-| art. 1:8, 6:8, 6:19, 6:39, 6:110, 6:121–6:122 WVV | Inbreng in nijverheid; CV reports; CV securities; issuance only for inbreng; *uittreding van rechtswege*. |
+| art. 1:8, 6:8, 6:19, 6:39, 6:110, 6:121–6:122 WVV | Inbreng in nijverheid; CV reports; CV securities (art. 6:19 also permits **bonds**, the investor leg's instrument); issuance only for inbreng; *uittreding van rechtswege*. |
+| arts. 7:170 ff. WVV | Bondholders' meeting — the **NV** machinery, cited as the model for binding dissenting holders by qualified majority. Whether it reaches a CV bond issue is an unverified counsel item. |
 | Wet 3 juli 2005 | Volunteer law — a poor fit for a profit-distributing CV. |
 | Arbeidsrelatiewet | Subordination test (contractor vs employee). |
