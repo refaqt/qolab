@@ -2,9 +2,13 @@
 
 **Role(s):** finance, business-dev
 
+**Citation note (2026-09-14):** where this log cites **art. 49 WIB 92** for “not excessive,” read **art. 53, 10° WIB 92** (excess; burden of proof on the administration; partial rejection only) with art. 49 for the conditions of deductibility. **Art. 26 §1 WIB 92** does not add back an advantage that is taken into account in the Belgian recipient’s taxable income, so it is largely neutral for an invoicing contributor. Corrected by the [2026-09-10 review §3](2026-09-10_arms-length-10x-and-repo-review.md); logged as [mistake 2026-09-14](../mistakes/2026-09-14_wrong-article-for-excess-test.md).
+
+**Status note (2026-09-14):** the working conclusion below (gated `k = 10` on effort) is **fallback B** since [ADR 2026-09-14 two bases (Proposed)](../decisions/2026-09-14_two-bases-10x-off-effort.md); the consolidated live spec is [paths/option-2-contingent-fee/](../../token-system-design/paths/option-2-contingent-fee/README.md).
+
 **Prevention rules applied:** [do not put a euro spot price on a growing pool](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not treat remaining `p` as remaining euros](../mistakes/2026-09-04_cheap-share-euro-par.md); [do not keep paid-off `p` as seniority](../mistakes/2026-09-08_unburned-p-after-cap.md).
 
-Companion DVB catalog: [token-system-design/dvb-questions.md](../../token-system-design/dvb-questions.md).
+Companion DVB catalog: [token-system-design/analysis/dvb-questions.md](../../token-system-design/analysis/dvb-questions.md).
 
 ## What happened
 
@@ -206,7 +210,7 @@ Proposed (discussion; **not** a new ADR):
 5. `k = 10` as the **lifetime lid**, reached only after ~10 **unpaid** years; freeze opening when that lot’s 1× is paid.
 6. Discard proportional amortization of remaining `F` and `O`. Discard 8%/month opening from month 1 as the filing path.
 7. Sub-project **pool math** may copy the same functions; legal invoicing party for a database `j` is still DVB **(o)**.
-8. Catalog DVB **(a)–(p)** in [token-system-design/dvb-questions.md](../../token-system-design/dvb-questions.md).
+8. Catalog DVB **(a)–(p)** in [token-system-design/analysis/dvb-questions.md](../../token-system-design/analysis/dvb-questions.md).
 
 Unchanged: no unit `v`; no euro par; membership off the reward; nested mint gate and project-as-contractor cash path still accepted for legal entities; option 1 vs 2 was **chosen as option 2** for this pass (still a DVB hypothesis).
 

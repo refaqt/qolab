@@ -2,11 +2,11 @@
 
 **Role(s):** finance, business-dev
 
-**Closed 2026-09-09:** Direction B is the live cash path, specified in [ADR 2026-09-09](../decisions/2026-09-09_project-as-contractor.md) and [nested-mint-budgets.md](../../token-system-design/nested-mint-budgets.md). The project cap is admitted hours × **project band**, not `c × €1`. Direction A (local pot of parent `p` distributed to people) is **not** the live model. Session: [2026-09-09 log](2026-09-09_hours-cap-and-project-contractor.md). The mint gate of [ADR 2026-09-08](../decisions/2026-09-08_nested-mint-budgets.md) is unchanged. This log stays as the fork record.
+**Closed 2026-09-09:** Direction B is the live cash path, specified in [ADR 2026-09-09](../decisions/2026-09-09_project-as-contractor.md) and [nested-mint-budgets.md](../../token-system-design/paths/option-2-contingent-fee/nested-mint-budgets.md). The project cap is admitted hours × **project band**, not `c × €1`. Direction A (local pot of parent `p` distributed to people) is **not** the live model. Session: [2026-09-09 log](2026-09-09_hours-cap-and-project-contractor.md). The mint gate of [ADR 2026-09-08](../decisions/2026-09-08_nested-mint-budgets.md) is unchanged. This log stays as the fork record.
 
 ## What happened
 
-Nested mint budgets are already the accepted **mint gate** ([nested-mint-budgets.md](../../token-system-design/nested-mint-budgets.md), [ADR 2026-09-08](../decisions/2026-09-08_nested-mint-budgets.md)): unofficial work does not move parent `c`; the parent later spends a mint budget; cash pool `P_t` stays global. Still open: how local weight `p_j` / `p_ij` **sunsets** when a sub-project distributes, and whether the sub-project’s own pool is parent `p` or euros.
+Nested mint budgets are already the accepted **mint gate** ([nested-mint-budgets.md](../../token-system-design/paths/option-2-contingent-fee/nested-mint-budgets.md), [ADR 2026-09-08](../decisions/2026-09-08_nested-mint-budgets.md)): unofficial work does not move parent `c`; the parent later spends a mint budget; cash pool `P_t` stays global. Still open: how local weight `p_j` / `p_ij` **sunsets** when a sub-project distributes, and whether the sub-project’s own pool is parent `p` or euros.
 
 Two directions. **Direction A** (local pot of parent `p`, personal `p_cap`, linear `c` so only `c` is needed) is the proposal under review; it still has loose ends. **Direction B** (the sub-project is a contractor on the parent, internal rules the same, income in euros) is probably more elegant and is the **next analysis**. Neither is accepted here. This does **not** un-accept nested mint budgets or the proportional burn of root `p` ([ADR 2026-09-08 p-burn](../decisions/2026-09-08_p-burn-remaining-cap.md)).
 
@@ -69,7 +69,7 @@ Complexity: nested copies of the same mechanism are acceptable **if** they reall
 - Where extra `p` in the local pot comes from if opened caps exceed this work’s mint; leftover burn + reverse `c` vs a later stream.
 - Grant-time tax of forced `p` receipt; DVB on remaining `p_cap` as consideration.
 - Whether linear `c` replaces the parent bonding curve globally or only inside nesting.
-- Two clocks (local `p_cap` from mint vs parent euro rem from first root-`p` eligibility) — [nested mint](../../token-system-design/nested-mint-budgets.md) already starts the fee-cap clock at first root `p`, not at unofficial accept.
+- Two clocks (local `p_cap` from mint vs parent euro rem from first root-`p` eligibility) — [nested mint](../../token-system-design/paths/option-2-contingent-fee/nested-mint-budgets.md) already starts the fee-cap clock at first root `p`, not at unofficial accept.
 
 ---
 

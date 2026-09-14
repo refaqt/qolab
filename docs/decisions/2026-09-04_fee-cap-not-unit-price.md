@@ -13,7 +13,7 @@ The vintage flow (annual budget `P_t` split by share of `p`, invoice clipped by 
 
 If that quotient were a grant-time unit price, VAT and income tax would attach at mint — the failure mode the tax analysis already rejected for `w = dc/dp`, `v = pool / N`, and 1 `p` = €1.
 
-Full argument: [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md) (“Does `(k × hours × rate) / Δp` price `p`?”).
+Full argument: [token-system-design/parked/vintage-pools.md](../../token-system-design/parked/vintage-pools.md) (“Does `(k × hours × rate) / Δp` price `p`?”).
 
 ## Decision
 

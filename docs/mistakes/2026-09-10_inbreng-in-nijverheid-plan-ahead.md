@@ -18,4 +18,4 @@ Do not use *inbreng in nijverheid* (or a one-time method blessing, or a post-hoc
 - [docs/decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md](../decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md)
 - [docs/log/2026-09-10_tokens-not-shares-avoid-revisor.md](../log/2026-09-10_tokens-not-shares-avoid-revisor.md)
 - [docs/mistakes/2026-09-04_cheap-share-euro-par.md](2026-09-04_cheap-share-euro-par.md)
-- [token-system-design/cheap-share-route.md](../../token-system-design/cheap-share-route.md)
+- [token-system-design/dead-ends/cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md)

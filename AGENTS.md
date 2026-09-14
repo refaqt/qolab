@@ -11,11 +11,11 @@ Before reading `.agents/` rules or skills, update tooling submodules to latest `
 
 ## Shared kit
 
-This repo mounts [refaqt/refaqt-agents](https://github.com/refaqt/refaqt-agents) at [`.agents/`](.agents/).
+This repo mounts [refaqt/refaqt-agents](https://github.com/refaqt/refaqt-agents) at [`.agents/`](.agents).
 
 1. Read [`.agents/rules/core.md`](.agents/rules/core.md) and [`.agents/rules/living-docs.md`](.agents/rules/living-docs.md).
-2. Read [`docs/mistakes/`](docs/mistakes/) and state which prevention rules apply.
-3. Read [`docs/mission.md`](docs/mission.md) and [`docs/architecture.md`](docs/architecture.md) before non-trivial work.
+2. Read [`docs/mistakes/`](docs/mistakes) and state which prevention rules apply.
+3. Read [`docs/mission.md`](docs/mission.md) and [`docs/architecture.md`](docs/architecture.md) before non-trivial work. For token-system work, the path map [`token-system-design/README.md`](token-system-design/README.md) says which system is live, open, parked, or dead — add a row there before adding a sketch.
 4. Before new coding solutions, check [`.agents-local/skills/patterns/SKILL.md`](.agents-local/skills/patterns/SKILL.md) if present.
 
 ## This repository
@@ -28,7 +28,7 @@ QOLAB — token system for the governance and work on Refaqt projects, in servic
 | Why a choice was made | `docs/decisions/YYYY-MM-DD_topic.md` |
 | Something that went wrong | `docs/mistakes/YYYY-MM-DD_topic.md` |
 
-Repo-specific skills: [`.agents-local/skills/`](.agents-local/skills/).
+Repo-specific skills: [`.agents-local/skills/`](.agents-local/skills).
 
 ## Skills
 

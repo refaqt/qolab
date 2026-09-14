@@ -45,7 +45,7 @@ Work yet to do: task description → hours; same hours × 100 for local `c_j` an
 
 This is Direction B from [2026-09-08 nested `p` sunset](2026-09-08_nested-p-sunset-two-directions.md), specified so that the project cap is **hours × project band**, not `c × €1`. Direction A (local pot of parent `p` split to people) is not the live model.
 
-Wrote [ADR 2026-09-09](../decisions/2026-09-09_project-as-contractor.md). Amended [nested-mint-budgets.md](../../token-system-design/nested-mint-budgets.md).
+Wrote [ADR 2026-09-09](../decisions/2026-09-09_project-as-contractor.md). Amended [nested-mint-budgets.md](../../token-system-design/paths/option-2-contingent-fee/nested-mint-budgets.md).
 
 **Prevention rules applied:** [do not put a euro spot price on a growing pool](../mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not treat remaining `p` as remaining euros](../mistakes/2026-09-04_cheap-share-euro-par.md); [do not keep paid-off `p` as seniority](../mistakes/2026-09-08_unburned-p-after-cap.md).
 

@@ -14,7 +14,7 @@ The cooperative thesis stays: a small piece of work shares in **global** success
 
 A one-shot grant of `p` sized like a purchase is a buyout. The need is a **funding stream**: the parent may admit root `p` more than once.
 
-Full note: [token-system-design/nested-mint-budgets.md](../../token-system-design/nested-mint-budgets.md).
+Full note: [token-system-design/paths/option-2-contingent-fee/nested-mint-budgets.md](../../token-system-design/paths/option-2-contingent-fee/nested-mint-budgets.md).
 
 ## Decision
 

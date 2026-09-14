@@ -2,6 +2,8 @@
 
 **Role(s):** finance, business-dev
 
+**Citation note (2026-09-14):** where this log cites **art. 49 WIB 92** for “not excessive,” read **art. 53, 10° WIB 92** (excess; burden of proof on the administration; partial rejection only) with art. 49 for the conditions of deductibility. **Art. 26 §1 WIB 92** does not add back an advantage that is taken into account in the Belgian recipient’s taxable income, so it is largely neutral for an invoicing contributor. Corrected by the [2026-09-10 review §3](2026-09-10_arms-length-10x-and-repo-review.md); logged as [mistake 2026-09-14](../mistakes/2026-09-14_wrong-article-for-excess-test.md).
+
 **Status:** Same rejection as the cheap-share dead-end **if** share *count* tracks contribution. The “one cash share per contributing member” sketch stays **open**. Design input for counsel, not a ruling.
 
 **Prevention rules applied:** [do not dress labour-quota cheap shares as a dividend](../mistakes/2026-09-04_cheap-share-euro-par.md); [do not put a euro spot price on certificates](../mistakes/2026-09-03_unit-price-on-growing-pool.md). Token-engineering: facts beat labels. Companions: [no investors / informal](2026-09-10_no-investors-euro-shares.md); [tokens not shares / revisor](2026-09-10_tokens-not-shares-avoid-revisor.md).
@@ -31,7 +33,7 @@ Art. **6:39 WVV**: a share may only be issued **in ruil voor een inbreng**. Ther
 - a **cash** inbreng (they did buy in, even at €0.01), or
 - **inbreng in nijverheid** / inbreng of a work receivable (art. **1:8**: a commitment to supply labour, which is inbreng in natura) → founder/board report + **bedrijfsrevisor** (arts. **6:8**, **6:110**), valuation, tax on FMV at grant, then 30% on later dividends.
 
-Honest inbreng in nijverheid is often **worse** than a contingent fee ([cheap-share-route.md](../../token-system-design/cheap-share-route.md); [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md)). It also cannot reward **unplanned** work later — the revisor values a **promised** commitment **before** shares exist ([ADR 2026-09-10](../decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md)). Extra company-law teeth: the subscriber **owes** what they promised (art. **1:9**), including a **non-compete** for the duration of a nijverheid inbreng; the shares **lapse** on death or lasting incapacity (art. **6:11**, unless statutes say otherwise).
+Honest inbreng in nijverheid is often **worse** than a contingent fee ([cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md); [ADR 2026-09-04](../decisions/2026-09-04_cheap-share-route-dead-end.md)). It also cannot reward **unplanned** work later — the revisor values a **promised** commitment **before** shares exist ([ADR 2026-09-10](../decisions/2026-09-10_inbreng-in-nijverheid-dead-end.md)). Extra company-law teeth: the subscriber **owes** what they promised (art. **1:9**), including a **non-compete** for the duration of a nijverheid inbreng; the shares **lapse** on death or lasting incapacity (art. **6:11**, unless statutes say otherwise).
 
 Creating a **new class** does not skip 6:39. Class L still needs an inbreng. A class whose **number** of shares is `f(contribution)` is the labour quota ([2026-09-08](2026-09-08_option-1-tenth-vs-ten-euro-shares.md)).
 
@@ -87,6 +89,6 @@ The open sketch remains: **equal** (or otherwise not-`f(p)`) cash membership sha
 
 ## Next Steps
 
-- Note this variant on [cheap-share-route.md](../../token-system-design/cheap-share-route.md).
+- Note this variant on [cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md).
 - Start-off stays: equal cash membership + `p` weights + later invoices. An MoU, if any, should **not** promise shares in proportion to contribution.
 - Counsel + accountant on the simpler option-2 spec, not on unpaid gifted class L.

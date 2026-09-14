@@ -9,7 +9,7 @@ QOLAB is meant to reward Refaqt contributions when there is revenue, cap those r
 
 The first mechanics sketch used C-tokens, a power-law bonding curve, R-tokens, and U-tokens at 1 U = 1 euro, with a 10% revenue pool and peer transfers. Under Belgian VAT (arts. 22, 22bis, 26 WBTW) and income-tax practice (tax at vesting/disposal, not at euro conversion), that sketch creates an ascertainable value at grant. Peer transfer and a euro peg also pull in e-money / FSMA / MiCA analysis. The “1 U = 1 euro” label also contradicts the pro-rata pool formula, which does not pay par.
 
-Full analysis of that sketch lived in `docs/token-system.md` (moved). Current iteration: [token-system-design/token-system.md](../../token-system-design/token-system.md).
+Full analysis of that sketch lived in `docs/token-system.md` (moved). Current iteration: [token-system-design/analysis/belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md).
 
 ## Decision
 
@@ -20,7 +20,7 @@ Until counsel and an accountant (and preferably a DVB ruling) say otherwise, des
 3. **No secondary market.** Transfers only to treasury, on death, or to a successor vehicle of the same beneficial owner.
 4. **Cash only in distribution rounds** funded from a solvency-checked pool (`min` of a profit metric, an optional revenue cap, and available cash) — not an automatic 10% of turnover. Do **not** use `v = pool / N`. Vintage packaging (default-in, leftover to reserves, time-opened lot cap) is **parked** for complexity — [ADR 2026-09-03](2026-09-03_vintage-pools-no-unit-price.md), [ADR 2026-09-04](2026-09-04_cheap-share-route-dead-end.md). Next pass is simpler option 2, not cheap extra shares.
 5. **Fee cap** at payout should stay tied to **documented effort**, not to a euro par on minted `p`. `(k × E) / Δp` is **not** a unit price of `p` — [ADR 2026-09-04](2026-09-04_fee-cap-not-unit-price.md). The time-opened per-lot formula is parked with vintages: [ADR 2026-09-03 time-opened fee cap](2026-09-03_time-opened-fee-cap.md).
-6. **Invoice at payout** is the consideration. Pool amounts are **VAT-exclusive**. Credits are contractually a contingent success fee, not shares and not a dividend. Labour-quota €1 shares as a dividend wrapper is a **dead-end** ([cheap-share-route.md](../../token-system-design/cheap-share-route.md)).
+6. **Invoice at payout** is the consideration. Pool amounts are **VAT-exclusive**. Credits are contractually a contingent success fee, not shares and not a dividend. Labour-quota €1 shares as a dividend wrapper is a **dead-end** ([cheap-share-route.md](../../token-system-design/dead-ends/cheap-share-route.md)).
 7. **Membership is optional and separate.** Statutes must say credits are not parts/shares and cash-out is not a distribution on capital (especially if the CV is or becomes a social enterprise). Do not issue extra profit-sharing shares whose number tracks contribution points.
 8. **Relationship-appropriate contracts:** employment (euro salary) vs dienstenovereenkomst + IP/CLA + QOLAB annex. Off-chain ledger by default.
 

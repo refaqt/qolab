@@ -10,7 +10,7 @@ The 2026-09-03 bonding-curve iteration dropped a mint-time euro rate `w = dc/dp`
 
 Capping the denominator (`v = pool / N_cap`) does not fix this. The GA then sets the price, either arbitrarily or to hit an ROI on contribution points, which is the grant-time pricing the tax analysis already rejected.
 
-Full note: [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md).
+Full note: [token-system-design/parked/vintage-pools.md](../../token-system-design/parked/vintage-pools.md).
 
 ## Decision
 

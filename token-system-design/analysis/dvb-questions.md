@@ -1,16 +1,16 @@
-# DVB questions (a)–(q)
+# DVB questions (a)–(s)
 
 Catalog of questions to put to the **Dienst Voorafgaande Beslissingen** (and counsel / accountant) before anyone is promised QOLAB credits or paid under them. This is **design input**, not a ruling and not a substitute for a filing.
 
-Numbering is stable. **(a)–(d)** are the core option-2 box. **(e)–(h)** were written for parked vintage packaging; they still apply wherever the live spec uses a yearly `P_t`, default-in, forfeiture, or a time-opened cap. **(i)–(j)** bind the next option-2 pass. **(k)–(o)** are nested sub-projects. **(p)** is the 2026-09-10 opening path (`k = 10`, lots, first-year 1×). **(q)** is the general anti-abuse rule on a two-instrument split.
+Numbering is stable. **(a)–(d)** are the core option-2 box. **(e)–(h)** were written for parked vintage packaging; they still apply wherever the live spec uses a yearly `P_t`, default-in, forfeiture, or a time-opened cap. **(i)–(j)** bind the next option-2 pass. **(k)–(o)** are nested sub-projects. **(p)** is the 2026-09-10 opening path (`k = 10`, lots, first-year 1×) — a **fallback** since [ADR 2026-09-14 two bases (Proposed)](../../docs/decisions/2026-09-14_two-bases-10x-off-effort.md). **(q)** is the general anti-abuse rule on a two-instrument split. **(r)** is exit / death / succession of an unpaid opened cap. **(s)** is the scoped royalty on the [Cred/Q path](../paths/scoped-royalty-cred-q/README.md). Counsel-only items are listed at the end.
 
 **Working hypothesis until a ruling:** VAT and professional income attach at **invoice**, not at mint; cash-out is an option-2 **success fee**, not a dividend; `p` is a dimensionless weight; the effort cap is an invoice ceiling, not a unit FX (`€/p`). Substance beats labels.
 
-**Which article does what** (corrected 2026-09-10 — [review log](../docs/log/2026-09-10_arms-length-10x-and-repo-review.md)). Earlier notes cite **art. 49 WIB 92** for “not excessive.” Art. 49 sets the **conditions** of deductibility (incurred in the period to obtain or retain taxable income, and justified). The **excess** test is **art. 53, 10° WIB 92** (*kosten in zover zij op onredelijke wijze de beroepsbehoeften overtreffen*): burden of proof on the administration, **partial** rejection only, no review of opportuneness. **Art. 26 WIB 92** (abnormal or benevolent advantage) has an express carve-out where the advantage **is taken into account in determining the taxable income of the Belgian recipient** — so it is largely neutral for a contributor or contributor BV that invoices and is taxed; art. 26 §2 targets related foreign / privileged-regime recipients. Quantum risk therefore runs through **art. 53, 10°** and through **requalification**, not through art. 26.
+**Which article does what** (corrected 2026-09-10 — [review log](../../docs/log/2026-09-10_arms-length-10x-and-repo-review.md)). Earlier notes cite **art. 49 WIB 92** for “not excessive.” Art. 49 sets the **conditions** of deductibility (incurred in the period to obtain or retain taxable income, and justified). The **excess** test is **art. 53, 10° WIB 92** (*kosten in zover zij op onredelijke wijze de beroepsbehoeften overtreffen*): burden of proof on the administration, **partial** rejection only, no review of opportuneness. **Art. 26 WIB 92** (abnormal or benevolent advantage) has an express carve-out where the advantage **is taken into account in determining the taxable income of the Belgian recipient** — so it is largely neutral for a contributor or contributor BV that invoices and is taxed; art. 26 §2 targets related foreign / privileged-regime recipients. Quantum risk therefore runs through **art. 53, 10°** and through **requalification**, not through art. 26.
 
 **What a ruling can and cannot settle.** The DVB rules on the **legal treatment** of a described transaction and issues decisions for **at most five years**, binding only while the stated conditions hold and the facts were completely and correctly described; the KB of 17 January 2003 already excludes tax rates and the calculation of tax. Expect the **box** ((a)–(e)) to be confirmable and the **quantum** (`k`) to come back as a *condition* (“provided the remuneration is at arm’s length”) rather than a confirmation. Prefiling is informal and non-binding; a negative signal there normally ends as *zonder gevolg* and the request is amended or dropped. A formal negative decision cannot be appealed, only refiled in modified form before the transaction is executed. **There is no mechanism by which the DVB orders a cap of 3× or any other multiple.**
 
-Companion analysis: [token-system.md](token-system.md), [vintage-pools.md](vintage-pools.md), [p-burn-remaining-cap.md](p-burn-remaining-cap.md), [nested-mint-budgets.md](nested-mint-budgets.md). Session that restated the live opening path: [docs/log/2026-09-10_pt-distribution-and-cap-opening.md](../docs/log/2026-09-10_pt-distribution-and-cap-opening.md).
+Companion analysis: [belgian-tax-and-company-law.md](belgian-tax-and-company-law.md), the [option-2 spec](../paths/option-2-contingent-fee/README.md) and its [annex terms](../paths/option-2-contingent-fee/annex-terms.md), [vintage-pools.md](../parked/vintage-pools.md), [p-burn-remaining-cap.md](../paths/option-2-contingent-fee/p-burn-remaining-cap.md), [nested-mint-budgets.md](../paths/option-2-contingent-fee/nested-mint-budgets.md). Path map: [README.md](../README.md). Session that restated the live opening path: [docs/log/2026-09-10_pt-distribution-and-cap-opening.md](../../docs/log/2026-09-10_pt-distribution-and-cap-opening.md).
 
 ---
 
@@ -33,8 +33,10 @@ Companion analysis: [token-system.md](token-system.md), [vintage-pools.md](vinta
 | **(m)** | Parent mint budgets vs implied euro value of the project? | If nested |
 | **(n)** | Fee-cap clock on `f_j` from first root `p`, not unofficial years? | If nested |
 | **(o)** | Project entity invoices `P_t`; people invoice the subpool? | If nested |
-| **(p)** | `k = 10` after ~10 unpaid years, 1× in year 1, lots: still a fee? | Proposed path |
+| **(p)** | `k = 10` after ~10 unpaid years, 1× in year 1, lots: still a fee? | Fallback only |
 | **(q)** | Art. 344 §1 abuse on splitting labour (fee) from residual upside (shares)? | If two instruments |
+| **(r)** | Exit / death / succession: is a lapse of an unpaid opened cap a taxable event? | Yes |
+| **(s)** | Scoped royalty (Cred-allocated, on products embodying the contribution): deductible fee at arm's length without an hours comparable? | If the Cred/Q path is pursued |
 
 ---
 
@@ -176,7 +178,7 @@ Companion analysis: [token-system.md](token-system.md), [vintage-pools.md](vinta
 
 **Why it exists.** If that quotient were a unit FX (euros per token, the same for every outstanding `p` at a date), it would be the same class of fact as `w`, `v = P/N`, and 1 `p` = €1. The design claim: the cap is on the **invoice versus work**, not on minted `p`. Same work, different mint dates, same cap, different `Δp` — the quotient is not a property of `p`. A maximum is not value: if `P_t` is zero, nothing is owed. Static `k×` open on day one plus a forecasted fat pool looks more like ascertainable consideration of ~`k×E`.
 
-**Working hypothesis.** An effort-tied fee cap is **not** a unit FX. Lead with the **ceiling** argument — a maximum is not consideration “to be received” while `P_t` may be zero — and use the non-uniformity of the quotient (same work, different mint dates, different `Δp`) as **support**, not as the case; an auditor can simply decline to be impressed by the algebra, and the `p` burn has since made remaining `p` linear in remaining opened cap ([p-burn-remaining-cap.md](p-burn-remaining-cap.md)). Do **not** publish `(k × E) / Δp` or `rem / p`. Do not mint `p` from `f` (that reconstructs `w = df/dp` in €/`p`). Logging `f` is safe only as a **contractual ceiling document**, not “fees he would normally have invoiced.”
+**Working hypothesis.** An effort-tied fee cap is **not** a unit FX. Lead with the **ceiling** argument — a maximum is not consideration “to be received” while `P_t` may be zero — and use the non-uniformity of the quotient (same work, different mint dates, different `Δp`) as **support**, not as the case; an auditor can simply decline to be impressed by the algebra, and the `p` burn has since made remaining `p` linear in remaining opened cap ([p-burn-remaining-cap.md](../paths/option-2-contingent-fee/p-burn-remaining-cap.md)). Do **not** publish `(k × E) / Δp` or `rem / p`. Do not mint `p` from `f` (that reconstructs `w = df/dp` in €/`p`). Logging `f` is safe only as a **contractual ceiling document**, not “fees he would normally have invoiced.”
 
 **Ask DVB.** Effort-tied cap vs implied `€/p` at grant. Cover uniform 100 points/hour (hours renamed, not €100/hour). Cover **`k = 10`** as still a fee bound (see **(p)**).
 
@@ -188,7 +190,7 @@ Companion analysis: [token-system.md](token-system.md), [vintage-pools.md](vinta
 
 **Why it exists.** Euro-par burns (`cash / w`, `v = P/N`, 1 `p` = €1, `S ← S − €`) price the mint. This fraction does not convert tokens at one rate for everyone; implied €/`p` is `rem_i / p_i`, which differs by person and mint date. It is still **stronger grant-time evidence** than never burning `p`. Do not publish `rem / p`. Do not book remaining `p` as remaining euros. Haircut on **`alloc_i`**, including forfeited slices.
 
-**Working hypothesis.** The burn amortizes **weight** as the ceiling is consumed. It is not a unit FX. Accepted as design ([p-burn-remaining-cap.md](p-burn-remaining-cap.md)); tax characterisation open.
+**Working hypothesis.** The burn amortizes **weight** as the ceiling is consumed. It is not a unit FX. Accepted as design ([p-burn-remaining-cap.md](../paths/option-2-contingent-fee/p-burn-remaining-cap.md)); tax characterisation open.
 
 **Ask DVB.** Remaining `p` after the fraction: still not a euro claim? Confirm the haircut is not a disposal at par.
 
@@ -234,7 +236,7 @@ Companion analysis: [token-system.md](token-system.md), [vintage-pools.md](vinta
 
 **Question.** Does opening of `f_j` / remaining cap start at **local accept** (including unofficial years) or only at **first root-`p` eligibility** for the project?
 
-**Why it exists.** A sale year plus years of “unpaid opening” on wilderness hours recreates a day-one lifetime multiple ([gold rush](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md)). Unofficial years do not open the euro cap.
+**Why it exists.** A sale year plus years of “unpaid opening” on wilderness hours recreates a day-one lifetime multiple ([gold rush](../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md)). Unofficial years do not open the euro cap.
 
 **Working hypothesis.** Clock starts at first root `p`. Catch-up of backlog is an attested hour inventory, then a parent admit at the **project** rate.
 
@@ -273,9 +275,11 @@ Companion analysis: [token-system.md](token-system.md), [vintage-pools.md](vinta
 
 **The argument to actually file (ex ante, not ex post).** Arm’s length is tested on the **bargain at the time it was struck**, not on the winning branch. A ceiling that pays 10× **only** where a lot waited ~10 years **fully unpaid**, and **0** in every branch where `P_t` never arrives, has an **expected value near 1×**. That is a no-cure-no-pay contingent fee, not a 26%/year yield. The pieces are already in the spec (`P_t` may be zero; lots lapse unpaid; freeze after 1× paid; no opening after repayment) — file them as one argument. It must be **evidenced**: real years with `P_t = 0`, real lots that lapsed unpaid, and a regulation that does not promise the multiple. Note the tension with **(e)**: the more reliably the pool pays every year, the weaker this gets.
 
-**Base of the ceiling is the real problem, not the number.** Writing the cap as `k × hours × frozen band` hands FPS the comparable (hours × rate), so every euro above 1× must be defended as a risk premium **on a wage-like benchmark**. A **royalty scoped to the products that embody the contribution** is compared against royalty rates instead, and a 10× lifetime return on the effort is then an ordinary outcome nobody computes. See the [review log](../docs/log/2026-09-10_arms-length-10x-and-repo-review.md) §1.5 and the [Cred/Q path](../docs/log/2026-09-10_cred-value-q-euro-par.md).
+**Status since 2026-09-14.** Under [ADR 2026-09-14 two bases (Proposed)](../../docs/decisions/2026-09-14_two-bases-10x-off-effort.md) option 2 targets ~1× on documented effort and the large upside moves to a scoped royalty (**(s)**) or cash shares (**(q)**). This item is filed only if that decision is not taken and a large `k` is kept on the effort base.
 
-**If the multiple is later disallowed, the CV pays — not the contributor.** Under **art. 53, 10°** only the **excess** slice is rejected: Refaqt has already paid the cash **and** owes VenB on the add-back, while the contributor’s tax is unchanged (they invoiced, they are taxed either way). Worse, a *belastingverhoging* of 10% or more on that supplement blocks the offset of losses, DBI, innovation deduction and the other deductions listed in **art. 206/3 §1 WIB 92** against it — which matters for a cooperative carrying forward losses. The contributor only pays more if the payment is **requalified** (hidden dividend → 30% RV with the CV as debtor; or wage → RSZ + PIT), and that is driven by **shape** (membership as the key, points as the key, subordination), not by the size of `k`. **Nothing in the draft annex says who bears a disallowance** — pool or contributor. Write it.
+**Base of the ceiling is the real problem, not the number.** Writing the cap as `k × hours × frozen band` hands FPS the comparable (hours × rate), so every euro above 1× must be defended as a risk premium **on a wage-like benchmark**. A **royalty scoped to the products that embody the contribution** is compared against royalty rates instead, and a 10× lifetime return on the effort is then an ordinary outcome nobody computes. See the [review log](../../docs/log/2026-09-10_arms-length-10x-and-repo-review.md) §1.5 and the [Cred/Q path](../../docs/log/2026-09-10_cred-value-q-euro-par.md).
+
+**If the multiple is later disallowed, the CV pays — not the contributor.** Under **art. 53, 10°** only the **excess** slice is rejected: Refaqt has already paid the cash **and** owes VenB on the add-back, while the contributor’s tax is unchanged (they invoiced, they are taxed either way). Worse, a *belastingverhoging* of 10% or more on that supplement blocks the offset of losses, DBI, innovation deduction and the other deductions listed in **art. 206/3 §1 WIB 92** against it — which matters for a cooperative carrying forward losses. The contributor only pays more if the payment is **requalified** (hidden dividend → 30% RV with the CV as debtor; or wage → RSZ + PIT), and that is driven by **shape** (membership as the key, points as the key, subordination), not by the size of `k`. Who bears a disallowance is now written: the **pool absorbs** it (Proposed default) — [annex-terms.md §C](../paths/option-2-contingent-fee/annex-terms.md), [ADR 2026-09-14 defaults](../../docs/decisions/2026-09-14_exit-death-and-disallowance-defaults.md).
 
 **Ask DVB.** Together with **(h)** and **(i)**: whether this path is still option 2; whether `k = 10` is at arm’s length (**art. 53, 10°**, with art. 49 for the conditions) after a long **unpaid** wait; whether a lower multiple would be required for a short payback (already 1× in year 1 under this path); **and whether they will confirm a quantum at all** or only the characterisation. Ask explicitly what happens to **already-opened** cap if `k` is trimmed later — is the contract still enforceable, and is a clawback expected.
 
@@ -285,13 +289,61 @@ Companion analysis: [token-system.md](token-system.md), [vintage-pools.md](vinta
 
 **Question.** If labour is paid as an option-2 contingent fee (credits `p`, effort cap, invoice) **beside** a residual 10×-shaped upside on **cash-subscribed shares**, can FPS invoke **art. 344 §1 WIB 92** (*fiscaal misbruik*) to treat the two together as one arrangement — a labour-quota profit right — and tax it accordingly?
 
-**Why it exists.** The general anti-abuse rule is not in any earlier note in this repo. It is the natural attack on structure A from the [tokens-not-shares log](../docs/log/2026-09-10_tokens-not-shares-avoid-revisor.md): the whole political motive for the two-instrument split is that contributors who work more should also get more of the residual. The moment the share allocation correlates with contribution — in the statutes, in a members’ agreement, in an MoU, or only in practice — the split into two legal boxes starts to look chosen for its tax result. That is the same family of fact as every [cheap-share](cheap-share-route.md) rejection, one level up.
+**Why it exists.** The general anti-abuse rule is not in any earlier note in this repo. It is the natural attack on structure A from the [tokens-not-shares log](../../docs/log/2026-09-10_tokens-not-shares-avoid-revisor.md): the whole political motive for the two-instrument split is that contributors who work more should also get more of the residual. The moment the share allocation correlates with contribution — in the statutes, in a members’ agreement, in an MoU, or only in practice — the split into two legal boxes starts to look chosen for its tax result. That is the same family of fact as every [cheap-share](../dead-ends/cheap-share-route.md) rejection, one level up.
 
-**Case to file.** The share class count is defensibly **not** `f(p)`: equal per contributing member, or a fixed statutory split against an investor class, with a **non-tax reason** for that shape that would hold even if the tax outcome were reversed. That reason includes Refaqt’s mission as written in the statutes (*doel* / *voorwerp*: local, on-demand manufacturing with less resource and energy use, and democratized access to tools — [docs/mission.md](../docs/mission.md)), not only governance, one-member-one-vote, or admission policy. Credits never convert into shares. No document ties share count to hours, points, `p`, or a contribution ledger.
+**Case to file.** The share class count is defensibly **not** `f(p)`: equal per contributing member, or a fixed statutory split against an investor class, with a **non-tax reason** for that shape that would hold even if the tax outcome were reversed. That reason includes Refaqt’s mission as written in the statutes (*doel* / *voorwerp*: local, on-demand manufacturing with less resource and energy use, and democratized access to tools — [docs/mission.md](../../docs/mission.md)), not only governance, one-member-one-vote, or admission policy. Credits never convert into shares. No document ties share count to hours, points, `p`, or a contribution ledger.
 
 **Working hypothesis.** Two genuinely different bases (capital at risk vs documented work), each with its own non-tax rationale, is not abuse. A share count that tracks contribution is the labour quota with an extra step, and art. 344 §1 is how it gets unwound even where company law was respected.
 
 **Ask DVB / counsel.** Whether the two-instrument split survives art. 344 §1 on the facts filed. Ask what correlation between contribution and share count is tolerated (eligibility gate vs quantum).
+
+---
+
+## (r) Exit, death, succession — lapse of an unpaid opened cap
+
+**Question.** A lot has opened cap that is not yet paid. The holder dies, transfers their activity to a successor vehicle of the same beneficial owner, leaves voluntarily, or is excluded. Is the continuation, freeze, or lapse of that cap a **taxable event** (a disposal or a waiver of a receivable) at the CV or at the holder / estate, or simply the absence of an invoice?
+
+**Why it exists.** [ADR 2026-09-02](../../docs/decisions/2026-09-02_tax-aware-contribution-credits.md) allows transfer to treasury, on death, or to a successor vehicle, but the live machinery (`p`, lots, opened cap, freeze, burn) had no rule for the opened cap. That is both a contract gap and the same tax shape as **(g)**: if a lapse were a taxable disposal, the cap would have been a receivable all along.
+
+**Case to file (Proposed default — [option-2 spec §8](../paths/option-2-contingent-fee/README.md#8-exit-death-succession-default-proposed), [annex-terms §D](../paths/option-2-contingent-fee/annex-terms.md)).** Death / successor vehicle: the lot continues as if the holder were present (estate or successor invoices) until exhausted or sunset. Voluntary exit: opening freezes at exit; the opened remainder stays invoiceable. Exclusion: the lot lapses to operating reserves and `p` retires. Same rules one level down for a subpool.
+
+**Working hypothesis.** A ceiling that was never a receivable cannot be “waived”; a lapse is no invoice, not a disposal. Continuation by an estate or successor is the same contingent fee payable to a different creditor, not a new grant. Universal succession on a BV merger is not a transfer.
+
+**Ask DVB.** Confirm no taxable event at freeze or lapse; confirm the estate / successor invoices under the same characterisation; whether exclusion-lapse is income to the CV.
+
+---
+
+## (s) Scoped royalty on the Cred/Q path
+
+**Question.** If contributions of designs and outputs are paid as a **royalty scoped to the products that embody them**, allocated by a value score (Cred) rather than hours, with `1 Q = €1` minted from that product-scoped pool and invoiced (or self-billed) by the contributor BV, is that a **deductible fee / royalty at arm's length** (art. 49 conditions; art. 53, 10° for the excess) when the comparable is a royalty rate and there is no hours benchmark? What scoping and what rate cap does the DVB expect, versus an **uncapped** Cred share of **all** `P_t`?
+
+**Why it exists.** [2026-09-10 review §1.5](../../docs/log/2026-09-10_arms-length-10x-and-repo-review.md): a ceiling written as `k × hours × frozen band` hands FPS the comparable, so a large multiple must be defended as a risk premium on a wage-like benchmark. A royalty on the products that use the contribution is compared against royalty rates, where a 10× lifetime return on the effort is an ordinary outcome. The path already accepts priced consideration at allocation ([scoped-royalty path](../paths/scoped-royalty-cred-q/README.md)); its named weakness — an uncapped share of all revenue is residual-claimant-shaped — is what scoping fixes.
+
+**Case to file.** IP licence or *dienstenovereenkomst* + Cred annex; product → contribution mapping in the annex; pool = policy % of net sales of the products concerned after the solvency waterfall; `1 Q = €1`; invoice or self-billing; VAT and professional income / VenB at allocation; no peer market; Q cancelled on payment; time-based work stays on option 2 (two bases, never mixed on one instrument).
+
+**Working hypothesis.** A product-scoped, rate-capped royalty allocated by an outcome-based key is an ordinary commercial contract. The arm's-length test is the royalty rate, not the hours. An uncapped share of all future `P_t` is the aggressive end and is not filed.
+
+**Ask DVB.** Characterisation (fee / royalty / IP sale) and that it is not a dividend when the key is Cred; time of supply given the published par (art. 22, 22bis, 26 WBTW); deductibility under art. 49 with the scoped royalty as the arm's-length comparable; what correlation between Cred and hours would flip it back to a labour comparable.
+
+---
+
+## Counsel items (not numbered DVB items)
+
+Questions the repo has not checked and that belong to counsel or an accountant rather than to a ruling request.
+
+| Item | Why it matters | Where it came from |
+| --- | --- | --- |
+| Art. 6:1 WVV *coöperatief doel* / *voorwerp* of a CV whose main activity is rewarding contributor labour | The mission is the candidate non-tax rationale (**(q)**); counsel drafts the Dutch wording | [review §4.7](../../docs/log/2026-09-10_arms-length-10x-and-repo-review.md), [ADR 2026-09-14 mission](../../docs/decisions/2026-09-14_refaqt-mission-design-constraint.md) |
+| Whether *werkende vennoot* case law is quoted at the right strength | Used in §3 of the analysis and against every labour-quota sketch | review §4.7 |
+| Whether the DVB has published anything on contribution-token schemes | Sets expectations for prefiling | review §4.7 |
+| Art. 6:19 WVV: QOLAB credits stay off the *effecten* registers and never convert into shares | Keeps the fee box | [tokens-not-shares](../../docs/log/2026-09-10_tokens-not-shares-avoid-revisor.md) |
+| Leonine clause (art. 4:2 WVV; BV analogue 5:41) for any class with a bounded profit right | Cash-shares path | [2026-09-11 log](../../docs/log/2026-09-11_cheap-share-ab-classes-sunset.md) |
+| *Uittreding van rechtswege* on loss of an “active contributor” *hoedanigheid* (arts. 6:121–6:122) and the distribution tests on paying the *scheidingsaandeel* | Cash-shares path mechanism | 2026-09-11 log |
+| VVPRbis *voorkeurrecht* test between classes (art. 269 §2 WIB 92) | Cash-shares path | 2026-09-11 log |
+| CV default on *volstorting*; whether a “€0 called” class is nijverheid anyway | Closes the startup-MoU variant | [startup-equity MoU](../../docs/log/2026-09-10_startup-equity-mou.md) |
+| RV / RSZ allocation if a payment is requalified; whether the CV may pass RV on | Annex clause | [annex-terms §C](../paths/option-2-contingent-fee/annex-terms.md) |
+| Whether to seek NRC recognition or *erkend als sociale onderneming* (art. 8:5 ~6% cap) | Fights a large residual on shares | [mission.md](../../docs/mission.md) |
+| Provisioning a default-in allocation so VenB matches the fee year | Accountant | [2026-09-03 log](../../docs/log/2026-09-03_vintage-pools-idle-capital.md) |
 
 ---
 
@@ -308,8 +360,8 @@ Companion analysis: [token-system.md](token-system.md), [vintage-pools.md](vinta
 
 ## How to file
 
-Put **draft contracts** (dienstenovereenkomst + QOLAB annex), the **waterfall** for `P_t`, and **worked numbers** (including a year with `P_t = 0` and a year that fills opened cap) in the ruling request. Ask **(a)–(d)**, **(e)–(f)**, **(h)–(j)**, and **(p)** on the live path; add **(g)** if sunset is in the spec; add **(k)–(o)** if nested projects are in scope; add **(q)** if a second, share-based instrument is in scope.
+Put **draft contracts** (dienstenovereenkomst + QOLAB annex), the **waterfall** for `P_t`, and **worked numbers** (including a year with `P_t = 0` and a year that fills opened cap) in the ruling request. Ask **(a)–(d)**, **(e)–(f)**, **(h)–(j)**, and **(r)** on the live path; add **(g)** if sunset is in the spec; add **(k)–(o)** if nested projects are in scope; add **(q)** if a second, share-based instrument is in scope; add **(s)** if the scoped-royalty path is in scope; add **(p)** only if a large `k` is kept on the effort base (fallback B).
 
-**File for the box, not for the number.** Start at **prefiling**. The gate before launch is **(a)–(d)**, not **(p)**: those are the expensive risks (tax at mint, dividend, wage, VAT timing) and they are the ones a ruling can actually close. Treat a decision that confirms the mechanism while leaving arm’s length as a condition as a **success**, not a failure — the residual exposure is then a partial disallowance at the CV under art. 53, 10°, which is the cheapest of the failure modes. Do not delay launch waiting for a confirmation of `k = 10` that the service is unlikely to give. Launching with **no ruling at all** is legally available; a cash reserve can cover that cheap disallowance on **open years**, not hidden-dividend or wage requalification, and FPS look-back is a rolling 3/4/7-year clock (RSZ 3/10) — [2026-09-14 log](../docs/log/2026-09-14_no-ruling-reserve-and-lookback.md).
+**File for the box, not for the number.** Start at **prefiling**. The gate before launch is **(a)–(d)**, not **(p)**: those are the expensive risks (tax at mint, dividend, wage, VAT timing) and they are the ones a ruling can actually close. Treat a decision that confirms the mechanism while leaving arm’s length as a condition as a **success**, not a failure — the residual exposure is then a partial disallowance at the CV under art. 53, 10°, which is the cheapest of the failure modes. Do not delay launch waiting for a confirmation of `k = 10` that the service is unlikely to give. Launching with **no ruling at all** is legally available; a cash reserve can cover that cheap disallowance on **open years**, not hidden-dividend or wage requalification, and FPS look-back is a rolling 3/4/7-year clock (RSZ 3/10) — [2026-09-14 log](../../docs/log/2026-09-14_no-ruling-reserve-and-lookback.md).
 
 Until the ruling exists, do not promise a unit price, a target ROI, a pot that “will be worth more if you wait,” or a default `k×` on a short payback.

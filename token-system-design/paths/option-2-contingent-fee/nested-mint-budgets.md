@@ -1,8 +1,8 @@
 # Nested mint budgets for sub-projects
 
-**Status: accepted (design) for sub-projects.** Tax characterisation is still a DVB hypothesis, not a ruling. Mint gate: [ADR 2026-09-08](../docs/decisions/2026-09-08_nested-mint-budgets.md). Cash path: [ADR 2026-09-09](../docs/decisions/2026-09-09_project-as-contractor.md) — the **project entity** holds root `p` and invoices `P_t`; **euros** land in a subpool and are split internally by `p_j`. Does **not** accept option 1 vs 2. Does **not** unpark vintages. Does **not** attribute product revenue to projects. Does **not** mint root `p` to contributors of `j`.
+**Status: accepted (design) for sub-projects.** Tax characterisation is still a DVB hypothesis, not a ruling. Mint gate: [ADR 2026-09-08](../../../docs/decisions/2026-09-08_nested-mint-budgets.md). Cash path: [ADR 2026-09-09](../../../docs/decisions/2026-09-09_project-as-contractor.md) — the **project entity** holds root `p` and invoices `P_t`; **euros** land in a subpool and are split internally by `p_j`. Does **not** accept option 1 vs 2. Does **not** unpark vintages. Does **not** attribute product revenue to projects. Does **not** mint root `p` to contributors of `j`.
 
-**Prevention rules applied:** [do not put a euro spot price on a growing pool](../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not dress labour-quota cheap shares as a dividend](../docs/mistakes/2026-09-04_cheap-share-euro-par.md); [do not keep paid-off `p` as seniority on later work](../docs/mistakes/2026-09-08_unburned-p-after-cap.md); [steep curve vs usable later mint](../docs/mistakes/2026-09-07_steep-curve-low-grant.md).
+**Prevention rules applied:** [do not put a euro spot price on a growing pool](../../../docs/mistakes/2026-09-03_unit-price-on-growing-pool.md); [do not open a lifetime multiple on day one](../../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md); [do not dress labour-quota cheap shares as a dividend](../../../docs/mistakes/2026-09-04_cheap-share-euro-par.md); [do not keep paid-off `p` as seniority on later work](../../../docs/mistakes/2026-09-08_unburned-p-after-cap.md); [steep curve vs usable later mint](../../../docs/mistakes/2026-09-07_steep-curve-low-grant.md).
 
 Nesting is **who may mint root `p`** (dilution gate) plus **who invoices `P_t`** (the project as a contractor). It is not a product-revenue waterfall. Do not analyse this as “parent `p` is distributed to people inside `j`.”
 
@@ -29,7 +29,7 @@ Nesting is **who may mint root `p`** (dilution gate) plus **who invoices `P_t`**
 
 Parent mints root `p` → sub-project **splits `p` among people** → those people invoice `P_t`.
 
-That path is what [ADR 2026-09-09](../docs/decisions/2026-09-09_project-as-contractor.md) replaces. It would require, on every mint, a filter of which local tasks are accepted and an averaged hourly rate for the lump. Direction A on [2026-09-08 nested `p` sunset](../docs/log/2026-09-08_nested-p-sunset-two-directions.md) (a local pot of parent `p`) is **not** the live spec.
+That path is what [ADR 2026-09-09](../../../docs/decisions/2026-09-09_project-as-contractor.md) replaces. It would require, on every mint, a filter of which local tasks are accepted and an averaged hourly rate for the lump. Direction A on [2026-09-08 nested `p` sunset](../../../docs/log/2026-09-08_nested-p-sunset-two-directions.md) (a local pot of parent `p`) is **not** the live spec.
 
 ---
 
@@ -84,7 +84,7 @@ A spin-out / IP sale in euros is a different box (not this route). This route is
 1. **Catch-up** (wilderness already done): parent marks grants as recognition of backlog. The project receives root `p` and `Δf_j` at the **project rate** (no task filter, no averaged contributor rate). Retire the admitted slice of unrecognized `c_j` so that labour is not minted into root `p` again. Do **not** slice local `p_j` by which tasks were in the grant — `p_j` stays the internal euro split key and burns when people take subpool euros.
 2. **Ongoing:** new local work mints new `p_j` and adds unrecognized `c_j`. Later `B_{t,j}` can admit more. The project can receive root `p` many times without a purchase.
 
-Do not leave paid-off **root** `p` on the project as seniority after its rem is 0 — same hole as [unburned root `p` after the cap](../docs/mistakes/2026-09-08_unburned-p-after-cap.md). Same for local `p_j` after a person has exhausted their subpool rem.
+Do not leave paid-off **root** `p` on the project as seniority after its rem is 0 — same hole as [unburned root `p` after the cap](../../../docs/mistakes/2026-09-08_unburned-p-after-cap.md). Same for local `p_j` after a person has exhausted their subpool rem.
 
 ### Late on the global curve
 
@@ -109,8 +109,8 @@ Two levels are enough to start. Deeper nesting is the same protocol (a project i
 
 ## Fee cap and tax hygiene
 
-- Open `r` / `k×` on **`f_j`** from **first root-`p` eligibility** for the project, not from year 1 of unofficial logging. A sale year plus years of “unpaid opening” on wilderness hours recreates the [day-one lifetime multiple](../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md).
-- Freeze after 1× of `f_j` is paid **stops further opening**; it does not forfeit remaining opened headroom ([2026-09-09 log](../docs/log/2026-09-09_hours-cap-and-project-contractor.md)).
+- Open `r` / `k×` on **`f_j`** from **first root-`p` eligibility** for the project, not from year 1 of unofficial logging. A sale year plus years of “unpaid opening” on wilderness hours recreates the [day-one lifetime multiple](../../../docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md).
+- Freeze after 1× of `f_j` is paid **stops further opening**; it does not forfeit remaining opened headroom ([2026-09-09 log](../../../docs/log/2026-09-09_hours-cap-and-project-contractor.md)).
 - Do not book remaining mint budget, remaining `p_j`, remaining root `p`, or remaining cap as a receivable.
 - Do not publish `€/p`, `€/p_j`, or `rem / p`.
 - Recognition (first `B_{t,j} > 0`) is a more sensitive grant-time moment than ordinary mint — still a hope until `P_t` exists, but tied to “we now believe this project.” DVB **(k)–(o)** below.
@@ -145,7 +145,7 @@ Two levels are enough to start. Deeper nesting is the same protocol (a project i
 
 ## DVB / counsel
 
-Existing items **(a)–(d)**, **(i)** (effort cap vs implied `€/p`), and **(j)** (proportional root-`p` burn) still apply. Nested **(k)–(o)** below. Full catalog: [dvb-questions.md](dvb-questions.md).
+Existing items **(a)–(d)**, **(i)** (effort cap vs implied `€/p`), and **(j)** (proportional root-`p` burn) still apply. Nested **(k)–(o)** below. Full catalog: [dvb-questions.md](../../analysis/dvb-questions.md).
 
 - **(k)** Delayed mint of root `p` after unofficial logged work: taxable event at local accept, at first `B_{t,j} > 0`, or still only at invoice?
 - **(l)** `p_j` as a non-claim on `P_t`; only a split key for the subpool.

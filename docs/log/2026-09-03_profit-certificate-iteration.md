@@ -4,7 +4,7 @@
 
 ## What happened
 
-Reviewed `token-system-design/2026-09-03_token-system-calculation.ods` (bonding curve `p = c0 · c^k`, euro withdrawal rate `dc/dp`, GA pool, pro-rata opt-in, burn = cash / rate). Goals shifted to: reward voluntary contributions, early-bird, no tax at grant of the right, no unlimited dividends. Wrote [token-system-design/token-system.md](../../token-system-design/token-system.md). Restored [docs/architecture.md](../architecture.md) as a pointer to the working folder.
+Reviewed `token-system-design/2026-09-03_token-system-calculation.ods` (bonding curve `p = c0 · c^k`, euro withdrawal rate `dc/dp`, GA pool, pro-rata opt-in, burn = cash / rate). Goals shifted to: reward voluntary contributions, early-bird, no tax at grant of the right, no unlimited dividends. Wrote [token-system-design/analysis/belgian-tax-and-company-law.md](../../token-system-design/analysis/belgian-tax-and-company-law.md). Restored [docs/architecture.md](../architecture.md) as a pointer to the working folder.
 
 ## Decisions
 

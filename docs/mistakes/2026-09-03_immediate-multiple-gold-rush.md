@@ -14,6 +14,6 @@ Do not open a lifetime multiple on day one. Cap each **lot** at 1× documented e
 
 ## Related
 
-- [token-system-design/vintage-pools.md](../../token-system-design/vintage-pools.md)
+- [token-system-design/parked/vintage-pools.md](../../token-system-design/parked/vintage-pools.md)
 - [docs/decisions/2026-09-03_time-opened-fee-cap.md](../decisions/2026-09-03_time-opened-fee-cap.md)
 - [docs/mistakes/2026-09-03_unit-price-on-growing-pool.md](2026-09-03_unit-price-on-growing-pool.md)

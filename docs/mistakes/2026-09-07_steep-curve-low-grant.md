@@ -14,7 +14,7 @@ Do not combine a low constant grant-time contribution value with a steep bonding
 
 ## Related
 
-- [token-system-design/2026-09-07_token-system-calculation.ods](../../token-system-design/2026-09-07_token-system-calculation.ods)
+- [token-system-design/spreadsheets/2026-09-07_token-system-calculation.ods](../../token-system-design/spreadsheets/2026-09-07_token-system-calculation.ods)
 - [docs/log/2026-09-07_bonding-curve-shares-dead-end.md](../log/2026-09-07_bonding-curve-shares-dead-end.md)
 - [docs/decisions/2026-09-07_bonding-curve-shares-dead-end.md](../decisions/2026-09-07_bonding-curve-shares-dead-end.md)
 - [docs/mistakes/2026-09-04_cheap-share-euro-par.md](2026-09-04_cheap-share-euro-par.md)

@@ -14,7 +14,7 @@ When remaining opened cap hits 0, `p` for that person (or lot) must be 0 **befor
 
 ## Related
 
-- [token-system-design/p-burn-remaining-cap.md](../../token-system-design/p-burn-remaining-cap.md)
+- [token-system-design/paths/option-2-contingent-fee/p-burn-remaining-cap.md](../../token-system-design/paths/option-2-contingent-fee/p-burn-remaining-cap.md)
 - [docs/decisions/2026-09-08_p-burn-remaining-cap.md](../decisions/2026-09-08_p-burn-remaining-cap.md)
 - [docs/mistakes/2026-09-03_unit-price-on-growing-pool.md](2026-09-03_unit-price-on-growing-pool.md)
 - [docs/mistakes/2026-09-03_immediate-multiple-gold-rush.md](2026-09-03_immediate-multiple-gold-rush.md)
