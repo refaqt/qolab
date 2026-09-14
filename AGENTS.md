@@ -15,12 +15,12 @@ This repo mounts [refaqt/refaqt-agents](https://github.com/refaqt/refaqt-agents)
 
 1. Read [`.agents/rules/core.md`](.agents/rules/core.md) and [`.agents/rules/living-docs.md`](.agents/rules/living-docs.md).
 2. Read [`docs/mistakes/`](docs/mistakes/) and state which prevention rules apply.
-3. Read [`docs/architecture.md`](docs/architecture.md) before non-trivial work.
+3. Read [`docs/mission.md`](docs/mission.md) and [`docs/architecture.md`](docs/architecture.md) before non-trivial work.
 4. Before new coding solutions, check [`.agents-local/skills/patterns/SKILL.md`](.agents-local/skills/patterns/SKILL.md) if present.
 
 ## This repository
 
-QOLAB — token system for the governance and work on Refaqt projects. Repo profile, folder map, and conventions: [`.agents-local/rules/repo.md`](.agents-local/rules/repo.md).
+QOLAB — token system for the governance and work on Refaqt projects, in service of [Refaqt’s mission](docs/mission.md). Repo profile, folder map, and conventions: [`.agents-local/rules/repo.md`](.agents-local/rules/repo.md).
 
 | You are adding | It goes in |
 | --- | --- |

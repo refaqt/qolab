@@ -18,6 +18,7 @@ Humans on Windows may double-click `setup-tooling.bat` instead.
 
 - [AGENTS.md](AGENTS.md) — entry point for Cursor, Claude Code, and other agents
 - [docs/onboarding.md](docs/onboarding.md) — how to set up and navigate this repository
+- [docs/mission.md](docs/mission.md) — Refaqt mission (binding constraint on token and legal design)
 - [docs/architecture.md](docs/architecture.md) — purpose and layout
 - [token-system-design/token-system.md](token-system-design/token-system.md) — Belgian tax/legal analysis of the contribution-credit system
 - [token-system-design/dvb-questions.md](token-system-design/dvb-questions.md) — questions **(a)–(q)** for the ruling commission
