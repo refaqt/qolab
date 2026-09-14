@@ -1,5 +1,7 @@
 # Architecture
 
+Refaqt’s mission is to make manufacturing use less resources and energy by making it more decentralized and local, more on-demand, and by democratizing access to manufacturing and manufacturing tools. Canonical text: [`mission.md`](mission.md). QOLAB is an instrument of that mission ([ADR 2026-09-14](decisions/2026-09-14_refaqt-mission-design-constraint.md)).
+
 QOLAB is a contribution-credit system for work on Refaqt projects. The live design draft lives in [`token-system-design/`](../token-system-design/) while the mechanics are still iterating. **No option is accepted yet.** Vintages are parked (complexity). Cheap-share, bonding-curve shares (cheap grant value + revenue mint), and **inbreng in nijverheid** (plan-ahead work-for-shares) are **dead-ends**. Next pass is option 2 with less machinery. **Accepted:** amortize `p` against remaining opened cap ([p-burn-remaining-cap.md](../token-system-design/p-burn-remaining-cap.md)); nested mint budgets ([nested-mint-budgets.md](../token-system-design/nested-mint-budgets.md)); project-as-contractor cash path ([ADR 2026-09-09](decisions/2026-09-09_project-as-contractor.md)).
 
 - Working overview: [token-system-design/architecture.md](../token-system-design/architecture.md)
@@ -31,5 +33,6 @@ Stack is not chosen yet. Default is an off-chain ledger.
 | `doqs/` | Documentation tooling (`refaqt/doqs` submodule) |
 | `.agents-local/` | Repo-specific agent rules and skills |
 | `docs/` | Living documentation (this pointer, ADRs, log, mistakes) |
+| `docs/mission.md` | Refaqt mission (binding constraint on token/legal design) |
 | `token-system-design/` | Working token-system draft |
 | `AGENTS.md` | Agent entry point |

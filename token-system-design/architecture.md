@@ -4,6 +4,8 @@ System overview and component map for this repository. Update when layout, entry
 
 ## Purpose
 
+Refaqt’s mission is to make manufacturing use less resources and energy by making it more decentralized and local, more on-demand, and by democratizing access to manufacturing and manufacturing tools. Canonical: [docs/mission.md](../docs/mission.md). QOLAB serves that mission; it is not a separate profit purpose ([ADR 2026-09-14](../docs/decisions/2026-09-14_refaqt-mission-design-constraint.md)).
+
 QOLAB is a **contribution-credit system** for work on Refaqt projects. Design is still iterating. **No option is accepted yet.**
 
 Constraints that still bind: non-transferable weights minted with `p = c0 · c^k`; **no** euro quote of `dc/dp` and **no** unit `v = pool / N`; governance membership is separate from the reward; do not mix a dividend story and a fee on the same instrument.
@@ -40,5 +42,6 @@ Stack is not chosen yet. Default is an off-chain ledger, not a chain.
 | `doqs/` | Documentation tooling (`refaqt/doqs` submodule) |
 | `.agents-local/` | Repo-specific agent rules and skills |
 | `docs/` | Living documentation (architecture pointer, ADRs, log, mistakes) |
+| `docs/mission.md` | Refaqt mission (binding constraint on token/legal design) |
 | `token-system-design/` | Working design: analysis, spreadsheet, this overview |
 | `AGENTS.md` | Agent entry point |
