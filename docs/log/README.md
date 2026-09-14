@@ -32,3 +32,4 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-14 | [Launch without a DVB ruling: reserve and look-back](2026-09-14_no-ruling-reserve-and-lookback.md) | cross-cutting / option-2 | finance, business-dev | 0 |
 | 2026-09-14 | [Review follow-ups applied; design folder restructured by path](2026-09-14_review-followups-and-path-restructure.md) | cross-cutting | finance, business-dev | 0 |
 | 2026-09-14 | [Cap simplified to one row; `r` as an opening factor](2026-09-14_simplified-cap-and-r-as-not-interest.md) | option-2 | finance, business-dev | 0 |
+| 2026-09-14 | [Investors, the no-freeze bond row, and the two-leg waterfall](2026-09-14_investors-and-the-two-leg-waterfall.md) | capped participating bond | finance, business-dev | 0 |

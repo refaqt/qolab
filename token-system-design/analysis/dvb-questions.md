@@ -1,4 +1,4 @@
-# DVB questions (a)–(s)
+# DVB questions (a)–(u)
 
 Catalog of questions to put to the **Dienst Voorafgaande Beslissingen** (and counsel / accountant) before anyone is promised QOLAB credits or paid under them. This is **design input**, not a ruling and not a substitute for a filing.
 
@@ -37,6 +37,8 @@ Companion analysis: [belgian-tax-and-company-law.md](belgian-tax-and-company-law
 | **(q)** | Art. 344 §1 abuse on splitting labour (fee) from residual upside (shares)? | If two instruments |
 | **(r)** | Exit / death / succession: is a lapse of an unpaid opened cap a taxable event? | Yes |
 | **(s)** | Scoped royalty (Cred-allocated, on products embodying the contribution): deductible fee at arm's length without an hours comparable? | If the Cred/Q path is pursued |
+| **(t)** | Art. 344 §1 abuse where one formula **couples** the fee leg and the capital leg of the same pool? | If an investor leg exists |
+| **(u)** | Capped participating bond: deductible uplift at arm's length, still debt, with contingent repayment? | If an investor leg exists |
 
 ---
 
@@ -301,6 +303,8 @@ Companion analysis: [belgian-tax-and-company-law.md](belgian-tax-and-company-law
 
 **Ask DVB / counsel.** Whether the two-instrument split survives art. 344 §1 on the facts filed. Ask what correlation between contribution and share count is tolerated (eligibility gate vs quantum).
 
+**Scope note (2026-09-14).** This item is about two instruments sitting **side by side**. Where the two legs are joined by a single split formula — as on the [capped-participating-bond path](../paths/capped-participating-bond/README.md), whose `θ` divides one pool between them — the coupling is a further fact and is asked separately as **(t)**. File (q) and (t) together whenever an investor leg exists.
+
 ---
 
 ## (r) Exit, death, succession — lapse of an unpaid opened cap
@@ -331,6 +335,34 @@ Companion analysis: [belgian-tax-and-company-law.md](belgian-tax-and-company-law
 
 ---
 
+## (t) Art. 344 §1 — one formula coupling the fee leg and the capital leg
+
+**Question.** The yearly pool `P_t` is divided between a contributor fee leg and a capital leg by `θ = Σ rem^C / (Σ rem^C + Σ rem^I)`, and each leg is then allocated and capped on its own basis. Can FPS invoke **art. 344 §1 WIB 92** to treat the two legs as **one arrangement** — a single profit-sharing scheme split into a deductible box and a debt box — and tax it accordingly?
+
+**Why it exists.** Item **(q)** was written for two instruments standing side by side, each with its own rationale. This is a stronger fact pattern against the taxpayer: the company itself states, in one formula, that the two legs share one pool and that what one leg may still be paid determines what the other receives this year. That is exactly the "chosen for its tax result" shape, one level up from the [cheap-share](../dead-ends/cheap-share-route.md) rejections — and here both legs are also **deductible**, so the coupling has an obvious fiscal effect to point at.
+
+**Case to file.** The non-tax rationale is the shape of the whole structure, not of either leg: **both legs are capped, and the residual belongs to the company and its mission.** Once contributors have reached `k · E` and holders `k_I · I`, the entire pool stays with the CV — the [worked example §4.4](../paths/capped-participating-bond/README.md) shows it from year 8. That is a **steward-ownership** choice written into the *doel* / *voorwerp* (art. 6:1 WVV *coöperatief doel*, [mission.md](../../docs/mission.md)), and it holds if the tax outcome were reversed: it costs both constituencies their upside above the caps. Supporting facts: `θ` is formulaic and nobody votes on it; what a person may advance is never a function of hours, `c`, `p`, or the contribution ledger, and allocation of the fee leg is never a function of their advance; subscription is cash only, never netted against anything the CV owes; and credits never convert into bonds or shares.
+
+**Working hypothesis.** Splitting one pool pro rata between two genuinely different claims — documented work at risk, and money at risk — by reference to what each may still be paid is a **waterfall**, not an abuse. A waterfall is the ordinary way a company with two classes of contingent claimant pays them. The abuse case appears only if the split, or either cap, tracks contribution on the capital side.
+
+**Ask DVB / counsel.** Whether the coupled waterfall survives art. 344 §1 on the facts filed; whether the caps-plus-mission-residual rationale is accepted as a non-fiscal motive; and what, if anything, about the coupling would have to change for it not to be.
+
+---
+
+## (u) Capped participating bond — deductible uplift, and still debt
+
+**Question.** An investor advances cash on a **subordinated, profit-participating bond** with **no fixed maturity**, repayable only out of the pool, non-transferable, carrying no vote. An uplift accrues at `r_I` per year on outstanding principal, payments reduce principal and accrued uplift in the same proportion, and everything ever paid on the instrument is capped at `k_I` times the amount advanced. Is the uplift a **deductible financial charge at arm's length** (art. 49 for the conditions; **art. 55 WIB 92** for the market-rate limit), and does the instrument remain **debt** rather than equity or a profit-sharing arrangement, given that repayment is contingent and may never happen?
+
+**Why it exists.** The instrument was chosen because a per-investor cap cannot ride on a dividend — see [path note §1](../paths/capped-participating-bond/README.md). Choosing debt buys an exact split and a coherent booking instruction, and it buys two new exposures the share route did not have. It also inverts the argument in **(h)**: there, the defence is that there is **no principal**. Here there is, and the accrual is openly simple interest on a declining balance.
+
+**Case to file.** Genuine cash at risk; subordination to all other creditors; no maturity; payment only out of a pool that may be zero; a holder who may be closed out having received less than they advanced; a lifetime lid. The uplift is an ordinary price for subordinated, unsecured, contingent capital, evidenced by a **documented comparable exercise** (what such a loan to a pre-revenue Belgian SME prices at) rather than by mirroring the contributor parameters. Principal is booked as a liability; the uplift is **not accrued** until the board opens the leg ([loan-regulations clauses 22–23](../paths/capped-participating-bond/loan-regulations.md)).
+
+**Working hypothesis.** Contingent repayment is what buys `k_I > 1`: if repayment were mandatory the instrument would be an ordinary loan, the cap could only cover the uplift, and `k_I` would have to fall to a market interest rate. The lid is not the number that will be tested — a realistic payment path closes far below it — the **effective rate actually paid** is.
+
+**Ask DVB / counsel.** Deductibility of the uplift under art. 49 and its ceiling under **art. 55**; whether **art. 18, 4° WIB 92** requalifies any part into a dividend where holders are also *bedrijfsleiders* or shareholders; **art. 198 §1, 11°** thin capitalisation; RV on the uplift and any exemption; whether contingent repayment plus the lid keeps the instrument debt for tax and for the annual accounts; and whether the non-accrual of the uplift before the board opens the leg is accepted.
+
+---
+
 ## Counsel items (not numbered DVB items)
 
 Questions the repo has not checked and that belong to counsel or an accountant rather than to a ruling request.
@@ -348,6 +380,12 @@ Questions the repo has not checked and that belong to counsel or an accountant r
 | RV / RSZ allocation if a payment is requalified; whether the CV may pass RV on | Annex clause | [annex-terms §C](../paths/option-2-contingent-fee/annex-terms.md) |
 | Whether to seek NRC recognition or *erkend als sociale onderneming* (art. 8:5 ~6% cap) | Fights a large residual on shares | [mission.md](../../docs/mission.md) |
 | Provisioning a default-in allocation so VenB matches the fee year | Accountant | [2026-09-03 log](../../docs/log/2026-09-03_vintage-pools-idle-capital.md) |
+| Holders'-meeting machinery for a **CV bond** under art. 6:19: availability, majorities, reserved matters, and whether **per-head** voting can be written into the issue conditions | Uniform terms with no individual veto depend on it; arts. 7:170 ff. are the NV model and are **unverified** for a CV | [capped-participating-bond §5.2](../paths/capped-participating-bond/README.md) |
+| Enforceability of **majority amendment** where it reduces an existing entitlement, with future-accrual-only as the protection | Without clause 15 every holder vetoes their own terms; with it, the protection is what makes it stand up | [loan-regulations clauses 15–17](../paths/capped-participating-bond/loan-regulations.md) |
+| The article and permitted deviation for **one member, one vote** in the statutes (the WVV default attaches votes to shares) | Governance premise of both legs | [capped-participating-bond §5.2](../paths/capped-participating-bond/README.md) |
+| FSMA: *informatienota* or prospectus for a **bond offered beyond members** (Wet 11 juli 2018; €5,000,000 / 12 months), and any recognised-cooperative exemption | This is the first path that cannot stay member-only by design | [loan-regulations clause 24](../paths/capped-participating-bond/loan-regulations.md) |
+| Accountant: principal booked as a liability while the **uplift is not accrued** until the board opens the leg | Mirror of clause 27 in the other direction; if the uplift is accrued the contingency is gone | [loan-regulations clauses 22–23](../paths/capped-participating-bond/loan-regulations.md) |
+| **Winwinlening** as a wrapper for small Flemish lenders | Attractive, but it requires repayment at term, so it conflicts with contingent repayment and cannot carry `k_I` | [capped-participating-bond §7](../paths/capped-participating-bond/README.md) |
 
 ---
 
@@ -357,15 +395,15 @@ Questions the repo has not checked and that belong to counsel or an accountant r
 | --- | --- |
 | MiCA | Off-chain, no technical peer transfer (Recital 17) |
 | E-money | No euro unit / par |
-| FSMA / prospectus | No ROI language; no offer of an investment to non-members |
+| FSMA / prospectus | No ROI language; no offer of an investment to non-members. **Live from the moment an investor leg exists** — a bond is an investment instrument, and an offering document must disclose the return terms ([carve-out in the path map](../README.md)) |
 | DAC8 | No public crypto rails |
 
 ---
 
 ## How to file
 
-Put **draft contracts** (dienstenovereenkomst + QOLAB annex), the **waterfall** for `P_t`, and **worked numbers** (including a year with `P_t = 0` and a year that fills opened cap) in the ruling request. Ask **(a)–(d)**, **(e)–(f)**, **(h)–(j)**, and **(r)** on the live path; add **(g)** if sunset is in the spec; add **(k)–(o)** if nested projects are in scope; add **(q)** if a second, share-based instrument is in scope; add **(s)** if the scoped-royalty path is in scope; add **(p)** only if a large `k` is kept on the effort base (fallback B).
+Put **draft contracts** (dienstenovereenkomst + QOLAB annex), the **waterfall** for `P_t`, and **worked numbers** (including a year with `P_t = 0` and a year that fills opened cap) in the ruling request. Ask **(a)–(d)**, **(e)–(f)**, **(h)–(j)**, and **(r)** on the live path; add **(g)** if sunset is in the spec; add **(k)–(o)** if nested projects are in scope; add **(q)** if a second, share-based instrument is in scope; add **(q)** together with **(t)** and **(u)** if an **investor leg** is in scope; add **(s)** if the scoped-royalty path is in scope; add **(p)** only if a large `k` is kept on the effort base (fallback B).
 
 **File for the box, not for the number.** Start at **prefiling**. The gate before launch is **(a)–(d)**, not **(p)**: those are the expensive risks (tax at mint, dividend, wage, VAT timing) and they are the ones a ruling can actually close. Treat a decision that confirms the mechanism while leaving arm’s length as a condition as a **success**, not a failure — the residual exposure is then a partial disallowance at the CV under art. 53, 10°, which is the cheapest of the failure modes. Do not delay launch waiting for a confirmation of `k = 10` that the service is unlikely to give. Launching with **no ruling at all** is legally available; a cash reserve can cover that cheap disallowance on **open years**, not hidden-dividend or wage requalification, and FPS look-back is a rolling 3/4/7-year clock (RSZ 3/10) — [2026-09-14 log](../../docs/log/2026-09-14_no-ruling-reserve-and-lookback.md).
 
-Until the ruling exists, do not promise a unit price, a target ROI, a pot that “will be worth more if you wait,” or a default `k×` on a short payback.
+Until the ruling exists, do not promise a unit price, a target ROI, a pot that “will be worth more if you wait,” or a default `k×` on a short payback. Do not **offer** a bond, a rate, or a multiple to anyone: the investor leg is open, not accepted, and the FSMA question is unanswered.

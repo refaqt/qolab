@@ -14,3 +14,4 @@ Incidents worth not repeating. One file per incident: `YYYY-MM-DD_topic.md`.
 | 2026-09-14 | [Wrong article for the excess test (art. 49 vs art. 53, 10°)](2026-09-14_wrong-article-for-excess-test.md) |
 | 2026-09-14 | [The large multiple was built on the effort base, with a ruling as the gate](2026-09-14_10x-on-the-effort-base.md) |
 | 2026-09-14 | [A cap written as a balance times `(1 + r)`](2026-09-14_cap-as-balance-times-one-plus-r.md) |
+| 2026-09-14 | [A second instrument publishing the comparable the first was designed not to have](2026-09-14_second-instrument-publishes-the-comparable.md) |
