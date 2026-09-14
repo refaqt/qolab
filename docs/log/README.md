@@ -34,3 +34,4 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-14 | [Cap simplified to one row; `r` as an opening factor](2026-09-14_simplified-cap-and-r-as-not-interest.md) | option-2 | finance, business-dev | 0 |
 | 2026-09-14 | [Investors, the no-freeze bond row, and the two-leg waterfall](2026-09-14_investors-and-the-two-leg-waterfall.md) | capped participating bond | finance, business-dev | 0 |
 | 2026-09-14 | [Hardware for experiments: ordinary bond, company purchase, loan for use](2026-09-14_hardware-via-bond-and-loan.md) | capped participating bond | finance, business-dev, hardware | 0 |
+| 2026-09-14 | [Soft-launch: what the website may say before legal drafting](2026-09-14_website-soft-launch.md) | option-2 | business-dev, finance, marketing | 0 |
