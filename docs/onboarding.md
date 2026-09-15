@@ -19,9 +19,11 @@ How to set up, run, and navigate this repository.
 | Doc | Use |
 | --- | --- |
 | `docs/mission.md` | Refaqt mission; binding on token, statute, and DVB drafts |
+| `docs/governance.md` | How decisions are made: circles, consent, escalation, hour acceptance |
 | `docs/architecture.md` | Pointer to the working design |
 | `token-system-design/README.md` | **Path map** — every token system, its status (live / viable / open / parked / dead-end), its entry document |
 | `token-system-design/paths/option-2-contingent-fee/` | Live spec (contingent invoiced fee, `p` as weights), annex terms, accepted `p` burn, nested mint budgets |
+| `token-system-design/paths/governance-voting/` | Governance leg: √-count vote-only shares, vote cap, veto share, asset lock |
 | `token-system-design/analysis/` | Belgian tax / company-law analysis; [DVB questions (a)–(s)](../token-system-design/analysis/dvb-questions.md) |
 | `token-system-design/parked/`, `dead-ends/`, `spreadsheets/` | Parked vintage note; rejected sketches; calculation sheets |
 | `.agents-local/skills/patterns/SKILL.md` | Project-specific reusable patterns |

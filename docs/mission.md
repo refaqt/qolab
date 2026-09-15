@@ -12,7 +12,7 @@ The mission is the candidate **non-tax rationale** for company form and surplus 
 
 Dutch statutory wording is **counsel**, not drafted here.
 
-Whether to seek Nationale Raad voor de Coöperatie recognition or *erkend als sociale onderneming* is **not** decided here. Art. 8:5 WVV’s ~6% cap on patrimonial advantage to shareholders fights a 10× residual; recording the mission is not that label.
+Recognition as *erkend als sociale onderneming* is **not sought** ([ADR 2026-09-15](decisions/2026-09-15_votes-off-the-reward.md)): the asset lock and the mission lock are written into the statutes and entrenched by a veto share, so art. 8:5 WVV’s ~6% cap is not a constraint. Whether to seek Nationale Raad voor de Coöperatie recognition is a separate matter, not decided here. Recording the mission is not a label.
 
 Labour-quota shares remain a **dead-end**. The mission does not revive option 1, mix a dividend story and a fee on the same instrument, or convert contributors into volunteers.
 

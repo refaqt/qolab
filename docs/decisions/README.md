@@ -20,3 +20,4 @@ Architecture Decision Records. One file per decision: `YYYY-MM-DD_topic.md`. Whi
 | 2026-09-14 | [The option-2 cap is one row per contributor](2026-09-14_simplified-cap-one-row.md) (Proposed) |
 | 2026-09-14 | [The investor leg is a capped participating bond, split against contributors by formula](2026-09-14_investor-leg-capped-participating-bond.md) (Proposed) |
 | 2026-09-14 | [Hardware for experiments is funded by the ordinary bond, then lent by the company](2026-09-14_hardware-via-bond-and-loan.md) (Proposed) |
+| 2026-09-15 | [Votes off the reward: √-count vote-only shares, a veto share, and an asset lock](2026-09-15_votes-off-the-reward.md) (Proposed) |

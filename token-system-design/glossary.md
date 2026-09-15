@@ -66,6 +66,22 @@ The [capped-participating-bond path](paths/capped-participating-bond/README.md).
 | carry ledger | The running record of deviation between the paid split and `θ`, corrected in the following year. Deviation arises only where a leg is cap-constrained |
 | within-leg re-pass | Unabsorbed allocation is redistributed **inside** a leg, never across legs — `θ` has already priced the relative remaining claims, so cross-leg spill double-counts |
 
+## Governance leg
+
+The [governance-voting path](paths/governance-voting/README.md). Nothing here is a claim on `P_t`; nothing here is minted from `p`.
+
+| Symbol | Meaning | Not |
+| --- | --- | --- |
+| `V_i(n)` | Decayed stock of accepted contribution: `V_i(n+1) = (1 − δ) · V_i(n) + c_i(n)`. Sets the share entitlement only | A claim on `P_t`; a weight in the fee split; a euro amount |
+| `δ` | Yearly decay of `V` (the share of `V` that drops off). GA parameter, 0.25 at the start | A return; the option-2 `r` |
+| `N_i(n)` | Governance shares member `i` may hold: `max(1, ⌊√(V_i / 1000)⌋)`. One share, one vote | A profit share; a count minted from `p` |
+| governance share | Vote-only share at €1, non-transferable, no dividend, returned at €1. One class | The reward; a labour-quota share |
+| `s_i^l`, `S_l`, `G_l` | Shares member `i` puts on proposal `l`; total on `l`; share of the budget `S_l / Σ S_l` | Quadratic funding (`(Σ√)²`) or quadratic voting; nothing is spent |
+| `cap(N)` | Vote cap per member: `max(10%, k / N)` of votes present, `k = 2` at the start | A recognition condition |
+| class G share | One veto share held by a foundation or non-profit; approval required on reserved matters; no dividend, €1 at liquidation | A golden share with economic rights |
+| asset lock | Statutory rules: no dividend on the governance share, *scheidingsaandeel* at paid-in, no capital reduction to members, liquidation surplus to a like-purpose entity, IP proceeds stay locked; entrenched by class G | Recognition as *sociale onderneming* (not sought) |
+| mission lock | The *doel* in the statutes plus "designs stay open under CERN-OHL" | A tax box |
+
 ## Three objects that get confused
 
 | Object | What it is | Used? |
