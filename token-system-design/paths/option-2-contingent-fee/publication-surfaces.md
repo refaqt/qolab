@@ -64,7 +64,7 @@ Preferred words: *ceiling / plafond*, *opening*, *unrecovered documented effort*
 - Compensation, **if any**, is a **contingent success fee**: you invoice only if, in a later year, the cooperative opens a surplus pool after reserves and mission investment. In a year with no pool, nothing is due.
 - The split among contributors is by **contribution weights** from accepted hours. Weights are not shares, not transferable, and will not be converted into shares.
 - There is a **ceiling** tied to documented effort so nobody invoices without limit. Do not state the formula, `r`, `k`, a multiple, or a wait story.
-- Governance membership, if it exists, is a **separate small cash share**, the same for each contributing member. Contribution is an eligibility gate, not a printer of extra paper.
+- Governance membership, if it exists, is a **separate vote-only share** at €1 that pays no dividend. How many a member may hold follows the square root of their decayed contribution ([governance leg](../governance-voting/README.md)); it is never extra paper that pays. Contribution is an eligibility gate for the reward, not a printer of profit rights.
 - Staff-like people are employees on euro payroll. Contributors are independent (own clients, no subordination), typically through a company.
 
 ### Draft copy (ready to paste)
@@ -81,7 +81,7 @@ Preferred words: *ceiling / plafond*, *opening*, *unrecovered documented effort*
 >
 > Invoices, if they happen, stay under a ceiling tied to documented effort. Until counsel sets the parameters, a log of accepted work is a record of contribution, not a claim and not money owed.
 >
-> If you become a member, that is a separate small cash share for governance. It is the same for each contributing member. It is not extra paper for extra hours.
+> If you become a member, that is a separate vote-only share for governance. It costs €1, pays nothing, and comes back at €1. How many you may hold follows your contribution, slowly. It is not paper that pays for extra hours.
 >
 > People who work like staff are employees, paid in euros. Contributors are independent. They have other clients. They usually invoice through their own company.
 >
@@ -118,7 +118,7 @@ Use the contributor page as the script. In conversation or a **private** one-pag
 
 - **Company.** For a Belgian person, this fee is heavily taxed. The design expects a contributor company. See the [adoption constraint](../../README.md#adoption-constraint).
 - **Independence.** They have other clients. Refaqt does not direct them like staff.
-- **Change.** The annex will be one standard document. The general assembly may amend it on one member, one vote. A reduction applies to **future opening** only. A ceiling already opened is honoured ([annex clause 13](annex-terms.md)).
+- **Change.** The annex will be one standard document. The general assembly may amend it by vote of the governance shares (one share, one vote, with a per-member cap — [governance leg](../governance-voting/README.md)). A reduction applies to **future opening** only. A ceiling already opened is honoured ([annex clause 13](annex-terms.md)).
 - **Exit, in outline.** If they leave, any later ceiling that was already opened can still be invoiced if a pool exists. Exclusion for cause drops the row. Do not use the banned words in section 3.
 
 Do not walk them through worked multiples, “expected 1×”, or the investor waterfall. Those belong in counsel packs, not recruiting.

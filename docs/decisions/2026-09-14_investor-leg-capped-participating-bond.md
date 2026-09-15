@@ -7,6 +7,7 @@
 - **Does not change:** the mint `p = c0 · c^k`, the waterfall that computes `P_t`, default-in and forfeiture, the [one-row contributor cap](2026-09-14_simplified-cap-one-row.md) or its **freeze**, the [fractional burn of `p`](2026-09-08_p-burn-remaining-cap.md), the [nested mint budgets](2026-09-08_nested-mint-budgets.md), or the [project-as-contractor cash path](2026-09-09_project-as-contractor.md).
 - **Does not decide:** the values of `r_I` and `k_I`; whether a second, uncapped capital base is pursued; whether a bond issue or bilateral contracts are used at launch; whether a sunset applies on this leg.
 - **Does not revive:** [cheap shares](2026-09-04_cheap-share-route-dead-end.md), [bonding-curve shares](2026-09-07_bonding-curve-shares-dead-end.md), or [*inbreng in nijverheid*](2026-09-10_inbreng-in-nijverheid-dead-end.md). **Does not reopen** [two bases](2026-09-14_two-bases-10x-off-effort.md): option 2 stays at or near 1× on effort.
+- **Amended by** [ADR 2026-09-15](2026-09-15_votes-off-the-reward.md): the "one member, one vote" sentence in decision 7 is replaced by one share, one vote on √-count governance shares with a per-member cap.
 
 ## Context
 

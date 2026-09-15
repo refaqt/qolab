@@ -171,6 +171,8 @@ Amending a bilateral contract needs that counterparty's consent. A stack of nego
 
 ### 5.2 One person, one vote, in two different rooms
 
+**Amended 2026-09-15.** The members' GA no longer votes one member, one vote. It votes one share, one vote on √-count governance shares with a per-member cap ([ADR 2026-09-15](../../../docs/decisions/2026-09-15_votes-off-the-reward.md), [governance leg](../governance-voting/README.md)). The holders' meeting row below is unchanged.
+
 | Room | Decides | The rule wanted | The obstacle |
 | --- | --- | --- | --- |
 | **Members' GA** | `P_t` policy, `r`/`k`, `r_I`/`k_I`, the Regulations | One member, one vote | The WVV default attaches votes to shares, so the deviation must be written into the statutes. Counsel confirms the article |

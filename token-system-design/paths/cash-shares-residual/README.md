@@ -25,7 +25,7 @@ Contribution is an **eligibility gate**, never a quantum. Dividends are genuine 
 
 The whole political motive for the two-instrument split is that contributors who work more should also get more of the residual. The moment share allocation correlates with contribution — in the statutes, a members’ agreement, an MoU, or only in practice — the split into two legal boxes looks chosen for its tax result and the general anti-abuse rule can unwind it (DVB **(q)**). So:
 
-- The count must be defensibly **not** `f(p)` for a reason that would hold if the tax outcome were reversed. That reason is [Refaqt’s mission](../../../docs/mission.md) written into the statutes as *doel* / *voorwerp* (art. 6:1 WVV *coöperatief doel*) plus one-member-one-vote and admission policy — not only governance convenience.
+- The count must be defensibly **not** `f(p)` for a reason that would hold if the tax outcome were reversed. That reason is [Refaqt’s mission](../../../docs/mission.md) written into the statutes as *doel* / *voorwerp* (art. 6:1 WVV *coöperatief doel*) plus the governance leg (a class ceiling on any financial class, the veto share, the asset lock — [governance-voting](../governance-voting/README.md)) and admission policy — not only governance convenience.
 - No document ties share count to hours, points, `p`, or the contribution ledger. Credits never convert into shares.
 - “More hours → more dividend” is **not** available on this instrument. That leg stays option 2.
 
