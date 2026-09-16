@@ -22,16 +22,16 @@ Recorded a future idea: build **Fabriq DAO**. A DAO is a member-run organisation
 - What stops others from copying this with no paywall, or with a different paywall: **network effect**. The protocol only sends RFQs to the network. The DPP only connects a product to potential suppliers **in** the network.
 - How to start:
   1. Form **Fabriq LLC** (a limited company, or a later legal form) that governs Fabriq.
-  2. Refaqt buys **DAI** (a dollar-pegged digital cash token) and uses it to buy **F**.
-  3. F is paid to the protocol. Refaqt gets a **receipt**.
+  2. Refaqt buys **DAI** (a dollar-pegged digital cash token) and uses it to buy **Q**.
+  3. Q is paid to the protocol. Refaqt gets a **receipt**.
 
 ### Working read (not a decision)
 
-This is the same family as the [2026-09-10 access-token sketch](2026-09-10_q-token-supplier-network.md): a token gates use of the supplier network; suppliers are still paid in ordinary money. This sketch adds three things: (1) DPP create/update and a commercial listing, not only placing orders; (2) a separate Fabriq entity so finance does not all flow through Refaqt; (3) an explicit start path (LLC, DAI → F, receipt).
+This is the same family as the [2026-09-10 access-token sketch](2026-09-10_q-token-supplier-network.md): a token gates use of the supplier network; suppliers are still paid in ordinary money. This sketch adds three things: (1) DPP create/update and a commercial listing, not only placing orders; (2) a separate Fabriq entity so finance does not all flow through Refaqt; (3) an explicit start path (LLC, DAI → Q, receipt).
 
-The mission can support a shared protocol that helps local, on-demand manufacturing. “The Q-token price will increase” is **not** a mission story. If that is the only reason to require Q, the sketch fails the [mission constraint](../mission.md). A receipt for F spent on protocol use can be a real cost of a service. A plan to hold F so the price rises is a different fact: then F (or Q) has a spot price, and a peer book prints a euro (or dollar) value that tax authorities can copy. Same finding as selling the access token to builders.
+The mission can support a shared protocol that helps local, on-demand manufacturing. “The Q-token price will increase” is **not** a mission story. If that is the only reason to require Q, the sketch fails the [mission constraint](../mission.md). A receipt for Q spent on protocol use can be a real cost of a service. A plan to hold Q so the price rises is a different fact: then Q has a spot price, and a peer book prints a euro (or dollar) value that tax authorities can copy. Same finding as selling the access token to builders.
 
-The letters clash. Live design already has two Q’s. This sketch also uses **F**. Until named, treat “Q-token” here as the access ticket, and “F” as what Refaqt buys with DAI to pay the protocol. They may be the same object or two objects. Do not freeze either name.
+The letter Q already names two different tokens in this repo: the access ticket and the euro-par Cred coupon. This sketch uses Q for the access ticket. Rename before any spec draft.
 
 Fabriq LLC / DAO next to Refaqt is a **second instrument** (or a second company). Before it is specified, list what the Refaqt contributor fee and the investor bond rely on being **absent**, and check that Fabriq does not supply those facts in a document anyone must publish.
 
@@ -39,14 +39,13 @@ Network effect is a reason users stay. It is not a legal barrier. Others can sti
 
 ## Decisions
 
-None. Sketch stays **open**. Not an ADR. Does not replace option 2. Does not accept a market in Q or F. Does not add a path folder (log only).
+None. Sketch stays **open**. Not an ADR. Does not replace option 2. Does not accept a market in Q. Does not add a path folder (log only).
 
 ## Open Questions
 
-- Are **F** and the **Q-token** the same token, or two tokens (access ticket vs payment to the protocol)?
 - Rename vs the two existing Q’s before any spec draft.
 - Does moving finance to Fabriq change option 2, the capped bond, or QOLAB at all, or does it sit beside them?
-- Pair check: what facts do the Refaqt instruments need to stay absent, and does a priced F or a DAI→F purchase print them?
+- Pair check: what facts do the Refaqt instruments need to stay absent, and does a priced Q or a DAI→Q purchase print them?
 - Closed-loop ticket vs transferable token: tax, MiCA/FSMA, and whether “price will increase” is even the goal.
 - Why an LLC (often a US form) rather than a Belgian CV or another form, and who holds it before a DAO exists.
 - What the receipt is for (service cost, token purchase, or both), and in which books it lands.
@@ -56,4 +55,4 @@ None. Sketch stays **open**. Not an ADR. Does not replace option 2. Does not acc
 
 - Keep the sketch in the log. Do not treat Fabriq DAO as the live spec.
 - If this path is pursued: add a row on the [path map](../../token-system-design/README.md) **before** a folder, run the pair check, and take the access-token tax questions (ticket vs priced token) with it.
-- Do not add a peer market in Q or F without revisiting [peer market prints a euro price](2026-09-07_s-burn-euro-par.md).
+- Do not add a peer market in Q without revisiting [peer market prints a euro price](2026-09-07_s-burn-euro-par.md).
