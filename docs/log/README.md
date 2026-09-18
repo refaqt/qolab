@@ -37,3 +37,4 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-14 | [Soft-launch: what the website may say before legal drafting](2026-09-14_website-soft-launch.md) | option-2 | business-dev, finance, marketing | 0 |
 | 2026-09-15 | [Governance leg: contribution-weighted votes, steward-ownership, sociocracy](2026-09-15_governance-token-and-sociocracy.md) | governance leg | finance, business-dev | 0 |
 | 2026-09-16 | [Fabriq DAO to run the manufacturing protocol (open)](2026-09-16_fabriq-dao-protocol.md) | access token | business-dev, finance | 0 |
+| 2026-09-17 | [Burn `p` on ecological damage instead of on the effort cap (open)](2026-09-17_eco-destruction-burn.md) | option-2 / cross-cutting | finance, business-dev | 0 |
