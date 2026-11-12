@@ -30,3 +30,9 @@ Humans on Windows may double-click `setup-tooling.bat` instead.
 - [docs/log/2026-09-10_arms-length-10x-and-repo-review.md](docs/log/2026-09-10_arms-length-10x-and-repo-review.md) — review of the whole analysis; arm's length and the 10× cap
 - [token-system-design/parked/vintage-pools.md](token-system-design/parked/vintage-pools.md) — vintage pools (parked: complexity)
 - [token-system-design/dead-ends/](token-system-design/dead-ends/README.md) — every rejected sketch and the one fact that kills it
+
+## Licence
+
+Copyright © 2025–2026 Refaqt (BE 0804.145.539) and contributors. Contributions are accepted under the [Refaqt Contributor Licence Agreement](https://github.com/refaqt/.github/blob/main/CLA.md).
+
+No open licence has been chosen for this repository yet. Until then, all rights are reserved. See [LICENSE](LICENSE).
