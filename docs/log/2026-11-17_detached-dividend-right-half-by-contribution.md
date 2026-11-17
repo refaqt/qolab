@@ -92,6 +92,28 @@ It answers **when** tax is due. It does not answer **what kind of income** this 
 
 So the argument is sound for the narrow question it addresses. It does not protect against reclassification at payout.
 
+### 6. Follow-up: when is the tax due, and is VAT due?
+
+**Income tax is due at payout, not when the work is done.**
+
+- Employees and company directors are taxed on what is paid or attributed to them. Self-employed people are taxed on income that is certain and determinable (*zeker en vaststaand*), even before it is paid.
+- Here the claim only becomes certain when the general assembly decides on the distribution. Before that there is no income to tax. So the earliest moment is the GA decision; for a natural person it is in practice the payment.
+- The administration therefore cannot tax the work as it happens, and it does not try to. Reclassification changes the **category and rate** applied at payout (professional income plus social contributions instead of 30% RV, with the RV credited). It does not move the timing. It arrives afterwards, inside the look-back periods (3 years as a rule, longer without a return or in case of fraud).
+- **One exception: taxing the right itself.** If a right received for work has a value of its own, it can be taxed when it is received. "Hard to value" is not "worth zero". After a few years of payouts the administration could estimate a value from that history. In this scheme the right comes with the share, which was paid for, and the labour weight is a formula, not a new grant per hour. That keeps this exception weak, as long as the right cannot be sold or transferred.
+
+**VAT depends on who receives the money and why.**
+
+| Recipient | VAT? |
+| --- | --- |
+| Genuine dividend on a share | No. Holding shares is not an economic activity |
+| Employee | No. Employment is outside VAT |
+| Self-employed natural person, payment reclassified as consideration for services | Yes in principle, at 21%. Under the small-business exemption (annual turnover up to €25,000) no VAT is charged, but the person must still register |
+| Contributor BV, payment reclassified as consideration | Yes, 21% |
+
+**When VAT is due on a contingent fee.** VAT on a service normally becomes due when the service is completed. When the amount depends on future events and cannot be known then, it becomes due when each payment becomes payable. The Court of Justice ruled this for contingent instalments to a football agent (C-548/17 *Baumgarten Sports*, 2018). So VAT here would also be due at payout.
+
+**What reclassification costs on VAT.** If the payment is reclassified as consideration, the amount received is treated as **VAT-inclusive**: 21/121 of it (about 17%) is VAT owed out of money already received, plus penalties. The company paid it as a dividend without an invoice, so it has nothing to deduct the VAT against. That is why a planned fee comes with an invoice and the company deducts the VAT.
+
 ## Questions to put to their lawyer (or to ours, if we borrow the idea)
 
 1. Which legal form does the separated dividend right take in their company type (share class, *winstbewijs*, contract), and which WVV article allows it?
