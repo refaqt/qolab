@@ -41,3 +41,4 @@ Chronological record of work. Entries: `YYYY-MM-DD_topic.md`. Every entry needs 
 | 2026-09-16 | [Fabriq DAO to run the manufacturing protocol (open)](2026-09-16_fabriq-dao-protocol.md) | access token | business-dev, finance | 0 |
 | 2026-09-17 | [Burn `p` on ecological damage instead of on the effort cap (open)](2026-09-17_eco-destruction-burn.md) | option-2 / cross-cutting | finance, business-dev | 0 |
 | 2026-11-17 | [Outside scheme: equal shares, separate dividend right, half by contribution](2026-11-17_detached-dividend-right-half-by-contribution.md) | cross-cutting / cash shares | finance, business-dev | 0 |
+| 2026-11-18 | [Options, convertibles and deferred invoices: equity without tax at contribution?](2026-11-18_options-convertibles-and-deferred-invoices.md) | cross-cutting / contract tokens / option-2 | finance, business-dev | 0 |
