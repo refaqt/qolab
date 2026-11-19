@@ -160,6 +160,59 @@ From the [governance leg](../../token-system-design/paths/governance-voting/READ
 | **A separate product company (BV or NV)** | The CV keeps its lock and governance. A BV or NV that runs a commercial product line can issue real warrants to contributors | Two companies, transfer pricing between them, and a mission lock in the BV too |
 | **Keep the upside off shares** | Use the [scoped royalty](../../token-system-design/paths/scoped-royalty-cred-q/README.md) or a capped bond instead | No equity, which was the point of the question |
 
+## 6. Follow-up questions
+
+The example used throughout: Ann gets an option on 500 shares at €10 (a share is worth €10 at grant), and three years later the shares are worth €40.
+
+### 6.1 Who sets the €10, and is that a revisor every time?
+
+- The Optiewet wants the **real value of the share on the date of the offer**. For an unlisted company that is a valuation, not a market price. If the company has a statutory auditor (*commissaris*), the auditor normally confirms it. A small CV usually has none; then an external accountant or a *bedrijfsrevisor* can do the valuation, using one method that stays the same every year.
+- This is **not** the revisor report for a contribution in kind. That report is needed only when shares are paid with something other than cash. A cash exercise needs no such report.
+- If the strike is set **below** the value, the difference is added to the taxable amount at grant.
+- Practical shape: **one valuation per year** and **one grant date per year** (or two) for all milestones accepted since the last round. Not one valuation per milestone.
+- Counsel and the accountant confirm who may sign the valuation for a CV without a statutory auditor.
+
+### 6.2 What if there is no payout within the option term?
+
+- The option does **not** depend on payouts. Ann may exercise with her own savings.
+- If she does not, the option expires. She loses the tax already paid at grant; it is not refunded.
+- Five years without any profit usually also means the share is not worth much more than €10. So in that case the option was worth little, and the loss is mainly the tax at grant.
+- The term can be **longer**: up to 10 years. Each year above five adds 1% to the taxable lump sum (10 years: 23% instead of 18%).
+- Do **not** plan to extend the term later. A change to the terms can count as a new grant and be taxed again.
+- Refaqt should **not** lend Ann the money to exercise. Company law limits a company that finances the purchase of its own shares (financial assistance), and a cheap loan is a taxable benefit.
+
+### 6.3 Is it about 9% tax today on unpaid work?
+
+No. The **work itself is not taxed** today: the `p` weight is a contingent claim. Only the **option** is taxed.
+
+- 18% is **not** a tax rate. It is the part of the **share value under option** that counts as income: 18% × 500 × €10 = €900 of income.
+- That €900 is then taxed at Ann's own rate (roughly 25–50%), plus social contributions for a self-employed person (about 20.5%). On €5,000 of shares under option that is roughly **€450–€650**, so about **9–13% of the share value under option**, not of the value of the work.
+- The **halved** lump sum (9%) applies under extra conditions, for example: no exercise before the end of the third calendar year after the offer, and the option cannot be sold or given to someone else. Then it is roughly 4.5–6.5% of the share value under option.
+- The tax grows with the **number of options** and the **share value at grant**. Both are choices. Grants made while the company is still worth little cost almost nothing.
+
+### 6.4 Where did €13,500 come from, and what was the work worth?
+
+The number was chosen so that, after tax, about €5,000 was left to exercise. In option-2 terms it can be read like this (illustration only; no document may state a euro amount per hour):
+
+- Documented effort when the work was accepted: **€9,000** (the hours times the frozen band, or a quote per milestone). That is what Ann would have invoiced if she had been paid at once, plus VAT.
+- The ceiling then opens while the work stays unpaid. With the illustrative `r = 0.25`, the ceiling is 1.25× after one unpaid year and 1.50× after two: **€13,500**.
+- The payout is Ann's share of the pool, limited by that ceiling. In this example the pool was large enough to fill it.
+- Under ADR 2026-09-14 (two bases, proposed) the multiple for time-based work stays near 1×. A smaller `r` or `k` gives a payout closer to €9,000.
+
+### 6.5 Contributors who work through their own company (BV)
+
+The Optiewet is only for natural persons. A contributor BV that receives the option is paid **in kind** for its services.
+
+| Step | Ann as a natural person | Ann's BV |
+| --- | --- | --- |
+| Option at grant (value about €900) | €900 counts as income: about €450–€650 tax and social contributions | VAT 21% (€189, paid by the CV in cash and recovered by the CV) and corporate tax about 20% (€180) |
+| Fee of €13,500 | About 63% tax and social contributions: about €5,000 left | Corporate tax 20%: €10,800 stays in the BV. Taken out through the liquidation reserve or VVPRbis at about 18%: about €8,860 for Ann |
+| Exercise (€5,000 for shares worth €20,000) | No tax | No tax. The BV pays from its own cash |
+| €15,000 growth when the shares are sold | In principle not taxed | Corporate tax about 20% (a small holding gets no exemption), then about 18% out: about €9,840 for Ann |
+| Dividends on the shares | 30% withholding tax | 30% withheld (creditable), corporate tax in the BV again, then 18–30% out |
+
+So the BV is better for the **fee** (about 34% instead of about 63%) and worse for the **share growth** (about 34% instead of 0%). The best mix would be: the BV invoices the fee, and Ann **personally** receives the option under the Optiewet. Ask the accountant whether that holds when the work is done through her BV; the halved 9% lump sum is often refused to the manager of a management company.
+
 ## Takeaway
 
 - If equity is wanted, the **option beside option 2** is the better of the two: a small tax at grant, value growth taxed as capital, a cash exercise without a revisor, and the fee can fund the exercise.
